@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageSpeed Insights Report - 12/20/2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 30px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1em;
+        }
+        
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .summary-card h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .summary-card .number {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        
+        .results-table-container {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+        
+        thead {
+            background: #333;
+            color: white;
+        }
+        
+        th {
+            padding: 12px 8px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px 8px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .url-cell {
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .score {
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            min-width: 45px;
+            text-align: center;
+        }
+        
+        .score-good {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .score-average {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .score-poor {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .status-pass {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .status-fail {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .metric-value {
+            font-size: 12px;
+        }
+        
+        .metric-good {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .metric-needs-improvement {
+            color: #ffc107;
+            font-weight: 600;
+        }
+        
+        .metric-poor {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .device-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        
+        .device-mobile {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .device-desktop {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .report-info {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .report-info p {
+            margin: 5px 0;
+            color: #333;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 PageSpeed Insights Report</h1>
+        <p class="subtitle">Comprehensive performance analysis for all pages</p>
+        
+        <div class="report-info">
+            <p><strong>Generated:</strong> 12/20/2025, 3:39:44 PM</p>
+            <p><strong>Total URLs Analyzed:</strong> 30</p>
+            <p><strong>Total Tests:</strong> 60 (Mobile + Desktop)</p>
+        </div>
+        
+        <div class="summary-cards">
+            <div class="summary-card">
+                <h3>Total URLs</h3>
+                <div class="number">30</div>
+            </div>
+            <div class="summary-card">
+                <h3>Passed</h3>
+                <div class="number">0</div>
+            </div>
+            <div class="summary-card">
+                <h3>Failed</h3>
+                <div class="number">60</div>
+            </div>
+            <div class="summary-card">
+                <h3>Success Rate</h3>
+                <div class="number">0%</div>
+            </div>
+        </div>
+        
+        <h2>Detailed Results</h2>
+        
+        <div class="results-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>URL</th>
+                        <th>Device</th>
+                        <th>Performance</th>
+                        <th>Accessibility</th>
+                        <th>Best Practices</th>
+                        <th>SEO</th>
+                        <th>FCP</th>
+                        <th>LCP</th>
+                        <th>CLS</th>
+                        <th>Status</th>
+                        <th>Issues</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-poor">92</span></td>
+                        <td><span class="metric-value metric-good">1.68s</span></td>
+                        <td><span class="metric-value metric-good">1.95s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100); SEO: 92 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">92</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-poor">85</span></td>
+                        <td><span class="metric-value metric-good">0.73s</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">0.005</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100); SEO: 85 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/meet-dan-indech-dds/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fmeet-dan-indech-dds%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/meet-dan-indech-dds/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">73</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">92</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.68s</span></td>
+                        <td><span class="metric-value metric-poor">3.78s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.192</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 73 (required: ≥90); LCP: 3.78s (required: ≤2.5s); CLS: 0.192 (required: ≤0.1); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/meet-dan-indech-dds/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fmeet-dan-indech-dds%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/meet-dan-indech-dds/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">0.038</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/meet-magda/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fmeet-magda%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/meet-magda/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">71</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.68s</span></td>
+                        <td><span class="metric-value metric-poor">4.11s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.162</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 71 (required: ≥90); LCP: 4.11s (required: ≤2.5s); CLS: 0.162 (required: ≤0.1); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/meet-magda/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fmeet-magda%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/meet-magda/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">91</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-good">0.042</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/meet-our-team/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fmeet-our-team%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/meet-our-team/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">76</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.66s</span></td>
+                        <td><span class="metric-value metric-poor">4.13s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.192</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 76 (required: ≥90); LCP: 4.13s (required: ≤2.5s); CLS: 0.192 (required: ≤0.1); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/meet-our-team/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fmeet-our-team%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/meet-our-team/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">84</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">1.07s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.16</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 84 (required: ≥90); CLS: 0.160 (required: ≤0.1); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/new-patients/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fnew-patients%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/new-patients/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">1.96s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/new-patients/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fnew-patients%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/new-patients/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.74s</span></td>
+                        <td><span class="metric-value metric-good">0.81s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/finance-insurance/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Ffinance-insurance%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/finance-insurance/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">92</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.68s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.95s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.95s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/finance-insurance/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Ffinance-insurance%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/finance-insurance/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">0.8s</span></td>
+                        <td><span class="metric-value metric-good">0.011</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/success-stories/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fsuccess-stories%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/success-stories/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">80</span></td>
+                        <td><span class="score score-poor">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.48s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.126</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 80 (required: ≥90); LCP: 3.48s (required: ≤2.5s); CLS: 0.126 (required: ≤0.1); Accessibility: 95 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/success-stories/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fsuccess-stories%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/success-stories/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-poor">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.45s</span></td>
+                        <td><span class="metric-value metric-good">0.56s</span></td>
+                        <td><span class="metric-value metric-good">0.02</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 95 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/contact-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fcontact-us%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/contact-us/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.66s</span></td>
+                        <td><span class="metric-value metric-good">1.66s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/contact-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fcontact-us%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/contact-us/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">92</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">1.18s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/site-map/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fsite-map%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/site-map/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">79</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">1.97s</span></td>
+                        <td><span class="metric-value metric-poor">0.415</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 79 (required: ≥90); CLS: 0.415 (required: ≤0.1); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/site-map/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fsite-map%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/site-map/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">93</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.71s</span></td>
+                        <td><span class="metric-value metric-good">0.71s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.136</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.136 (required: ≤0.1); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/cosmetic-periodontics/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fcosmetic-periodontics%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/cosmetic-periodontics/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/cosmetic-periodontics/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fcosmetic-periodontics%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/cosmetic-periodontics/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.74s</span></td>
+                        <td><span class="metric-value metric-good">0.74s</span></td>
+                        <td><span class="metric-value metric-good">0.004</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/esthetic-crown/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Festhetic-crown%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/esthetic-crown/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.66s</span></td>
+                        <td><span class="metric-value metric-good">1.66s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/esthetic-crown/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Festhetic-crown%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/esthetic-crown/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">0.007</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/soft-tissue-grafting/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fsoft-tissue-grafting%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/soft-tissue-grafting/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/soft-tissue-grafting/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fsoft-tissue-grafting%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/soft-tissue-grafting/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">88</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.74s</span></td>
+                        <td><span class="metric-value metric-good">1.18s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 88 (required: ≥90); Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/ridge-augmentation/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fridge-augmentation%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/ridge-augmentation/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/ridge-augmentation/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fridge-augmentation%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/ridge-augmentation/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">89</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 89 (required: ≥90); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/bone-grafting/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fbone-grafting%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/bone-grafting/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.68s</span></td>
+                        <td><span class="metric-value metric-good">1.68s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/bone-grafting/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fbone-grafting%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/bone-grafting/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">92</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">1.16s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/laser-procedures/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Flaser-procedures%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/laser-procedures/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">88</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.68s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.51s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 88 (required: ≥90); LCP: 3.51s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/laser-procedures/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Flaser-procedures%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/laser-procedures/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">0.82s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/laser-periodontal/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Flaser-periodontal%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/laser-periodontal/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">88</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.66s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.52s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 88 (required: ≥90); LCP: 3.52s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/laser-periodontal/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Flaser-periodontal%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/laser-periodontal/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">88</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.71s</span></td>
+                        <td><span class="metric-value metric-good">1.17s</span></td>
+                        <td><span class="metric-value metric-good">0.004</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 88 (required: ≥90); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/laser-pocket-disinfection-lpd/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Flaser-pocket-disinfection-lpd%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/laser-pocket-disinfection-lpd/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/laser-pocket-disinfection-lpd/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Flaser-pocket-disinfection-lpd%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/laser-pocket-disinfection-lpd/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">0.004</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/laser-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Flaser-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/laser-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/laser-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Flaser-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/laser-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">93</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-good">0.004</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/dental-implants/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fdental-implants%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/dental-implants/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">85</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-poor">3.81s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 85 (required: ≥90); LCP: 3.81s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/dental-implants/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fdental-implants%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/dental-implants/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">89</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.71s</span></td>
+                        <td><span class="metric-value metric-good">1.16s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 89 (required: ≥90); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/replacing-single-multiple-teeth/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Freplacing-single-multiple-teeth%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/replacing-single-multiple-teeth/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">87</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.49s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 87 (required: ≥90); LCP: 3.49s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/replacing-single-multiple-teeth/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Freplacing-single-multiple-teeth%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/replacing-single-multiple-teeth/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">94</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/all-on-4-and-teeth-in-a-day/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fall-on-4-and-teeth-in-a-day%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/all-on-4-and-teeth-in-a-day/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.66s</span></td>
+                        <td><span class="metric-value metric-good">1.66s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/all-on-4-and-teeth-in-a-day/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fall-on-4-and-teeth-in-a-day%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/all-on-4-and-teeth-in-a-day/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">91</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">1.21s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/replacing-dentures-with-implants/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Freplacing-dentures-with-implants%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/replacing-dentures-with-implants/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">90</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.49s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 3.49s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/replacing-dentures-with-implants/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Freplacing-dentures-with-implants%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/replacing-dentures-with-implants/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">92</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/effects-of-tooth-loss/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Feffects-of-tooth-loss%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/effects-of-tooth-loss/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">92</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.29s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 3.29s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/effects-of-tooth-loss/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Feffects-of-tooth-loss%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/effects-of-tooth-loss/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">90</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">1.17s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/sinus-lift-for-implants/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fsinus-lift-for-implants%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/sinus-lift-for-implants/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">86</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.73s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 86 (required: ≥90); LCP: 3.73s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/sinus-lift-for-implants/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fsinus-lift-for-implants%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/sinus-lift-for-implants/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">72</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.78s</span></td>
+                        <td><span class="metric-value metric-good">0.025</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 72 (required: ≥90); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/advanced-imaging-for-implant-success/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fadvanced-imaging-for-implant-success%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/advanced-imaging-for-implant-success/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/advanced-imaging-for-implant-success/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fadvanced-imaging-for-implant-success%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/advanced-imaging-for-implant-success/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">91</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">1.22s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/oral-cancer-screenings/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Foral-cancer-screenings%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/oral-cancer-screenings/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">85</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.69s</span></td>
+                        <td><span class="metric-value metric-poor">3.77s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 85 (required: ≥90); LCP: 3.77s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/oral-cancer-screenings/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Foral-cancer-screenings%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/oral-cancer-screenings/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">93</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/wisdom-teeth-extraction-3rd-molar/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fwisdom-teeth-extraction-3rd-molar%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/wisdom-teeth-extraction-3rd-molar/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/wisdom-teeth-extraction-3rd-molar/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fwisdom-teeth-extraction-3rd-molar%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/wisdom-teeth-extraction-3rd-molar/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">94</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">1.13s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/tooth-exposure-for-orthodontics/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Ftooth-exposure-for-orthodontics%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/tooth-exposure-for-orthodontics/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/tooth-exposure-for-orthodontics/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Ftooth-exposure-for-orthodontics%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/tooth-exposure-for-orthodontics/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">92</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">1.14s</span></td>
+                        <td><span class="metric-value metric-good">0.004</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/patient-comfort-sedation/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fpatient-comfort-sedation%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/patient-comfort-sedation/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">90</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.68s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.39s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 3.39s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/patient-comfort-sedation/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Fpatient-comfort-sedation%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/patient-comfort-sedation/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">93</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.71s</span></td>
+                        <td><span class="metric-value metric-good">0.71s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/request-an-appointment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Frequest-an-appointment%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/request-an-appointment/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">84</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.66s</span></td>
+                        <td><span class="metric-value metric-good">1.66s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 84 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.desertridgeperiodontics.com/request-an-appointment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.desertridgeperiodontics.com%2Frequest-an-appointment%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.desertridgeperiodontics.com/request-an-appointment/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-poor">85</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.74s</span></td>
+                        <td><span class="metric-value metric-good">0.74s</span></td>
+                        <td><span class="metric-value metric-good">0.006</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 85 (required: 100)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+            <h3 style="margin-bottom: 10px;">Scoring Criteria</h3>
+            <ul style="line-height: 1.8; color: #666;">
+                <li><strong>Performance:</strong> Must be ≥90 (Good: Green, Average: Yellow, Poor: Red)</li>
+                <li><strong>Accessibility:</strong> Must be 100 (Pass: Green, Fail: Red)</li>
+                <li><strong>SEO:</strong> Must be 100 (Pass: Green, Fail: Red)</li>
+                <li><strong>FCP (First Contentful Paint):</strong> Must be ≤1.8s (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+                <li><strong>LCP (Largest Contentful Paint):</strong> Must be ≤2.5s (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+                <li><strong>CLS (Cumulative Layout Shift):</strong> Must be ≤0.1 (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
