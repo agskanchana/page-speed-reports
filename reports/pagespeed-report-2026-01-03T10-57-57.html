@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageSpeed Insights Report - 1/3/2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 30px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1em;
+        }
+        
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .summary-card h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .summary-card .number {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        
+        .results-table-container {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+        
+        thead {
+            background: #333;
+            color: white;
+        }
+        
+        th {
+            padding: 12px 8px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px 8px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .url-cell {
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .score {
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            min-width: 45px;
+            text-align: center;
+        }
+        
+        .score-good {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .score-average {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .score-poor {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .status-pass {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .status-fail {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .metric-value {
+            font-size: 12px;
+        }
+        
+        .metric-good {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .metric-needs-improvement {
+            color: #ffc107;
+            font-weight: 600;
+        }
+        
+        .metric-poor {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .device-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        
+        .device-mobile {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .device-desktop {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .report-info {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .report-info p {
+            margin: 5px 0;
+            color: #333;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 PageSpeed Insights Report</h1>
+        <p class="subtitle">Comprehensive performance analysis for all pages</p>
+        
+        <div class="report-info">
+            <p><strong>Generated:</strong> 1/3/2026, 4:27:57 PM</p>
+            <p><strong>Total URLs Analyzed:</strong> 47</p>
+            <p><strong>Total Tests:</strong> 94 (Mobile + Desktop)</p>
+        </div>
+        
+        <div class="summary-cards">
+            <div class="summary-card">
+                <h3>Total URLs</h3>
+                <div class="number">47</div>
+            </div>
+            <div class="summary-card">
+                <h3>Passed</h3>
+                <div class="number">77</div>
+            </div>
+            <div class="summary-card">
+                <h3>Failed</h3>
+                <div class="number">17</div>
+            </div>
+            <div class="summary-card">
+                <h3>Success Rate</h3>
+                <div class="number">82%</div>
+            </div>
+        </div>
+        
+        <h2>Detailed Results</h2>
+        
+        <div class="results-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>URL</th>
+                        <th>Device</th>
+                        <th>Performance</th>
+                        <th>Accessibility</th>
+                        <th>Best Practices</th>
+                        <th>SEO</th>
+                        <th>FCP</th>
+                        <th>LCP</th>
+                        <th>CLS</th>
+                        <th>Status</th>
+                        <th>Issues</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">1.04s</span></td>
+                        <td><span class="metric-value metric-good">0.004</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/meet-the-providers/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fmeet-the-providers%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/meet-the-providers/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">83</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-poor">3.99s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.13</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 83 (required: ≥90); LCP: 3.99s (required: ≤2.5s); CLS: 0.130 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/meet-the-providers/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fmeet-the-providers%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/meet-the-providers/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.044</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/membership-and-financials/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fmembership-and-financials%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/membership-and-financials/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/membership-and-financials/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fmembership-and-financials%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/membership-and-financials/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="metric-value metric-poor">N/As</span></td>
+                        <td><span class="metric-value metric-poor">N/As</span></td>
+                        <td><span class="metric-value metric-poor">N/A</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">API Error: Lighthouse returned error: Something went wrong.</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/botox/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fbotox%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/botox/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.58s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/botox/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fbotox%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/botox/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.65s</span></td>
+                        <td><span class="metric-value metric-good">0.065</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/jeuveau/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fjeuveau%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/jeuveau/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">93</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.07s</span></td>
+                        <td><span class="metric-value metric-good">1.12s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/jeuveau/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fjeuveau%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/jeuveau/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.006</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/dysport/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fdysport%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/dysport/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/dysport/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fdysport%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/dysport/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.34s</span></td>
+                        <td><span class="metric-value metric-good">0.005</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/xeomin/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fxeomin%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/xeomin/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/xeomin/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fxeomin%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/xeomin/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/daxxify/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fdaxxify%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/daxxify/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/daxxify/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fdaxxify%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/daxxify/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.008</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/dermal-fillers/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fdermal-fillers%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/dermal-fillers/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0.013</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/dermal-fillers/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fdermal-fillers%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/dermal-fillers/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.34s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/sculptra/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fsculptra%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/sculptra/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/sculptra/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fsculptra%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/sculptra/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.34s</span></td>
+                        <td><span class="metric-value metric-good">0.005</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/radiesse/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fradiesse%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/radiesse/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">92</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">SEO: 92 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/radiesse/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fradiesse%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/radiesse/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">86</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">92</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.7s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.22</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 86 (required: ≥90); CLS: 0.220 (required: ≤0.1); SEO: 92 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/hair-restoration/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fhair-restoration%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/hair-restoration/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">92</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.5s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">SEO: 92 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/hair-restoration/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fhair-restoration%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/hair-restoration/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">92</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.34s</span></td>
+                        <td><span class="metric-value metric-good">0.004</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">SEO: 92 (required: 100)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/laser-hair-reduction/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Flaser-hair-reduction%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/laser-hair-reduction/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/laser-hair-reduction/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Flaser-hair-reduction%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/laser-hair-reduction/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.52s</span></td>
+                        <td><span class="metric-value metric-good">0.64s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/nordlys-ipl/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fnordlys-ipl%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/nordlys-ipl/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/nordlys-ipl/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fnordlys-ipl%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/nordlys-ipl/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.34s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/co2re-skin-resurfacing/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fco2re-skin-resurfacing%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/co2re-skin-resurfacing/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.5s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/co2re-skin-resurfacing/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fco2re-skin-resurfacing%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/co2re-skin-resurfacing/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.34s</span></td>
+                        <td><span class="metric-value metric-good">0.008</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/co2re-scar-revision/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fco2re-scar-revision%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/co2re-scar-revision/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/co2re-scar-revision/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fco2re-scar-revision%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/co2re-scar-revision/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.38s</span></td>
+                        <td><span class="metric-value metric-good">0.007</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/co2re-intima/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fco2re-intima%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/co2re-intima/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.8s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/co2re-intima/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fco2re-intima%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/co2re-intima/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.67s</span></td>
+                        <td><span class="metric-value metric-good">0.036</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/attiva/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fattiva%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/attiva/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.5s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/attiva/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fattiva%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/attiva/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/body-contouring/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fbody-contouring%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/body-contouring/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.5s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/body-contouring/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fbody-contouring%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/body-contouring/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.38s</span></td>
+                        <td><span class="metric-value metric-good">0.005</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/microneedling-rf/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fmicroneedling-rf%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/microneedling-rf/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/microneedling-rf/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fmicroneedling-rf%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/microneedling-rf/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0.035</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/chemical-peels/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fchemical-peels%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/chemical-peels/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/chemical-peels/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fchemical-peels%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/chemical-peels/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.008</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/permanent-makeup/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fpermanent-makeup%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/permanent-makeup/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/permanent-makeup/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fpermanent-makeup%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/permanent-makeup/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.105</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.105 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/eyelash-extensions/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Feyelash-extensions%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/eyelash-extensions/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/eyelash-extensions/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Feyelash-extensions%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/eyelash-extensions/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.007</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/wellness-weight-loss/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fwellness-weight-loss%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/wellness-weight-loss/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/wellness-weight-loss/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fwellness-weight-loss%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/wellness-weight-loss/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.64s</span></td>
+                        <td><span class="metric-value metric-good">0.004</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/aqua-facial/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Faqua-facial%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/aqua-facial/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.5s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/aqua-facial/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Faqua-facial%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/aqua-facial/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.007</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/facials/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Ffacials%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/facials/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/facials/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Ffacials%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/facials/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.38s</span></td>
+                        <td><span class="metric-value metric-good">0.008</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/fort-myers-florida/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Ffort-myers-florida%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/fort-myers-florida/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/fort-myers-florida/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Ffort-myers-florida%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/fort-myers-florida/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.78s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/punta-gorda-florida/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fpunta-gorda-florida%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/punta-gorda-florida/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/punta-gorda-florida/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fpunta-gorda-florida%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/punta-gorda-florida/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/prp-derma-gel/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fprp-derma-gel%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/prp-derma-gel/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/prp-derma-gel/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fprp-derma-gel%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/prp-derma-gel/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.66s</span></td>
+                        <td><span class="metric-value metric-good">0.004</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/sexual-rejuvenation/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fsexual-rejuvenation%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/sexual-rejuvenation/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.5s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/sexual-rejuvenation/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fsexual-rejuvenation%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/sexual-rejuvenation/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.007</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/skin-care-products/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fskin-care-products%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/skin-care-products/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">54</span></td>
+                        <td><span class="score score-poor">91</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.97s</span></td>
+                        <td><span class="metric-value metric-poor">3.83s</span></td>
+                        <td><span class="metric-value metric-poor">0.347</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 54 (required: ≥90); LCP: 3.83s (required: ≤2.5s); CLS: 0.347 (required: ≤0.1); Accessibility: 91 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/skin-care-products/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fskin-care-products%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/skin-care-products/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-poor">91</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.34s</span></td>
+                        <td><span class="metric-value metric-good">0.022</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 91 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/site-map/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fsite-map%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/site-map/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">74</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-poor">0.49</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 74 (required: ≥90); CLS: 0.490 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/site-map/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fsite-map%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/site-map/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.66s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.105</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.105 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/contact-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fcontact-us%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/contact-us/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">88</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.238</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 88 (required: ≥90); CLS: 0.238 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/contact-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fcontact-us%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/contact-us/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.65s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/gallery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fgallery%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/gallery/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">82</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-poor">0.372</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 82 (required: ≥90); CLS: 0.372 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/gallery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fgallery%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/gallery/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.67s</span></td>
+                        <td><span class="metric-value metric-good">0.008</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/neurotoxin-filler-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fneurotoxin-filler-pre-post%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/neurotoxin-filler-pre-post/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/neurotoxin-filler-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fneurotoxin-filler-pre-post%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/neurotoxin-filler-pre-post/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.026</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/facial-chemical-peels-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Ffacial-chemical-peels-pre-post%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/facial-chemical-peels-pre-post/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/facial-chemical-peels-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Ffacial-chemical-peels-pre-post%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/facial-chemical-peels-pre-post/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.65s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/laser-hair-reduction-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Flaser-hair-reduction-pre-post%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/laser-hair-reduction-pre-post/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/laser-hair-reduction-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Flaser-hair-reduction-pre-post%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/laser-hair-reduction-pre-post/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.64s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/laser-vein-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Flaser-vein-pre-post%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/laser-vein-pre-post/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/laser-vein-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Flaser-vein-pre-post%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/laser-vein-pre-post/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="metric-value metric-poor">N/As</span></td>
+                        <td><span class="metric-value metric-poor">N/As</span></td>
+                        <td><span class="metric-value metric-poor">N/A</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">API Error: Lighthouse returned error: Something went wrong.</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/c02re-laser-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fc02re-laser-pre-post%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/c02re-laser-pre-post/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.6s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.60s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/c02re-laser-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fc02re-laser-pre-post%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/c02re-laser-pre-post/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.37s</span></td>
+                        <td><span class="metric-value metric-good">0.016</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/ipl-photofacial-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fipl-photofacial-pre-post%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/ipl-photofacial-pre-post/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/ipl-photofacial-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fipl-photofacial-pre-post%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/ipl-photofacial-pre-post/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.016</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/prp-eve-shot-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fprp-eve-shot-pre-post%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/prp-eve-shot-pre-post/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/prp-eve-shot-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fprp-eve-shot-pre-post%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/prp-eve-shot-pre-post/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/prp-adam-shot-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fprp-adam-shot-pre-post%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/prp-adam-shot-pre-post/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/prp-adam-shot-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fprp-adam-shot-pre-post%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/prp-adam-shot-pre-post/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.67s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/microneedling-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fmicroneedling-pre-post%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/microneedling-pre-post/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/microneedling-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fmicroneedling-pre-post%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/microneedling-pre-post/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.66s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/sculptra-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fsculptra-pre-post%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/sculptra-pre-post/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/sculptra-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fsculptra-pre-post%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/sculptra-pre-post/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.005</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/cosmetic-tattoo-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fcosmetic-tattoo-pre-post%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/cosmetic-tattoo-pre-post/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/cosmetic-tattoo-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fcosmetic-tattoo-pre-post%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/cosmetic-tattoo-pre-post/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.53s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.101</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.101 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/lash-aftercare-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Flash-aftercare-pre-post%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/lash-aftercare-pre-post/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.145</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.145 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/lash-aftercare-pre-post/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Flash-aftercare-pre-post%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/lash-aftercare-pre-post/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.007</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/what-sets-us-apart/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fwhat-sets-us-apart%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/what-sets-us-apart/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.sweetspotmedispa.com/what-sets-us-apart/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sweetspotmedispa.com%2Fwhat-sets-us-apart%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.sweetspotmedispa.com/what-sets-us-apart/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.65s</span></td>
+                        <td><span class="metric-value metric-good">0.035</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+            <h3 style="margin-bottom: 10px;">Scoring Criteria</h3>
+            <ul style="line-height: 1.8; color: #666;">
+                <li><strong>Performance:</strong> Must be ≥90 (Good: Green, Average: Yellow, Poor: Red)</li>
+                <li><strong>Accessibility:</strong> Must be 100 (Pass: Green, Fail: Red)</li>
+                <li><strong>SEO:</strong> Must be 100 (Pass: Green, Fail: Red)</li>
+                <li><strong>FCP (First Contentful Paint):</strong> Must be ≤1.8s (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+                <li><strong>LCP (Largest Contentful Paint):</strong> Must be ≤2.5s (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+                <li><strong>CLS (Cumulative Layout Shift):</strong> Must be ≤0.1 (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
