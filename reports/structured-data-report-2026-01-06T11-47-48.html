@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structured Data Test Report - 1/6/2026</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 1400px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 30px; }
+        h1 { color: #333; margin-bottom: 10px; }
+        .subtitle { color: #666; margin-bottom: 30px; }
+        .summary-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-bottom: 30px; }
+        .summary-card { padding: 20px; border-radius: 8px; text-align: center; color: white; }
+        .summary-card.total { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .summary-card.passed { background: #28a745; }
+        .summary-card.failed { background: #dc3545; }
+        .summary-card.pending { background: #6c757d; }
+        .summary-card h3 { font-size: 14px; margin-bottom: 8px; opacity: 0.9; }
+        .summary-card .number { font-size: 32px; font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 13px; }
+        thead { background: #333; color: white; }
+        th { padding: 12px 8px; text-align: left; font-weight: 600; }
+        td { padding: 12px 8px; border-bottom: 1px solid #e9ecef; }
+        tbody tr:hover { background: #f8f9fa; }
+        .url-cell { max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .url-cell a { color: #1a0dab; text-decoration: none; }
+        .url-cell a:hover { text-decoration: underline; }
+        td a { color: #1a73e8; text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .status-pass { color: #28a745; font-weight: 600; }
+        .status-fail { color: #dc3545; font-weight: 600; }
+        .status-pending { color: #6c757d; font-weight: 600; }
+        .report-info { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+        .report-info p { margin: 5px 0; color: #666; }
+        @media print { body { background: white; padding: 0; } .container { box-shadow: none; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Structured Data Test Report</h1>
+        <p class="subtitle">Google Rich Results Test Analysis</p>
+        
+        <div class="report-info">
+            <p><strong>Sitemap:</strong> https://www.caringsmiledental.com/page-sitemap.xml</p>
+            <p><strong>Generated:</strong> 1/6/2026, 5:17:48 PM</p>
+            <p><strong>Total URLs Analyzed:</strong> 31</p>
+        </div>
+        
+        <div class="summary-cards">
+            <div class="summary-card total">
+                <h3>Total URLs</h3>
+                <div class="number">31</div>
+            </div>
+            <div class="summary-card passed">
+                <h3>Passed</h3>
+                <div class="number">31</div>
+            </div>
+            <div class="summary-card failed">
+                <h3>Failed</h3>
+                <div class="number">0</div>
+            </div>
+            <div class="summary-card pending">
+                <h3>Pending</h3>
+                <div class="number">0</div>
+            </div>
+        </div>
+        
+        <h2>Detailed Results</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>URL</th>
+                    <th>Google Test</th>
+                    <th>Status</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                    <tr>
+                        <td>1</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/" target="_blank">https://www.caringsmiledental.com/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>2</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/our-technology/" target="_blank">https://www.caringsmiledental.com/our-technology/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Four-technology%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>3</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/what-to-expect-on-your-first-visit/" target="_blank">https://www.caringsmiledental.com/what-to-expect-on-your-first-visit/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Fwhat-to-expect-on-your-first-visit%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>4</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/new-patient-forms/" target="_blank">https://www.caringsmiledental.com/new-patient-forms/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Fnew-patient-forms%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>5</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/financial-and-insurance/" target="_blank">https://www.caringsmiledental.com/financial-and-insurance/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Ffinancial-and-insurance%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>6</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/site-map/" target="_blank">https://www.caringsmiledental.com/site-map/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Fsite-map%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>7</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/periodontal-gum-disease-therapy/" target="_blank">https://www.caringsmiledental.com/periodontal-gum-disease-therapy/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Fperiodontal-gum-disease-therapy%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>8</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/airway-dentistry/" target="_blank">https://www.caringsmiledental.com/airway-dentistry/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Fairway-dentistry%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>9</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/comprehensive-dental-care/" target="_blank">https://www.caringsmiledental.com/comprehensive-dental-care/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Fcomprehensive-dental-care%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>10</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/myofunctional-therapy/" target="_blank">https://www.caringsmiledental.com/myofunctional-therapy/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Fmyofunctional-therapy%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>11</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/tmj-tmd-treatment/" target="_blank">https://www.caringsmiledental.com/tmj-tmd-treatment/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Ftmj-tmd-treatment%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>12</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/botox-dentistry/" target="_blank">https://www.caringsmiledental.com/botox-dentistry/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Fbotox-dentistry%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>13</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/fillings/" target="_blank">https://www.caringsmiledental.com/fillings/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Ffillings%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>14</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/oral-cancer-screening/" target="_blank">https://www.caringsmiledental.com/oral-cancer-screening/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Foral-cancer-screening%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>15</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/laser-assisted-periodontal-treatment/" target="_blank">https://www.caringsmiledental.com/laser-assisted-periodontal-treatment/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Flaser-assisted-periodontal-treatment%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>16</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/veneers/" target="_blank">https://www.caringsmiledental.com/veneers/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Fveneers%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>17</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/professional-teeth-cleaning/" target="_blank">https://www.caringsmiledental.com/professional-teeth-cleaning/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Fprofessional-teeth-cleaning%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>18</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/dentures-and-partials/" target="_blank">https://www.caringsmiledental.com/dentures-and-partials/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Fdentures-and-partials%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>19</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/invisalign-for-adults-and-teens/" target="_blank">https://www.caringsmiledental.com/invisalign-for-adults-and-teens/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Finvisalign-for-adults-and-teens%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>20</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/root-canal-treatment/" target="_blank">https://www.caringsmiledental.com/root-canal-treatment/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Froot-canal-treatment%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>21</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/sealants/" target="_blank">https://www.caringsmiledental.com/sealants/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Fsealants%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>22</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/teeth-whitening/" target="_blank">https://www.caringsmiledental.com/teeth-whitening/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Fteeth-whitening%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>23</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/pediatric-dentistry/" target="_blank">https://www.caringsmiledental.com/pediatric-dentistry/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Fpediatric-dentistry%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>24</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/crowns-and-bridgework/" target="_blank">https://www.caringsmiledental.com/crowns-and-bridgework/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Fcrowns-and-bridgework%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>25</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/what-sets-us-apart/" target="_blank">https://www.caringsmiledental.com/what-sets-us-apart/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Fwhat-sets-us-apart%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>26</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/scaling-and-root-planing/" target="_blank">https://www.caringsmiledental.com/scaling-and-root-planing/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Fscaling-and-root-planing%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>27</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/meet-the-providers/" target="_blank">https://www.caringsmiledental.com/meet-the-providers/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Fmeet-the-providers%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>28</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/success-stories/" target="_blank">https://www.caringsmiledental.com/success-stories/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Fsuccess-stories%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>29</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/contact-us/" target="_blank">https://www.caringsmiledental.com/contact-us/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Fcontact-us%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>30</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/request-an-appointment/" target="_blank">https://www.caringsmiledental.com/request-an-appointment/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Frequest-an-appointment%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>31</td>
+                        <td class="url-cell"><a href="https://www.caringsmiledental.com/dental-implants/" target="_blank">https://www.caringsmiledental.com/dental-implants/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.caringsmiledental.com%2Fdental-implants%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+            </tbody>
+        </table>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+            <h3>Legend</h3>
+            <p style="margin-top: 10px;">
+                <span class="status-pass">✓ PASS</span> - Structured data is valid<br>
+                <span class="status-fail">✗ FAIL</span> - Structured data has errors<br>
+                <span class="status-pending">⏳ PENDING</span> - Not yet tested
+            </p>
+        </div>
+    </div>
+</body>
+</html>
