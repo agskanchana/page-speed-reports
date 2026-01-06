@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageSpeed Insights Report - 1/6/2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 30px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1em;
+        }
+        
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .summary-card h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .summary-card .number {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        
+        .results-table-container {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+        
+        thead {
+            background: #333;
+            color: white;
+        }
+        
+        th {
+            padding: 12px 8px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px 8px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .url-cell {
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .score {
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            min-width: 45px;
+            text-align: center;
+        }
+        
+        .score-good {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .score-average {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .score-poor {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .status-pass {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .status-fail {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .metric-value {
+            font-size: 12px;
+        }
+        
+        .metric-good {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .metric-needs-improvement {
+            color: #ffc107;
+            font-weight: 600;
+        }
+        
+        .metric-poor {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .device-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        
+        .device-mobile {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .device-desktop {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .report-info {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .report-info p {
+            margin: 5px 0;
+            color: #333;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 PageSpeed Insights Report</h1>
+        <p class="subtitle">Comprehensive performance analysis for all pages</p>
+        
+        <div class="report-info">
+            <p><strong>Generated:</strong> 1/6/2026, 8:53:51 AM</p>
+            <p><strong>Total URLs Analyzed:</strong> 33</p>
+            <p><strong>Total Tests:</strong> 66 (Mobile + Desktop)</p>
+        </div>
+        
+        <div class="summary-cards">
+            <div class="summary-card">
+                <h3>Total URLs</h3>
+                <div class="number">33</div>
+            </div>
+            <div class="summary-card">
+                <h3>Passed</h3>
+                <div class="number">46</div>
+            </div>
+            <div class="summary-card">
+                <h3>Failed</h3>
+                <div class="number">20</div>
+            </div>
+            <div class="summary-card">
+                <h3>Success Rate</h3>
+                <div class="number">70%</div>
+            </div>
+        </div>
+        
+        <h2>Detailed Results</h2>
+        
+        <div class="results-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>URL</th>
+                        <th>Device</th>
+                        <th>Performance</th>
+                        <th>Accessibility</th>
+                        <th>Best Practices</th>
+                        <th>SEO</th>
+                        <th>FCP</th>
+                        <th>LCP</th>
+                        <th>CLS</th>
+                        <th>Status</th>
+                        <th>Issues</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.queensdds.com/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">85</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.07s</span></td>
+                        <td><span class="metric-value metric-poor">3.94s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 85 (required: ≥90); LCP: 3.94s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-good">0.005</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/prosthodontics/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fprosthodontics%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/prosthodontics/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-good">1.36s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/prosthodontics/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fprosthodontics%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/prosthodontics/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.015</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/veneers/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fveneers%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/veneers/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.queensdds.com/veneers/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fveneers%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/veneers/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">85</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-poor">0.297</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 85 (required: ≥90); CLS: 0.297 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/sedation-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fsedation-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/sedation-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/sedation-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fsedation-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/sedation-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.7s</span></td>
+                        <td><span class="metric-value metric-good">0.066</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/tmj/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Ftmj%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/tmj/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/tmj/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Ftmj%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/tmj/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.67s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/snap-on-dentures/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fsnap-on-dentures%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/snap-on-dentures/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0.094</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/snap-on-dentures/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fsnap-on-dentures%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/snap-on-dentures/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.037</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.queensdds.com/contact-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fcontact-us%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/contact-us/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">91</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.45s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 3.45s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/contact-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fcontact-us%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/contact-us/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.018</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/medical-insurance/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fmedical-insurance%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/medical-insurance/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-good">1.28s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/medical-insurance/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fmedical-insurance%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/medical-insurance/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.33s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/my-digital-dental-lab/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fmy-digital-dental-lab%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/my-digital-dental-lab/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-good">1.28s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/my-digital-dental-lab/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fmy-digital-dental-lab%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/my-digital-dental-lab/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.7s</span></td>
+                        <td><span class="metric-value metric-good">0.047</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/no-fault-liability-insurance/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fno-fault-liability-insurance%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/no-fault-liability-insurance/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-good">1.28s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/no-fault-liability-insurance/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fno-fault-liability-insurance%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/no-fault-liability-insurance/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.053</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/whole-body-wellness/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fwhole-body-wellness%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/whole-body-wellness/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.07s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.queensdds.com/whole-body-wellness/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fwhole-body-wellness%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/whole-body-wellness/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">93</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.152</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.152 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/complete-mouth-rehabilitation/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fcomplete-mouth-rehabilitation%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/complete-mouth-rehabilitation/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/complete-mouth-rehabilitation/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fcomplete-mouth-rehabilitation%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/complete-mouth-rehabilitation/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.7s</span></td>
+                        <td><span class="metric-value metric-good">0.005</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.queensdds.com/site-map/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fsite-map%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/site-map/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">75</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.13s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.71s</span></td>
+                        <td><span class="metric-value metric-poor">0.448</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 75 (required: ≥90); LCP: 2.71s (required: ≤2.5s); CLS: 0.448 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.queensdds.com/site-map/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fsite-map%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/site-map/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">87</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.7s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.239</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 87 (required: ≥90); CLS: 0.239 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/crowns/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fcrowns%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/crowns/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.07s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/crowns/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fcrowns%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/crowns/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.006</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/bone-grafts/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fbone-grafts%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/bone-grafts/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/bone-grafts/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fbone-grafts%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/bone-grafts/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.004</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.queensdds.com/workers-compensation/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fworkers-compensation%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/workers-compensation/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-good">1.28s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.queensdds.com/workers-compensation/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fworkers-compensation%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/workers-compensation/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">89</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.34s</span></td>
+                        <td><span class="metric-value metric-good">0.45s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 89 (required: ≥90); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.queensdds.com/success-stories/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fsuccess-stories%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/success-stories/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">69</span></td>
+                        <td><span class="score score-poor">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.53s</span></td>
+                        <td><span class="metric-value metric-poor">0.282</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 69 (required: ≥90); LCP: 2.53s (required: ≤2.5s); CLS: 0.282 (required: ≤0.1); Accessibility: 96 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.queensdds.com/success-stories/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fsuccess-stories%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/success-stories/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">85</span></td>
+                        <td><span class="score score-poor">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.64s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.197</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 85 (required: ≥90); CLS: 0.197 (required: ≤0.1); Accessibility: 96 (required: 100)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/membership-plan/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fmembership-plan%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/membership-plan/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-good">1.28s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/membership-plan/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fmembership-plan%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/membership-plan/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.046</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.queensdds.com/recommended-products/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Frecommended-products%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/recommended-products/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">91</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.07s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.42s</span></td>
+                        <td><span class="metric-value metric-good">0.027</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 3.42s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/recommended-products/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Frecommended-products%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/recommended-products/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.7s</span></td>
+                        <td><span class="metric-value metric-good">0.009</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.queensdds.com/dr-paul-springs/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fdr-paul-springs%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/dr-paul-springs/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">77</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-poor">4.09s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.197</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 77 (required: ≥90); LCP: 4.09s (required: ≤2.5s); CLS: 0.197 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.queensdds.com/dr-paul-springs/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fdr-paul-springs%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/dr-paul-springs/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.66s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.11</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.110 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.queensdds.com/dr-becca-baer/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fdr-becca-baer%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/dr-becca-baer/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">77</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-poor">4.07s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.197</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 77 (required: ≥90); LCP: 4.07s (required: ≤2.5s); CLS: 0.197 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/dr-becca-baer/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fdr-becca-baer%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/dr-becca-baer/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.052</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.queensdds.com/dr-samer-chahine/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fdr-samer-chahine%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/dr-samer-chahine/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">78</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.07s</span></td>
+                        <td><span class="metric-value metric-poor">4.14s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.16</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 78 (required: ≥90); LCP: 4.14s (required: ≤2.5s); CLS: 0.160 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/dr-samer-chahine/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fdr-samer-chahine%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/dr-samer-chahine/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.016</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.queensdds.com/forms-and-registration/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fforms-and-registration%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/forms-and-registration/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.07s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.7s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.70s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/forms-and-registration/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fforms-and-registration%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/forms-and-registration/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.34s</span></td>
+                        <td><span class="metric-value metric-good">0.7s</span></td>
+                        <td><span class="metric-value metric-good">0.005</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.queensdds.com/smile-transformation/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fsmile-transformation%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/smile-transformation/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">70</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.07s</span></td>
+                        <td><span class="metric-value metric-poor">5.33s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.192</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 70 (required: ≥90); LCP: 5.33s (required: ≤2.5s); CLS: 0.192 (required: ≤0.1); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.queensdds.com/smile-transformation/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fsmile-transformation%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/smile-transformation/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.64s</span></td>
+                        <td><span class="metric-value metric-good">0.087</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/what-sets-us-apart/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fwhat-sets-us-apart%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/what-sets-us-apart/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-good">1.28s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/what-sets-us-apart/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fwhat-sets-us-apart%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/what-sets-us-apart/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0.011</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/meet-the-team/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fmeet-the-team%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/meet-the-team/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/meet-the-team/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fmeet-the-team%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/meet-the-team/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.35s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.04</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/sleep-apnea-treatment-snoring/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fsleep-apnea-treatment-snoring%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/sleep-apnea-treatment-snoring/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/sleep-apnea-treatment-snoring/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fsleep-apnea-treatment-snoring%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/sleep-apnea-treatment-snoring/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.99s</span></td>
+                        <td><span class="metric-value metric-good">0.009</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/dental-implants/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fdental-implants%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/dental-implants/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/dental-implants/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fdental-implants%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/dental-implants/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.3s</span></td>
+                        <td><span class="metric-value metric-good">0.41s</span></td>
+                        <td><span class="metric-value metric-good">0.03</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/cosmetic-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fcosmetic-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/cosmetic-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.queensdds.com/cosmetic-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fcosmetic-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/cosmetic-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">86</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-poor">0.258</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 86 (required: ≥90); CLS: 0.258 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/clear-aligner-orthodontics/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fclear-aligner-orthodontics%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/clear-aligner-orthodontics/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/clear-aligner-orthodontics/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fclear-aligner-orthodontics%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/clear-aligner-orthodontics/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.68s</span></td>
+                        <td><span class="metric-value metric-good">0.008</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/minimally-invasive-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fminimally-invasive-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/minimally-invasive-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.queensdds.com/minimally-invasive-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fminimally-invasive-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/minimally-invasive-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">89</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.213</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 89 (required: ≥90); CLS: 0.213 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/temporomandibular-joint-dysfunction/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Ftemporomandibular-joint-dysfunction%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/temporomandibular-joint-dysfunction/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/temporomandibular-joint-dysfunction/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Ftemporomandibular-joint-dysfunction%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/temporomandibular-joint-dysfunction/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.008</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/biologically-driven-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fbiologically-driven-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/biologically-driven-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.queensdds.com/biologically-driven-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.queensdds.com%2Fbiologically-driven-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.queensdds.com/biologically-driven-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.33s</span></td>
+                        <td><span class="metric-value metric-good">0.68s</span></td>
+                        <td><span class="metric-value metric-good">0.013</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+            <h3 style="margin-bottom: 10px;">Scoring Criteria</h3>
+            <ul style="line-height: 1.8; color: #666;">
+                <li><strong>Performance:</strong> Must be ≥90 (Good: Green, Average: Yellow, Poor: Red)</li>
+                <li><strong>Accessibility:</strong> Must be 100 (Pass: Green, Fail: Red)</li>
+                <li><strong>SEO:</strong> Must be 100 (Pass: Green, Fail: Red)</li>
+                <li><strong>FCP (First Contentful Paint):</strong> Must be ≤1.8s (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+                <li><strong>LCP (Largest Contentful Paint):</strong> Must be ≤2.5s (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+                <li><strong>CLS (Cumulative Layout Shift):</strong> Must be ≤0.1 (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
