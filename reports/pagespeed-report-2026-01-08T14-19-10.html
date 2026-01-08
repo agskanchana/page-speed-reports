@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageSpeed Insights Report - 1/8/2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 30px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1em;
+        }
+        
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .summary-card h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .summary-card .number {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        
+        .results-table-container {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+        
+        thead {
+            background: #333;
+            color: white;
+        }
+        
+        th {
+            padding: 12px 8px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px 8px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .url-cell {
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .score {
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            min-width: 45px;
+            text-align: center;
+        }
+        
+        .score-good {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .score-average {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .score-poor {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .status-pass {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .status-fail {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .metric-value {
+            font-size: 12px;
+        }
+        
+        .metric-good {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .metric-needs-improvement {
+            color: #ffc107;
+            font-weight: 600;
+        }
+        
+        .metric-poor {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .device-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        
+        .device-mobile {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .device-desktop {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .report-info {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .report-info p {
+            margin: 5px 0;
+            color: #333;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 PageSpeed Insights Report</h1>
+        <p class="subtitle">Comprehensive performance analysis for all pages</p>
+        
+        <div class="report-info">
+            <p><strong>Generated:</strong> 1/8/2026, 7:49:10 PM</p>
+            <p><strong>Total URLs Analyzed:</strong> 55</p>
+            <p><strong>Total Tests:</strong> 110 (Mobile + Desktop)</p>
+        </div>
+        
+        <div class="summary-cards">
+            <div class="summary-card">
+                <h3>Total URLs</h3>
+                <div class="number">55</div>
+            </div>
+            <div class="summary-card">
+                <h3>Passed</h3>
+                <div class="number">70</div>
+            </div>
+            <div class="summary-card">
+                <h3>Failed</h3>
+                <div class="number">40</div>
+            </div>
+            <div class="summary-card">
+                <h3>Success Rate</h3>
+                <div class="number">64%</div>
+            </div>
+        </div>
+        
+        <h2>Detailed Results</h2>
+        
+        <div class="results-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>URL</th>
+                        <th>Device</th>
+                        <th>Performance</th>
+                        <th>Accessibility</th>
+                        <th>Best Practices</th>
+                        <th>SEO</th>
+                        <th>FCP</th>
+                        <th>LCP</th>
+                        <th>CLS</th>
+                        <th>Status</th>
+                        <th>Issues</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">83</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.07s</span></td>
+                        <td><span class="metric-value metric-poor">3.81s</span></td>
+                        <td><span class="metric-value metric-good">0.1</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 83 (required: ≥90); LCP: 3.81s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="metric-value metric-poor">N/As</span></td>
+                        <td><span class="metric-value metric-poor">N/As</span></td>
+                        <td><span class="metric-value metric-poor">N/A</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">API Error: Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Details: net::ERR_TIMED_OUT)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/insurance-coverage/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Finsurance-coverage%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/insurance-coverage/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/insurance-coverage/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Finsurance-coverage%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/insurance-coverage/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.7s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/bill-pay/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fbill-pay%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/bill-pay/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">90</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/bill-pay/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fbill-pay%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/bill-pay/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">70</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.52s</span></td>
+                        <td><span class="metric-value metric-good">1.02s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 70 (required: ≥90)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/prep-for-surgery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fprep-for-surgery%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/prep-for-surgery/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">84</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.68s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.117</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 84 (required: ≥90); LCP: 2.68s (required: ≤2.5s); CLS: 0.117 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/prep-for-surgery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fprep-for-surgery%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/prep-for-surgery/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.37s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/meet-our-retired-physicians/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fmeet-our-retired-physicians%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/meet-our-retired-physicians/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="metric-value metric-poor">N/As</span></td>
+                        <td><span class="metric-value metric-poor">N/As</span></td>
+                        <td><span class="metric-value metric-poor">N/A</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">API Error: Lighthouse returned error: Something went wrong.</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/meet-our-retired-physicians/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fmeet-our-retired-physicians%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/meet-our-retired-physicians/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.009</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/provide-feedback/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fprovide-feedback%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/provide-feedback/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-average">81</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.67s</span></td>
+                        <td><span class="metric-value metric-good">1.68s</span></td>
+                        <td><span class="metric-value metric-good">0.036</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/provide-feedback/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fprovide-feedback%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/provide-feedback/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-average">81</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.54s</span></td>
+                        <td><span class="metric-value metric-good">0.011</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/in-the-news-media/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fin-the-news-media%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/in-the-news-media/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.12s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/in-the-news-media/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fin-the-news-media%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/in-the-news-media/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.33s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/faq/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Ffaq%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/faq/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/faq/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Ffaq%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/faq/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">58</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.6s</span></td>
+                        <td><span class="metric-value metric-good">1.54s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 58 (required: ≥90)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/manchester/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fmanchester%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/manchester/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/manchester/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fmanchester%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/manchester/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.007</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/cromwell/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fcromwell%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/cromwell/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">86</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.54s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 86 (required: ≥90); LCP: 2.54s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/cromwell/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fcromwell%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/cromwell/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.42s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/farmington/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Ffarmington%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/farmington/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/farmington/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Ffarmington%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/farmington/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/enfield/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fenfield%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/enfield/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.52s</span></td>
+                        <td><span class="metric-value metric-good">0.01</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/enfield/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fenfield%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/enfield/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/hartford/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fhartford%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/hartford/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">93</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/hartford/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fhartford%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/hartford/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">81</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.74s</span></td>
+                        <td><span class="metric-value metric-good">0.054</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 81 (required: ≥90)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/understanding-eye-anatomy/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Funderstanding-eye-anatomy%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/understanding-eye-anatomy/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.11s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/understanding-eye-anatomy/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Funderstanding-eye-anatomy%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/understanding-eye-anatomy/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.007</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/treatments-offered/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Ftreatments-offered%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/treatments-offered/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0.01</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/treatments-offered/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Ftreatments-offered%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/treatments-offered/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.41s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/medical-evaluation-second-opinion/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fmedical-evaluation-second-opinion%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/medical-evaluation-second-opinion/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/medical-evaluation-second-opinion/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fmedical-evaluation-second-opinion%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/medical-evaluation-second-opinion/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.116</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.116 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/in-office-procedures/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fin-office-procedures%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/in-office-procedures/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/in-office-procedures/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fin-office-procedures%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/in-office-procedures/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.007</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/intravitreal-suprachoroidal-injection/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fintravitreal-suprachoroidal-injection%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/intravitreal-suprachoroidal-injection/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/intravitreal-suprachoroidal-injection/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fintravitreal-suprachoroidal-injection%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/intravitreal-suprachoroidal-injection/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="metric-value metric-poor">N/As</span></td>
+                        <td><span class="metric-value metric-poor">N/As</span></td>
+                        <td><span class="metric-value metric-poor">N/A</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">API Error: Lighthouse returned error: Something went wrong.</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/laser-surgery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Flaser-surgery%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/laser-surgery/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.07s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.101</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.101 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/laser-surgery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Flaser-surgery%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/laser-surgery/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">0.009</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/pneumatic-retinopexy/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fpneumatic-retinopexy%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/pneumatic-retinopexy/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.07s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0.065</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/pneumatic-retinopexy/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fpneumatic-retinopexy%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/pneumatic-retinopexy/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.119</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.119 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/vitreoretinal-surgery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fvitreoretinal-surgery%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/vitreoretinal-surgery/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.63s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.63s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/vitreoretinal-surgery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fvitreoretinal-surgery%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/vitreoretinal-surgery/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.33s</span></td>
+                        <td><span class="metric-value metric-good">0.88s</span></td>
+                        <td><span class="metric-value metric-good">0.015</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/photodynamic-therapy/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fphotodynamic-therapy%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/photodynamic-therapy/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.07s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.103</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.103 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/photodynamic-therapy/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fphotodynamic-therapy%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/photodynamic-therapy/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.014</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/lens-dislocation-surgery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Flens-dislocation-surgery%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/lens-dislocation-surgery/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.12s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/lens-dislocation-surgery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Flens-dislocation-surgery%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/lens-dislocation-surgery/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.01</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/scleral-buckling/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fscleral-buckling%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/scleral-buckling/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">73</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.14s</span></td>
+                        <td><span class="metric-value metric-good">1.88s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 73 (required: ≥90)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/scleral-buckling/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fscleral-buckling%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/scleral-buckling/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.7s</span></td>
+                        <td><span class="metric-value metric-good">0.014</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/proliferative-vitreoretinopathy-pvr/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fproliferative-vitreoretinopathy-pvr%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/proliferative-vitreoretinopathy-pvr/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.115</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.115 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/proliferative-vitreoretinopathy-pvr/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fproliferative-vitreoretinopathy-pvr%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/proliferative-vitreoretinopathy-pvr/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.03</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/sub-retinal-therapy/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fsub-retinal-therapy%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/sub-retinal-therapy/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.113</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.113 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/sub-retinal-therapy/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fsub-retinal-therapy%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/sub-retinal-therapy/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.01</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/ocular-oncology-service/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Focular-oncology-service%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/ocular-oncology-service/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.07s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.136</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.136 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/ocular-oncology-service/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Focular-oncology-service%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/ocular-oncology-service/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.009</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/benign-choroidal-nevi/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fbenign-choroidal-nevi%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/benign-choroidal-nevi/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.62s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.62s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/benign-choroidal-nevi/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fbenign-choroidal-nevi%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/benign-choroidal-nevi/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.014</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/clinical-trials/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fclinical-trials%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/clinical-trials/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0.014</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/clinical-trials/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fclinical-trials%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/clinical-trials/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">92</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-good">0.015</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/photobiomodulation/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fphotobiomodulation%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/photobiomodulation/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0.067</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/photobiomodulation/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fphotobiomodulation%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/photobiomodulation/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">86</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.64s</span></td>
+                        <td><span class="metric-value metric-good">0.76s</span></td>
+                        <td><span class="metric-value metric-good">0.022</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 86 (required: ≥90)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/inherited-disease-genetic-testing/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Finherited-disease-genetic-testing%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/inherited-disease-genetic-testing/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.07s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0.079</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/inherited-disease-genetic-testing/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Finherited-disease-genetic-testing%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/inherited-disease-genetic-testing/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">69</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0.86s</span></td>
+                        <td><span class="metric-value metric-good">0.012</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 69 (required: ≥90)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/medical-oncology/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fmedical-oncology%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/medical-oncology/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.07s</span></td>
+                        <td><span class="metric-value metric-good">1.5s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/medical-oncology/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fmedical-oncology%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/medical-oncology/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.017</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/uveitis-intraocular-inflammation/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fuveitis-intraocular-inflammation%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/uveitis-intraocular-inflammation/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/uveitis-intraocular-inflammation/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fuveitis-intraocular-inflammation%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/uveitis-intraocular-inflammation/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.013</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/radiation-oncology/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fradiation-oncology%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/radiation-oncology/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.11s</span></td>
+                        <td><span class="metric-value metric-good">1.5s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/radiation-oncology/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fradiation-oncology%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/radiation-oncology/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.021</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/choroidal-melanoma/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fchoroidal-melanoma%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/choroidal-melanoma/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.07s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.121</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.121 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/choroidal-melanoma/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fchoroidal-melanoma%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/choroidal-melanoma/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">93</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.151</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.151 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/what-is-a-retina-specialist/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fwhat-is-a-retina-specialist%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/what-is-a-retina-specialist/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.96s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/what-is-a-retina-specialist/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fwhat-is-a-retina-specialist%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/what-is-a-retina-specialist/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.75s</span></td>
+                        <td><span class="metric-value metric-good">0.006</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/what-to-expect/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fwhat-to-expect%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/what-to-expect/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.6s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.60s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/what-to-expect/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fwhat-to-expect%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/what-to-expect/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.006</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/new-patient-forms/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fnew-patient-forms%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/new-patient-forms/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">2.48s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/new-patient-forms/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fnew-patient-forms%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/new-patient-forms/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.65s</span></td>
+                        <td><span class="metric-value metric-good">0.004</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/request-medical-records/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Frequest-medical-records%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/request-medical-records/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.96s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/request-medical-records/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Frequest-medical-records%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/request-medical-records/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">60</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.56s</span></td>
+                        <td><span class="metric-value metric-good">1.27s</span></td>
+                        <td><span class="metric-value metric-good">0.055</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 60 (required: ≥90)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/reviews/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Freviews%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/reviews/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">90</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/reviews/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Freviews%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/reviews/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">74</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.37s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 74 (required: ≥90)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/request-an-appointment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Frequest-an-appointment%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/request-an-appointment/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0.01</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/request-an-appointment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Frequest-an-appointment%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/request-an-appointment/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.39s</span></td>
+                        <td><span class="metric-value metric-good">0.004</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/noam-rudnick-m-d-ph-d/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fnoam-rudnick-m-d-ph-d%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/noam-rudnick-m-d-ph-d/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">69</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-poor">4.69s</span></td>
+                        <td><span class="metric-value metric-poor">0.264</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 69 (required: ≥90); LCP: 4.69s (required: ≤2.5s); CLS: 0.264 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/noam-rudnick-m-d-ph-d/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fnoam-rudnick-m-d-ph-d%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/noam-rudnick-m-d-ph-d/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">66</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">1.16s</span></td>
+                        <td><span class="metric-value metric-good">0.005</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 66 (required: ≥90)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/scott-walter-m-d-m-sc/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fscott-walter-m-d-m-sc%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/scott-walter-m-d-m-sc/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-poor">44</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-poor">4.65s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.231</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 44 (required: ≥90); LCP: 4.65s (required: ≤2.5s); CLS: 0.231 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/scott-walter-m-d-m-sc/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fscott-walter-m-d-m-sc%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/scott-walter-m-d-m-sc/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.45s</span></td>
+                        <td><span class="metric-value metric-good">0.01</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/ron-margolis-m-d/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fron-margolis-m-d%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/ron-margolis-m-d/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">56</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-poor">4.95s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.222</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 56 (required: ≥90); LCP: 4.95s (required: ≤2.5s); CLS: 0.222 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/ron-margolis-m-d/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fron-margolis-m-d%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/ron-margolis-m-d/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.019</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/luis-martinez-velazquez-m-d-ph-d/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fluis-martinez-velazquez-m-d-ph-d%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/luis-martinez-velazquez-m-d-ph-d/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">72</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-poor">4.86s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.207</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 72 (required: ≥90); LCP: 4.86s (required: ≤2.5s); CLS: 0.207 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/luis-martinez-velazquez-m-d-ph-d/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fluis-martinez-velazquez-m-d-ph-d%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/luis-martinez-velazquez-m-d-ph-d/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.75s</span></td>
+                        <td><span class="metric-value metric-good">0.023</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/greg-budoff-m-d/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fgreg-budoff-m-d%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/greg-budoff-m-d/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">70</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-poor">4.95s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.22</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 70 (required: ≥90); LCP: 4.95s (required: ≤2.5s); CLS: 0.220 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/greg-budoff-m-d/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fgreg-budoff-m-d%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/greg-budoff-m-d/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.016</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/contact-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fcontact-us%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/contact-us/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/contact-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fcontact-us%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/contact-us/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.67s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/conditions-we-treat/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fconditions-we-treat%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/conditions-we-treat/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/conditions-we-treat/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fconditions-we-treat%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/conditions-we-treat/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.031</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/referrals/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Freferrals%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/referrals/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.11s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/referrals/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Freferrals%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/referrals/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.37s</span></td>
+                        <td><span class="metric-value metric-good">0.008</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/careers/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fcareers%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/careers/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">88</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-average">81</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.68s</span></td>
+                        <td><span class="metric-value metric-good">1.68s</span></td>
+                        <td><span class="metric-value metric-good">0.01</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 88 (required: ≥90)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/careers/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fcareers%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/careers/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">83</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-average">81</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.57s</span></td>
+                        <td><span class="metric-value metric-good">0.005</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 83 (required: ≥90)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/meet-our-physicians/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fmeet-our-physicians%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/meet-our-physicians/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">89</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.46s</span></td>
+                        <td><span class="metric-value metric-good">0.051</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 89 (required: ≥90); LCP: 3.46s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/meet-our-physicians/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fmeet-our-physicians%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/meet-our-physicians/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0.022</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/site-map/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fsite-map%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/site-map/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.56s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.56s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/site-map/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fsite-map%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/site-map/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">86</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.37s</span></td>
+                        <td><span class="metric-value metric-poor">0.267</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 86 (required: ≥90); CLS: 0.267 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/on-call-emergencies/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fon-call-emergencies%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/on-call-emergencies/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/on-call-emergencies/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fon-call-emergencies%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/on-call-emergencies/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.66s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.retinact.com/meet-our-team/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fmeet-our-team%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/meet-our-team/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.96s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/meet-our-team/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Fmeet-our-team%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/meet-our-team/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">83</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">1.16s</span></td>
+                        <td><span class="metric-value metric-good">0.057</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 83 (required: ≥90)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/tavish-nanda-m-d/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Ftavish-nanda-m-d%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/tavish-nanda-m-d/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">79</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">4.95s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 79 (required: ≥90); LCP: 4.95s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.retinact.com/tavish-nanda-m-d/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.retinact.com%2Ftavish-nanda-m-d%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.retinact.com/tavish-nanda-m-d/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">68</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0.91s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 68 (required: ≥90)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+            <h3 style="margin-bottom: 10px;">Scoring Criteria</h3>
+            <ul style="line-height: 1.8; color: #666;">
+                <li><strong>Performance:</strong> Must be ≥90 (Good: Green, Average: Yellow, Poor: Red)</li>
+                <li><strong>Accessibility:</strong> Must be 100 (Pass: Green, Fail: Red)</li>
+                <li><strong>SEO:</strong> Must be 100 (Pass: Green, Fail: Red)</li>
+                <li><strong>FCP (First Contentful Paint):</strong> Must be ≤1.8s (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+                <li><strong>LCP (Largest Contentful Paint):</strong> Must be ≤2.5s (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+                <li><strong>CLS (Cumulative Layout Shift):</strong> Must be ≤0.1 (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
