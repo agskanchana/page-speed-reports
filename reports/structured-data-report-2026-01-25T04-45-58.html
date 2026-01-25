@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structured Data Test Report - 1/25/2026</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 1400px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 30px; }
+        h1 { color: #333; margin-bottom: 10px; }
+        .subtitle { color: #666; margin-bottom: 30px; }
+        .summary-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-bottom: 30px; }
+        .summary-card { padding: 20px; border-radius: 8px; text-align: center; color: white; }
+        .summary-card.total { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .summary-card.passed { background: #28a745; }
+        .summary-card.failed { background: #dc3545; }
+        .summary-card.pending { background: #6c757d; }
+        .summary-card h3 { font-size: 14px; margin-bottom: 8px; opacity: 0.9; }
+        .summary-card .number { font-size: 32px; font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 13px; }
+        thead { background: #333; color: white; }
+        th { padding: 12px 8px; text-align: left; font-weight: 600; }
+        td { padding: 12px 8px; border-bottom: 1px solid #e9ecef; }
+        tbody tr:hover { background: #f8f9fa; }
+        .url-cell { max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .url-cell a { color: #1a0dab; text-decoration: none; }
+        .url-cell a:hover { text-decoration: underline; }
+        td a { color: #1a73e8; text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .status-pass { color: #28a745; font-weight: 600; }
+        .status-fail { color: #dc3545; font-weight: 600; }
+        .status-pending { color: #6c757d; font-weight: 600; }
+        .report-info { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+        .report-info p { margin: 5px 0; color: #666; }
+        @media print { body { background: white; padding: 0; } .container { box-shadow: none; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Structured Data Test Report</h1>
+        <p class="subtitle">Google Rich Results Test Analysis</p>
+        
+        <div class="report-info">
+            <p><strong>Sitemap:</strong> https://www.lornafedelemmd.com/page-sitemap.xml</p>
+            <p><strong>Generated:</strong> 1/25/2026, 10:15:58 AM</p>
+            <p><strong>Total URLs Analyzed:</strong> 19</p>
+        </div>
+        
+        <div class="summary-cards">
+            <div class="summary-card total">
+                <h3>Total URLs</h3>
+                <div class="number">19</div>
+            </div>
+            <div class="summary-card passed">
+                <h3>Passed</h3>
+                <div class="number">0</div>
+            </div>
+            <div class="summary-card failed">
+                <h3>Failed</h3>
+                <div class="number">1</div>
+            </div>
+            <div class="summary-card pending">
+                <h3>Pending</h3>
+                <div class="number">18</div>
+            </div>
+        </div>
+        
+        <h2>Detailed Results</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>URL</th>
+                    <th>Google Test</th>
+                    <th>Status</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                    <tr>
+                        <td>1</td>
+                        <td class="url-cell"><a href="https://www.lornafedelemmd.com/" target="_blank">https://www.lornafedelemmd.com/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.lornafedelemmd.com%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pending">⏳ PENDING</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>2</td>
+                        <td class="url-cell"><a href="https://www.lornafedelemmd.com/what-to-expect-on-your-first-visit/" target="_blank">https://www.lornafedelemmd.com/what-to-expect-on-your-first-visit/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.lornafedelemmd.com%2Fwhat-to-expect-on-your-first-visit%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pending">⏳ PENDING</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>3</td>
+                        <td class="url-cell"><a href="https://www.lornafedelemmd.com/new-patient-forms/" target="_blank">https://www.lornafedelemmd.com/new-patient-forms/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.lornafedelemmd.com%2Fnew-patient-forms%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pending">⏳ PENDING</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>4</td>
+                        <td class="url-cell"><a href="https://www.lornafedelemmd.com/site-map/" target="_blank">https://www.lornafedelemmd.com/site-map/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.lornafedelemmd.com%2Fsite-map%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pending">⏳ PENDING</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>5</td>
+                        <td class="url-cell"><a href="https://www.lornafedelemmd.com/what-sets-us-apart/" target="_blank">https://www.lornafedelemmd.com/what-sets-us-apart/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.lornafedelemmd.com%2Fwhat-sets-us-apart%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pending">⏳ PENDING</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>6</td>
+                        <td class="url-cell"><a href="https://www.lornafedelemmd.com/meet-dr-lorna-fedelem/" target="_blank">https://www.lornafedelemmd.com/meet-dr-lorna-fedelem/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.lornafedelemmd.com%2Fmeet-dr-lorna-fedelem%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pending">⏳ PENDING</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>7</td>
+                        <td class="url-cell"><a href="https://www.lornafedelemmd.com/meet-the-team/" target="_blank">https://www.lornafedelemmd.com/meet-the-team/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.lornafedelemmd.com%2Fmeet-the-team%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pending">⏳ PENDING</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>8</td>
+                        <td class="url-cell"><a href="https://www.lornafedelemmd.com/faqs/" target="_blank">https://www.lornafedelemmd.com/faqs/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.lornafedelemmd.com%2Ffaqs%2F" target="_blank">Test Link</a></td>
+                        <td class="status-fail">✗ FAIL</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>9</td>
+                        <td class="url-cell"><a href="https://www.lornafedelemmd.com/membership-plans/" target="_blank">https://www.lornafedelemmd.com/membership-plans/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.lornafedelemmd.com%2Fmembership-plans%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pending">⏳ PENDING</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>10</td>
+                        <td class="url-cell"><a href="https://www.lornafedelemmd.com/success-story/" target="_blank">https://www.lornafedelemmd.com/success-story/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.lornafedelemmd.com%2Fsuccess-story%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pending">⏳ PENDING</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>11</td>
+                        <td class="url-cell"><a href="https://www.lornafedelemmd.com/gallery/" target="_blank">https://www.lornafedelemmd.com/gallery/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.lornafedelemmd.com%2Fgallery%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pending">⏳ PENDING</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>12</td>
+                        <td class="url-cell"><a href="https://www.lornafedelemmd.com/contact-us/" target="_blank">https://www.lornafedelemmd.com/contact-us/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.lornafedelemmd.com%2Fcontact-us%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pending">⏳ PENDING</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>13</td>
+                        <td class="url-cell"><a href="https://www.lornafedelemmd.com/request-an-appointment/" target="_blank">https://www.lornafedelemmd.com/request-an-appointment/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.lornafedelemmd.com%2Frequest-an-appointment%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pending">⏳ PENDING</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>14</td>
+                        <td class="url-cell"><a href="https://www.lornafedelemmd.com/concierge-medicine/" target="_blank">https://www.lornafedelemmd.com/concierge-medicine/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.lornafedelemmd.com%2Fconcierge-medicine%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pending">⏳ PENDING</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>15</td>
+                        <td class="url-cell"><a href="https://www.lornafedelemmd.com/emsculpt-neo/" target="_blank">https://www.lornafedelemmd.com/emsculpt-neo/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.lornafedelemmd.com%2Femsculpt-neo%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pending">⏳ PENDING</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>16</td>
+                        <td class="url-cell"><a href="https://www.lornafedelemmd.com/exomind/" target="_blank">https://www.lornafedelemmd.com/exomind/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.lornafedelemmd.com%2Fexomind%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pending">⏳ PENDING</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>17</td>
+                        <td class="url-cell"><a href="https://www.lornafedelemmd.com/emsella/" target="_blank">https://www.lornafedelemmd.com/emsella/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.lornafedelemmd.com%2Femsella%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pending">⏳ PENDING</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>18</td>
+                        <td class="url-cell"><a href="https://www.lornafedelemmd.com/emface/" target="_blank">https://www.lornafedelemmd.com/emface/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.lornafedelemmd.com%2Femface%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pending">⏳ PENDING</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>19</td>
+                        <td class="url-cell"><a href="https://www.lornafedelemmd.com/exion/" target="_blank">https://www.lornafedelemmd.com/exion/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.lornafedelemmd.com%2Fexion%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pending">⏳ PENDING</td>
+                        <td></td>
+                    </tr>
+                
+            </tbody>
+        </table>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+            <h3>Legend</h3>
+            <p style="margin-top: 10px;">
+                <span class="status-pass">✓ PASS</span> - Structured data is valid<br>
+                <span class="status-fail">✗ FAIL</span> - Structured data has errors<br>
+                <span class="status-pending">⏳ PENDING</span> - Not yet tested
+            </p>
+        </div>
+    </div>
+</body>
+</html>
