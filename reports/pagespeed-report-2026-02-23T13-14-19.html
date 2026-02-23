@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageSpeed Insights Report - 2/23/2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 30px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1em;
+        }
+        
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .summary-card h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .summary-card .number {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        
+        .results-table-container {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+        
+        thead {
+            background: #333;
+            color: white;
+        }
+        
+        th {
+            padding: 12px 8px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px 8px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .url-cell {
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .score {
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            min-width: 45px;
+            text-align: center;
+        }
+        
+        .score-good {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .score-average {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .score-poor {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .status-pass {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .status-fail {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .metric-value {
+            font-size: 12px;
+        }
+        
+        .metric-good {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .metric-needs-improvement {
+            color: #ffc107;
+            font-weight: 600;
+        }
+        
+        .metric-poor {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .device-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        
+        .device-mobile {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .device-desktop {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .report-info {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .report-info p {
+            margin: 5px 0;
+            color: #333;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 PageSpeed Insights Report</h1>
+        <p class="subtitle">Comprehensive performance analysis for all pages</p>
+        
+        <div class="report-info">
+            <p><strong>Generated:</strong> 2/23/2026, 6:44:19 PM</p>
+            <p><strong>Total URLs Analyzed:</strong> 37</p>
+            <p><strong>Total Tests:</strong> 74 (Mobile + Desktop)</p>
+        </div>
+        
+        <div class="summary-cards">
+            <div class="summary-card">
+                <h3>Total URLs</h3>
+                <div class="number">37</div>
+            </div>
+            <div class="summary-card">
+                <h3>Passed</h3>
+                <div class="number">0</div>
+            </div>
+            <div class="summary-card">
+                <h3>Failed</h3>
+                <div class="number">74</div>
+            </div>
+            <div class="summary-card">
+                <h3>Success Rate</h3>
+                <div class="number">0%</div>
+            </div>
+        </div>
+        
+        <h2>Detailed Results</h2>
+        
+        <div class="results-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>URL</th>
+                        <th>Device</th>
+                        <th>Performance</th>
+                        <th>Accessibility</th>
+                        <th>Best Practices</th>
+                        <th>SEO</th>
+                        <th>FCP</th>
+                        <th>LCP</th>
+                        <th>CLS</th>
+                        <th>Status</th>
+                        <th>Issues</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-poor">92</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">1.5s</span></td>
+                        <td><span class="metric-value metric-good">0.01</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100); SEO: 92 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">92</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.016</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100); SEO: 92 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/about-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fabout-us%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/about-us/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/about-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fabout-us%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/about-us/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.38s</span></td>
+                        <td><span class="metric-value metric-good">0.005</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/financial-options/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Ffinancial-options%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/financial-options/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">86</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-poor">4.11s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 86 (required: ≥90); LCP: 4.11s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/financial-options/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Ffinancial-options%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/financial-options/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.76s</span></td>
+                        <td><span class="metric-value metric-good">0.075</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/patient-forms/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fpatient-forms%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/patient-forms/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/patient-forms/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fpatient-forms%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/patient-forms/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">90</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.5s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.199</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.199 (required: ≤0.1); Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/patient-specials/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fpatient-specials%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/patient-specials/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">86</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-poor">4.09s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 86 (required: ≥90); LCP: 4.09s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/patient-specials/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fpatient-specials%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/patient-specials/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.5s</span></td>
+                        <td><span class="metric-value metric-good">0.006</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/reviews/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Freviews%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/reviews/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">78</span></td>
+                        <td><span class="score score-poor">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.3s</span></td>
+                        <td><span class="metric-value metric-good">0.055</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 78 (required: ≥90); LCP: 3.30s (required: ≤2.5s); Accessibility: 95 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/reviews/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Freviews%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/reviews/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">84</span></td>
+                        <td><span class="score score-poor">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.5s</span></td>
+                        <td><span class="metric-value metric-good">0.018</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 84 (required: ≥90); Accessibility: 95 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/site-map/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fsite-map%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/site-map/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">79</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">2.27s</span></td>
+                        <td><span class="metric-value metric-poor">0.385</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 79 (required: ≥90); CLS: 0.385 (required: ≤0.1); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/site-map/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fsite-map%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/site-map/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">88</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.5s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.228</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 88 (required: ≥90); CLS: 0.228 (required: ≤0.1); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/cosmetic-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fcosmetic-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/cosmetic-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/cosmetic-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fcosmetic-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/cosmetic-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.012</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/dental-bonding/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fdental-bonding%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/dental-bonding/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/dental-bonding/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fdental-bonding%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/dental-bonding/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.45s</span></td>
+                        <td><span class="metric-value metric-good">0.031</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/dental-crowns/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fdental-crowns%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/dental-crowns/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.007</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/dental-crowns/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fdental-crowns%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/dental-crowns/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.02</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/dental-veneers/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fdental-veneers%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/dental-veneers/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/dental-veneers/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fdental-veneers%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/dental-veneers/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.42s</span></td>
+                        <td><span class="metric-value metric-good">0.03</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/invisalign-clear-aligners/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Finvisalign-clear-aligners%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/invisalign-clear-aligners/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/invisalign-clear-aligners/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Finvisalign-clear-aligners%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/invisalign-clear-aligners/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.016</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/teeth-whitening/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fteeth-whitening%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/teeth-whitening/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/teeth-whitening/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fteeth-whitening%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/teeth-whitening/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.018</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/smile-makeover/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fsmile-makeover%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/smile-makeover/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.51s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.51s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/smile-makeover/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fsmile-makeover%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/smile-makeover/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.42s</span></td>
+                        <td><span class="metric-value metric-good">0.036</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/restorative-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Frestorative-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/restorative-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/restorative-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Frestorative-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/restorative-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.42s</span></td>
+                        <td><span class="metric-value metric-good">0.016</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/tooth-colored-fillings/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Ftooth-colored-fillings%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/tooth-colored-fillings/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/tooth-colored-fillings/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Ftooth-colored-fillings%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/tooth-colored-fillings/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.42s</span></td>
+                        <td><span class="metric-value metric-good">0.014</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/dental-bridges/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fdental-bridges%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/dental-bridges/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/dental-bridges/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fdental-bridges%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/dental-bridges/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.74s</span></td>
+                        <td><span class="metric-value metric-good">0.01</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/dental-implants/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fdental-implants%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/dental-implants/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.006</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/dental-implants/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fdental-implants%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/dental-implants/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.74s</span></td>
+                        <td><span class="metric-value metric-good">0.023</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/dentures-partials/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fdentures-partials%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/dentures-partials/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/dentures-partials/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fdentures-partials%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/dentures-partials/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.51s</span></td>
+                        <td><span class="metric-value metric-good">0.017</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/implant-supported-dentures/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fimplant-supported-dentures%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/implant-supported-dentures/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/implant-supported-dentures/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fimplant-supported-dentures%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/implant-supported-dentures/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.42s</span></td>
+                        <td><span class="metric-value metric-good">0.019</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/general-family-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fgeneral-family-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/general-family-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/general-family-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fgeneral-family-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/general-family-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.78s</span></td>
+                        <td><span class="metric-value metric-good">0.031</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/dental-cleanings-exams/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fdental-cleanings-exams%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/dental-cleanings-exams/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/dental-cleanings-exams/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fdental-cleanings-exams%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/dental-cleanings-exams/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.42s</span></td>
+                        <td><span class="metric-value metric-good">0.018</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/oral-cancer-screenings/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Foral-cancer-screenings%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/oral-cancer-screenings/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/oral-cancer-screenings/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Foral-cancer-screenings%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/oral-cancer-screenings/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.42s</span></td>
+                        <td><span class="metric-value metric-good">0.026</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/kids-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fkids-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/kids-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/kids-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fkids-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/kids-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.42s</span></td>
+                        <td><span class="metric-value metric-good">0.031</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/emergency-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Femergency-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/emergency-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/emergency-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Femergency-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/emergency-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.42s</span></td>
+                        <td><span class="metric-value metric-good">0.014</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/periodontics/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fperiodontics%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/periodontics/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/periodontics/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fperiodontics%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/periodontics/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.42s</span></td>
+                        <td><span class="metric-value metric-good">0.031</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/bone-grafting/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fbone-grafting%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/bone-grafting/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/bone-grafting/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fbone-grafting%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/bone-grafting/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.42s</span></td>
+                        <td><span class="metric-value metric-good">0.02</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/crown-lengthening/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fcrown-lengthening%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/crown-lengthening/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/crown-lengthening/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fcrown-lengthening%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/crown-lengthening/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.42s</span></td>
+                        <td><span class="metric-value metric-good">0.019</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/frenectomy/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Ffrenectomy%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/frenectomy/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/frenectomy/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Ffrenectomy%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/frenectomy/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.037</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/gum-graft-gum-surgery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fgum-graft-gum-surgery%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/gum-graft-gum-surgery/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.97s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/gum-graft-gum-surgery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fgum-graft-gum-surgery%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/gum-graft-gum-surgery/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.74s</span></td>
+                        <td><span class="metric-value metric-good">0.014</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/oral-surgery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Foral-surgery%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/oral-surgery/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/oral-surgery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Foral-surgery%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/oral-surgery/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.42s</span></td>
+                        <td><span class="metric-value metric-good">0.013</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/tooth-extractions-wisdom-tooth-removal/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Ftooth-extractions-wisdom-tooth-removal%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/tooth-extractions-wisdom-tooth-removal/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/tooth-extractions-wisdom-tooth-removal/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Ftooth-extractions-wisdom-tooth-removal%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/tooth-extractions-wisdom-tooth-removal/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.42s</span></td>
+                        <td><span class="metric-value metric-good">0.015</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/meet-the-doctors/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fmeet-the-doctors%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/meet-the-doctors/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">83</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-poor">3.79s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.143</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 83 (required: ≥90); LCP: 3.79s (required: ≤2.5s); CLS: 0.143 (required: ≤0.1); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/meet-the-doctors/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fmeet-the-doctors%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/meet-the-doctors/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">88</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.77s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.22</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 88 (required: ≥90); CLS: 0.220 (required: ≤0.1); Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/meet-the-team/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fmeet-the-team%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/meet-the-team/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/meet-the-team/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fmeet-the-team%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/meet-the-team/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.029</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/tour-the-office/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Ftour-the-office%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/tour-the-office/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.52s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.52s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/tour-the-office/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Ftour-the-office%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/tour-the-office/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.42s</span></td>
+                        <td><span class="metric-value metric-good">0.005</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/contact-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fcontact-us%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/contact-us/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-poor">93</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-good">1.37s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 93 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/contact-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Fcontact-us%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/contact-us/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">89</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.38s</span></td>
+                        <td><span class="metric-value metric-good">0.004</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 89 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/request-an-appointment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Frequest-an-appointment%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/request-an-appointment/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-poor">84</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">2.26s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 84 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.redrockdental.org/request-an-appointment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.redrockdental.org%2Frequest-an-appointment%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.redrockdental.org/request-an-appointment/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">84</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.006</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 84 (required: 100)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+            <h3 style="margin-bottom: 10px;">Scoring Criteria</h3>
+            <ul style="line-height: 1.8; color: #666;">
+                <li><strong>Performance:</strong> Must be ≥90 (Good: Green, Average: Yellow, Poor: Red)</li>
+                <li><strong>Accessibility:</strong> Must be 100 (Pass: Green, Fail: Red)</li>
+                <li><strong>SEO:</strong> Must be 100 (Pass: Green, Fail: Red)</li>
+                <li><strong>FCP (First Contentful Paint):</strong> Must be ≤1.8s (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+                <li><strong>LCP (Largest Contentful Paint):</strong> Must be ≤2.5s (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+                <li><strong>CLS (Cumulative Layout Shift):</strong> Must be ≤0.1 (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
