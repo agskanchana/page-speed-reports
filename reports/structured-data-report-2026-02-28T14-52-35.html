@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structured Data Test Report - 2/28/2026</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 1400px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 30px; }
+        h1 { color: #333; margin-bottom: 10px; }
+        .subtitle { color: #666; margin-bottom: 30px; }
+        .summary-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-bottom: 30px; }
+        .summary-card { padding: 20px; border-radius: 8px; text-align: center; color: white; }
+        .summary-card.total { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .summary-card.passed { background: #28a745; }
+        .summary-card.failed { background: #dc3545; }
+        .summary-card.pending { background: #6c757d; }
+        .summary-card h3 { font-size: 14px; margin-bottom: 8px; opacity: 0.9; }
+        .summary-card .number { font-size: 32px; font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 13px; }
+        thead { background: #333; color: white; }
+        th { padding: 12px 8px; text-align: left; font-weight: 600; }
+        td { padding: 12px 8px; border-bottom: 1px solid #e9ecef; }
+        tbody tr:hover { background: #f8f9fa; }
+        .url-cell { max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .url-cell a { color: #1a0dab; text-decoration: none; }
+        .url-cell a:hover { text-decoration: underline; }
+        td a { color: #1a73e8; text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .status-pass { color: #28a745; font-weight: 600; }
+        .status-fail { color: #dc3545; font-weight: 600; }
+        .status-pending { color: #6c757d; font-weight: 600; }
+        .report-info { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+        .report-info p { margin: 5px 0; color: #666; }
+        @media print { body { background: white; padding: 0; } .container { box-shadow: none; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Structured Data Test Report</h1>
+        <p class="subtitle">Google Rich Results Test Analysis</p>
+        
+        <div class="report-info">
+            <p><strong>Sitemap:</strong> https://www.humbervalleydental.ca/page-sitemap.xml</p>
+            <p><strong>Generated:</strong> 2/28/2026, 8:22:35 PM</p>
+            <p><strong>Total URLs Analyzed:</strong> 49</p>
+        </div>
+        
+        <div class="summary-cards">
+            <div class="summary-card total">
+                <h3>Total URLs</h3>
+                <div class="number">49</div>
+            </div>
+            <div class="summary-card passed">
+                <h3>Passed</h3>
+                <div class="number">49</div>
+            </div>
+            <div class="summary-card failed">
+                <h3>Failed</h3>
+                <div class="number">0</div>
+            </div>
+            <div class="summary-card pending">
+                <h3>Pending</h3>
+                <div class="number">0</div>
+            </div>
+        </div>
+        
+        <h2>Detailed Results</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>URL</th>
+                    <th>Google Test</th>
+                    <th>Status</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                    <tr>
+                        <td>1</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/" target="_blank">https://www.humbervalleydental.ca/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>2</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/success-stories/" target="_blank">https://www.humbervalleydental.ca/success-stories/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fsuccess-stories%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>3</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/meet-dr-ammar-taimish/" target="_blank">https://www.humbervalleydental.ca/meet-dr-ammar-taimish/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fmeet-dr-ammar-taimish%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>4</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/office-tour/" target="_blank">https://www.humbervalleydental.ca/office-tour/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Foffice-tour%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>5</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/impacting-our-community/" target="_blank">https://www.humbervalleydental.ca/impacting-our-community/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fimpacting-our-community%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>6</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/dental-videos/" target="_blank">https://www.humbervalleydental.ca/dental-videos/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fdental-videos%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>7</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/payment-and-financing/" target="_blank">https://www.humbervalleydental.ca/payment-and-financing/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fpayment-and-financing%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>8</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/specials/" target="_blank">https://www.humbervalleydental.ca/specials/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fspecials%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>9</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/technology/" target="_blank">https://www.humbervalleydental.ca/technology/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Ftechnology%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>10</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/gallery/" target="_blank">https://www.humbervalleydental.ca/gallery/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fgallery%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>11</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/site-map/" target="_blank">https://www.humbervalleydental.ca/site-map/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fsite-map%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>12</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/hygiene-services/" target="_blank">https://www.humbervalleydental.ca/hygiene-services/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fhygiene-services%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>13</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/full-mouth-restoration/" target="_blank">https://www.humbervalleydental.ca/full-mouth-restoration/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Ffull-mouth-restoration%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>14</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/gum-grafting/" target="_blank">https://www.humbervalleydental.ca/gum-grafting/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fgum-grafting%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>15</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/laser-gum-therapy/" target="_blank">https://www.humbervalleydental.ca/laser-gum-therapy/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Flaser-gum-therapy%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>16</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/root-canal-therapy/" target="_blank">https://www.humbervalleydental.ca/root-canal-therapy/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Froot-canal-therapy%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>17</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/wisdom-teeth-surgery/" target="_blank">https://www.humbervalleydental.ca/wisdom-teeth-surgery/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fwisdom-teeth-surgery%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>18</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/orthodontics/" target="_blank">https://www.humbervalleydental.ca/orthodontics/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Forthodontics%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>19</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/clear-aligners-invisalign-clearcorrect/" target="_blank">https://www.humbervalleydental.ca/clear-aligners-invisalign-clearcorrect/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fclear-aligners-invisalign-clearcorrect%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>20</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/zoom-teeth-whitening/" target="_blank">https://www.humbervalleydental.ca/zoom-teeth-whitening/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fzoom-teeth-whitening%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>21</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/request-an-appointment/" target="_blank">https://www.humbervalleydental.ca/request-an-appointment/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Frequest-an-appointment%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>22</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/patient-forms/" target="_blank">https://www.humbervalleydental.ca/patient-forms/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fpatient-forms%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>23</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/dental-implants/" target="_blank">https://www.humbervalleydental.ca/dental-implants/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fdental-implants%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>24</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/dental-bridges/" target="_blank">https://www.humbervalleydental.ca/dental-bridges/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fdental-bridges%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>25</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/patient-info/" target="_blank">https://www.humbervalleydental.ca/patient-info/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fpatient-info%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>26</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/tmj-tmd-therapy/" target="_blank">https://www.humbervalleydental.ca/tmj-tmd-therapy/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Ftmj-tmd-therapy%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>27</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/pediatric-dental-services/" target="_blank">https://www.humbervalleydental.ca/pediatric-dental-services/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fpediatric-dental-services%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>28</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/web-stories/" target="_blank">https://www.humbervalleydental.ca/web-stories/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fweb-stories%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>29</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/meet-dr-david-ma/" target="_blank">https://www.humbervalleydental.ca/meet-dr-david-ma/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fmeet-dr-david-ma%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>30</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/oral-surgery/" target="_blank">https://www.humbervalleydental.ca/oral-surgery/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Foral-surgery%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>31</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/restorative-dentistry/" target="_blank">https://www.humbervalleydental.ca/restorative-dentistry/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Frestorative-dentistry%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>32</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/periodontal-services/" target="_blank">https://www.humbervalleydental.ca/periodontal-services/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fperiodontal-services%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>33</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/family-kid-dentistry/" target="_blank">https://www.humbervalleydental.ca/family-kid-dentistry/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Ffamily-kid-dentistry%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>34</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/cosmetic-dentistry/" target="_blank">https://www.humbervalleydental.ca/cosmetic-dentistry/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fcosmetic-dentistry%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>35</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/early-orthodontic-assessments-for-children/" target="_blank">https://www.humbervalleydental.ca/early-orthodontic-assessments-for-children/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fearly-orthodontic-assessments-for-children%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>36</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/faqs/" target="_blank">https://www.humbervalleydental.ca/faqs/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Ffaqs%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>37</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/meet-dr-geeta-gautham/" target="_blank">https://www.humbervalleydental.ca/meet-dr-geeta-gautham/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fmeet-dr-geeta-gautham%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>38</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/our-practice/" target="_blank">https://www.humbervalleydental.ca/our-practice/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Four-practice%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>39</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/porcelain-crowns-and-onlays/" target="_blank">https://www.humbervalleydental.ca/porcelain-crowns-and-onlays/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fporcelain-crowns-and-onlays%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>40</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/sedation-dentistry/" target="_blank">https://www.humbervalleydental.ca/sedation-dentistry/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fsedation-dentistry%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>41</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/all-on-4-implants/" target="_blank">https://www.humbervalleydental.ca/all-on-4-implants/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fall-on-4-implants%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>42</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/space-maintainers/" target="_blank">https://www.humbervalleydental.ca/space-maintainers/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fspace-maintainers%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>43</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/myofunctional-therapy/" target="_blank">https://www.humbervalleydental.ca/myofunctional-therapy/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fmyofunctional-therapy%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>44</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/cdcp-plan/" target="_blank">https://www.humbervalleydental.ca/cdcp-plan/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fcdcp-plan%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>45</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/emergency-dentistry/" target="_blank">https://www.humbervalleydental.ca/emergency-dentistry/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Femergency-dentistry%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>46</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/meet-the-team/" target="_blank">https://www.humbervalleydental.ca/meet-the-team/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fmeet-the-team%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>47</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/early-childhood-orthodontics/" target="_blank">https://www.humbervalleydental.ca/early-childhood-orthodontics/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fearly-childhood-orthodontics%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>48</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/smile-makeover/" target="_blank">https://www.humbervalleydental.ca/smile-makeover/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fsmile-makeover%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>49</td>
+                        <td class="url-cell"><a href="https://www.humbervalleydental.ca/contact-us/" target="_blank">https://www.humbervalleydental.ca/contact-us/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.humbervalleydental.ca%2Fcontact-us%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+            </tbody>
+        </table>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+            <h3>Legend</h3>
+            <p style="margin-top: 10px;">
+                <span class="status-pass">✓ PASS</span> - Structured data is valid<br>
+                <span class="status-fail">✗ FAIL</span> - Structured data has errors<br>
+                <span class="status-pending">⏳ PENDING</span> - Not yet tested
+            </p>
+        </div>
+    </div>
+</body>
+</html>
