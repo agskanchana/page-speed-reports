@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageSpeed Insights Report - 3/18/2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 30px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1em;
+        }
+        
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .summary-card h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .summary-card .number {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        
+        .results-table-container {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+        
+        thead {
+            background: #333;
+            color: white;
+        }
+        
+        th {
+            padding: 12px 8px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px 8px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .url-cell {
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .score {
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            min-width: 45px;
+            text-align: center;
+        }
+        
+        .score-good {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .score-average {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .score-poor {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .status-pass {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .status-fail {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .metric-value {
+            font-size: 12px;
+        }
+        
+        .metric-good {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .metric-needs-improvement {
+            color: #ffc107;
+            font-weight: 600;
+        }
+        
+        .metric-poor {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .device-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        
+        .device-mobile {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .device-desktop {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .report-info {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .report-info p {
+            margin: 5px 0;
+            color: #333;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 PageSpeed Insights Report</h1>
+        <p class="subtitle">Comprehensive performance analysis for all pages</p>
+        
+        <div class="report-info">
+            <p><strong>Generated:</strong> 3/18/2026, 11:55:13 AM</p>
+            <p><strong>Total URLs Analyzed:</strong> 48</p>
+            <p><strong>Total Tests:</strong> 96 (Mobile + Desktop)</p>
+        </div>
+        
+        <div class="summary-cards">
+            <div class="summary-card">
+                <h3>Total URLs</h3>
+                <div class="number">48</div>
+            </div>
+            <div class="summary-card">
+                <h3>Passed</h3>
+                <div class="number">56</div>
+            </div>
+            <div class="summary-card">
+                <h3>Failed</h3>
+                <div class="number">40</div>
+            </div>
+            <div class="summary-card">
+                <h3>Success Rate</h3>
+                <div class="number">58%</div>
+            </div>
+        </div>
+        
+        <h2>Detailed Results</h2>
+        
+        <div class="results-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>URL</th>
+                        <th>Device</th>
+                        <th>Performance</th>
+                        <th>Accessibility</th>
+                        <th>Best Practices</th>
+                        <th>SEO</th>
+                        <th>FCP</th>
+                        <th>LCP</th>
+                        <th>CLS</th>
+                        <th>Status</th>
+                        <th>Issues</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.52s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.52s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">90</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.56s</span></td>
+                        <td><span class="metric-value metric-good">0.67s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/contact-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fcontact-us%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/contact-us/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">1.66s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/contact-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fcontact-us%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/contact-us/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.56s</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/refractive-lens-exchange-rle/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Frefractive-lens-exchange-rle%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/refractive-lens-exchange-rle/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/refractive-lens-exchange-rle/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Frefractive-lens-exchange-rle%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/refractive-lens-exchange-rle/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.3s</span></td>
+                        <td><span class="metric-value metric-good">0.71s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/premium-lens-surgery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fpremium-lens-surgery%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/premium-lens-surgery/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.089</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/premium-lens-surgery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fpremium-lens-surgery%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/premium-lens-surgery/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.7s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/cataract-surgery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fcataract-surgery%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/cataract-surgery/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.52s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.52s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/cataract-surgery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fcataract-surgery%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/cataract-surgery/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/common-laser-questions/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fcommon-laser-questions%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/common-laser-questions/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">77</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-poor">4.08s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.192</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 77 (required: ≥90); LCP: 4.08s (required: ≤2.5s); CLS: 0.192 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/common-laser-questions/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fcommon-laser-questions%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/common-laser-questions/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.71s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/common-cataract-questions/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fcommon-cataract-questions%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/common-cataract-questions/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">1.8s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/common-cataract-questions/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fcommon-cataract-questions%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/common-cataract-questions/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/what-to-expect-on-your-first-visit/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fwhat-to-expect-on-your-first-visit%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/what-to-expect-on-your-first-visit/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.97s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.97s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/what-to-expect-on-your-first-visit/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fwhat-to-expect-on-your-first-visit%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/what-to-expect-on-your-first-visit/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.7s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/general-faqs/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fgeneral-faqs%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/general-faqs/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">1.8s</span></td>
+                        <td><span class="metric-value metric-good">0.011</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/general-faqs/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fgeneral-faqs%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/general-faqs/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">0.022</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/intraocular-lenses-iols/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fintraocular-lenses-iols%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/intraocular-lenses-iols/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.51s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.51s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/intraocular-lenses-iols/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fintraocular-lenses-iols%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/intraocular-lenses-iols/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">89</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">2s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 89 (required: ≥90)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/no-stitch-pterygium-surgery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fno-stitch-pterygium-surgery%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/no-stitch-pterygium-surgery/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.51s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.51s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/no-stitch-pterygium-surgery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fno-stitch-pterygium-surgery%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/no-stitch-pterygium-surgery/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.71s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/buderim-laser/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fbuderim-laser%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/buderim-laser/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">1.68s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/buderim-laser/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fbuderim-laser%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/buderim-laser/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.76s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/refer-a-patient/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Frefer-a-patient%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/refer-a-patient/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">64</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-average">81</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">2.4s</span></td>
+                        <td><span class="metric-value metric-poor">0.291</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 64 (required: ≥90); CLS: 0.291 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/refer-a-patient/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Frefer-a-patient%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/refer-a-patient/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">79</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-average">81</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.49s</span></td>
+                        <td><span class="metric-value metric-good">0.81s</span></td>
+                        <td><span class="metric-value metric-good">0.018</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 79 (required: ≥90)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/meet-dr-rylan-hayes/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fmeet-dr-rylan-hayes%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/meet-dr-rylan-hayes/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">76</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-poor">4.08s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.218</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 76 (required: ≥90); LCP: 4.08s (required: ≤2.5s); CLS: 0.218 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/meet-dr-rylan-hayes/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fmeet-dr-rylan-hayes%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/meet-dr-rylan-hayes/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.73s</span></td>
+                        <td><span class="metric-value metric-good">0.07</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/site-map/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fsite-map%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/site-map/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">88</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">1.21s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.234</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 88 (required: ≥90); CLS: 0.234 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/site-map/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fsite-map%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/site-map/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">91</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.67s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.143</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.143 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/eye-health-quizes/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Feye-health-quizes%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/eye-health-quizes/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">78</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.07s</span></td>
+                        <td><span class="metric-value metric-poor">6.01s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 78 (required: ≥90); LCP: 6.01s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/eye-health-quizes/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Feye-health-quizes%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/eye-health-quizes/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.3s</span></td>
+                        <td><span class="metric-value metric-good">0.41s</span></td>
+                        <td><span class="metric-value metric-good">0.023</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/alexandra-head-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Falexandra-head-cataract%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/alexandra-head-cataract/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">72</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.68s</span></td>
+                        <td><span class="metric-value metric-poor">6.5s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.123</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 72 (required: ≥90); LCP: 6.50s (required: ≤2.5s); CLS: 0.123 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/alexandra-head-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Falexandra-head-cataract%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/alexandra-head-cataract/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.47s</span></td>
+                        <td><span class="metric-value metric-good">0.74s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/gympie-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fgympie-cataract%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/gympie-cataract/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">92</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.26s</span></td>
+                        <td><span class="metric-value metric-good">0.038</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 3.26s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/gympie-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fgympie-cataract%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/gympie-cataract/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.019</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/maleny-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fmaleny-cataract%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/maleny-cataract/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">88</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.28s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.119</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 88 (required: ≥90); LCP: 3.28s (required: ≤2.5s); CLS: 0.119 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/maleny-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fmaleny-cataract%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/maleny-cataract/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.52s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/mapleton-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fmapleton-cataract%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/mapleton-cataract/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">92</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.28s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 3.28s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/mapleton-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fmapleton-cataract%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/mapleton-cataract/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.49s</span></td>
+                        <td><span class="metric-value metric-good">0.76s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/maroochydore-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fmaroochydore-cataract%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/maroochydore-cataract/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">91</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.29s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 3.29s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/maroochydore-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fmaroochydore-cataract%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/maroochydore-cataract/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">82</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.47s</span></td>
+                        <td><span class="metric-value metric-good">0.77s</span></td>
+                        <td><span class="metric-value metric-poor">0.329</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 82 (required: ≥90); CLS: 0.329 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/minyama-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fminyama-cataract%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/minyama-cataract/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">81</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.7s</span></td>
+                        <td><span class="metric-value metric-poor">4.3s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.111</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 81 (required: ≥90); LCP: 4.30s (required: ≤2.5s); CLS: 0.111 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/minyama-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fminyama-cataract%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/minyama-cataract/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.73s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/nambour-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fnambour-cataract%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/nambour-cataract/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.69s</span></td>
+                        <td><span class="metric-value metric-good">2.25s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/nambour-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fnambour-cataract%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/nambour-cataract/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.73s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/pelican-waters-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fpelican-waters-cataract%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/pelican-waters-cataract/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">91</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.69s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.25s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 3.25s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/pelican-waters-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fpelican-waters-cataract%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/pelican-waters-cataract/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.017</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/peregian-beach-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fperegian-beach-cataract%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/peregian-beach-cataract/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">93</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.26s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 3.26s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/peregian-beach-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fperegian-beach-cataract%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/peregian-beach-cataract/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.47s</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/caloundra-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fcaloundra-cataract%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/caloundra-cataract/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">89</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.69s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.3s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 89 (required: ≥90); LCP: 3.30s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/caloundra-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fcaloundra-cataract%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/caloundra-cataract/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.47s</span></td>
+                        <td><span class="metric-value metric-good">0.74s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/coolum-beach-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fcoolum-beach-cataract%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/coolum-beach-cataract/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">91</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.68s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.34s</span></td>
+                        <td><span class="metric-value metric-good">0.048</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 3.34s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/coolum-beach-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fcoolum-beach-cataract%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/coolum-beach-cataract/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.74s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/golden-beach-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fgolden-beach-cataract%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/golden-beach-cataract/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">92</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.27s</span></td>
+                        <td><span class="metric-value metric-good">0.032</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 3.27s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/golden-beach-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fgolden-beach-cataract%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/golden-beach-cataract/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.49s</span></td>
+                        <td><span class="metric-value metric-good">0.76s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/noosa-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fnoosa-cataract%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/noosa-cataract/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">2.25s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/noosa-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fnoosa-cataract%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/noosa-cataract/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.47s</span></td>
+                        <td><span class="metric-value metric-good">0.54s</span></td>
+                        <td><span class="metric-value metric-good">0.017</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/sunshine-beach-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fsunshine-beach-cataract%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/sunshine-beach-cataract/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">85</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.33s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 85 (required: ≥90); LCP: 3.33s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/sunshine-beach-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fsunshine-beach-cataract%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/sunshine-beach-cataract/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.75s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/marcus-beach-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fmarcus-beach-cataract%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/marcus-beach-cataract/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">72</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1s</span></td>
+                        <td><span class="metric-value metric-good">2.25s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 72 (required: ≥90)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/marcus-beach-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fmarcus-beach-cataract%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/marcus-beach-cataract/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.77s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/buderim-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fbuderim-cataract%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/buderim-cataract/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">89</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.27s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.114</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 89 (required: ≥90); LCP: 3.27s (required: ≤2.5s); CLS: 0.114 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/buderim-cataract/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fbuderim-cataract%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/buderim-cataract/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.76s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/caloundra-laser/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fcaloundra-laser%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/caloundra-laser/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.69s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.69s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/caloundra-laser/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fcaloundra-laser%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/caloundra-laser/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.73s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/coolum-beach-laser/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fcoolum-beach-laser%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/coolum-beach-laser/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.69s</span></td>
+                        <td><span class="metric-value metric-good">1.69s</span></td>
+                        <td><span class="metric-value metric-good">0.021</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/coolum-beach-laser/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fcoolum-beach-laser%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/coolum-beach-laser/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.75s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/maleny-laser/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fmaleny-laser%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/maleny-laser/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">1.68s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/maleny-laser/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fmaleny-laser%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/maleny-laser/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.77s</span></td>
+                        <td><span class="metric-value metric-good">0.017</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/marcus-beach-laser/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fmarcus-beach-laser%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/marcus-beach-laser/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.008</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/marcus-beach-laser/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fmarcus-beach-laser%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/marcus-beach-laser/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.54s</span></td>
+                        <td><span class="metric-value metric-good">0.017</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/maroochydore-laser/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fmaroochydore-laser%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/maroochydore-laser/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.68s</span></td>
+                        <td><span class="metric-value metric-good">1.68s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/maroochydore-laser/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fmaroochydore-laser%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/maroochydore-laser/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.77s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/minyama-laser/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fminyama-laser%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/minyama-laser/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.68s</span></td>
+                        <td><span class="metric-value metric-good">1.68s</span></td>
+                        <td><span class="metric-value metric-good">0.009</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/minyama-laser/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fminyama-laser%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/minyama-laser/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.54s</span></td>
+                        <td><span class="metric-value metric-good">0.017</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/noosa-laser/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fnoosa-laser%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/noosa-laser/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.67s</span></td>
+                        <td><span class="metric-value metric-good">1.76s</span></td>
+                        <td><span class="metric-value metric-good">0.008</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/noosa-laser/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fnoosa-laser%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/noosa-laser/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.73s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/sunshine-beach-laser/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fsunshine-beach-laser%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/sunshine-beach-laser/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">92</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">2.5s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">SEO: 92 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/sunshine-beach-laser/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fsunshine-beach-laser%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/sunshine-beach-laser/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">92</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.74s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">SEO: 92 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/golden-beach-laser/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fgolden-beach-laser%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/golden-beach-laser/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-poor">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.68s</span></td>
+                        <td><span class="metric-value metric-good">1.68s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 96 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/golden-beach-laser/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fgolden-beach-laser%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/golden-beach-laser/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-poor">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.52s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 96 (required: 100)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/request-an-appointment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Frequest-an-appointment%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/request-an-appointment/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">1.74s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/request-an-appointment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Frequest-an-appointment%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/request-an-appointment/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.7s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/alexandra-head-laser/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Falexandra-head-laser%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/alexandra-head-laser/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.53s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.53s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/alexandra-head-laser/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Falexandra-head-laser%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/alexandra-head-laser/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.74s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/service-areas/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fservice-areas%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/service-areas/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">92</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">SEO: 92 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/service-areas/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fservice-areas%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/service-areas/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">92</span></td>
+                        <td><span class="metric-value metric-good">0.3s</span></td>
+                        <td><span class="metric-value metric-good">0.71s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">SEO: 92 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/cornea-surgery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fcornea-surgery%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/cornea-surgery/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.52s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.52s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/cornea-surgery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fcornea-surgery%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/cornea-surgery/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/glaucoma-treatment-and-migs/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fglaucoma-treatment-and-migs%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/glaucoma-treatment-and-migs/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.084</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/glaucoma-treatment-and-migs/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fglaucoma-treatment-and-migs%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/glaucoma-treatment-and-migs/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.3s</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/macular-injections-and-general-ophthalmology/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fmacular-injections-and-general-ophthalmology%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/macular-injections-and-general-ophthalmology/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.51s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.51s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/macular-injections-and-general-ophthalmology/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Fmacular-injections-and-general-ophthalmology%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/macular-injections-and-general-ophthalmology/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">86</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.52s</span></td>
+                        <td><span class="metric-value metric-good">1.64s</span></td>
+                        <td><span class="metric-value metric-good">0.02</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 86 (required: ≥90)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/laser-vision-correction-surgery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Flaser-vision-correction-surgery%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/laser-vision-correction-surgery/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.53s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.114</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.53s (required: ≤2.5s); CLS: 0.114 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.thevisionsurgeon.au/laser-vision-correction-surgery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.thevisionsurgeon.au%2Flaser-vision-correction-surgery%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.thevisionsurgeon.au/laser-vision-correction-surgery/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.7s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+            <h3 style="margin-bottom: 10px;">Scoring Criteria</h3>
+            <ul style="line-height: 1.8; color: #666;">
+                <li><strong>Performance:</strong> Must be ≥90 (Good: Green, Average: Yellow, Poor: Red)</li>
+                <li><strong>Accessibility:</strong> Must be 100 (Pass: Green, Fail: Red)</li>
+                <li><strong>SEO:</strong> Must be 100 (Pass: Green, Fail: Red)</li>
+                <li><strong>FCP (First Contentful Paint):</strong> Must be ≤1.8s (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+                <li><strong>LCP (Largest Contentful Paint):</strong> Must be ≤2.5s (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+                <li><strong>CLS (Cumulative Layout Shift):</strong> Must be ≤0.1 (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
