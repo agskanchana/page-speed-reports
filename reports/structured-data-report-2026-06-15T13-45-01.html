@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structured Data Test Report - 6/15/2026</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 1400px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 30px; }
+        h1 { color: #333; margin-bottom: 10px; }
+        .subtitle { color: #666; margin-bottom: 30px; }
+        .summary-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-bottom: 30px; }
+        .summary-card { padding: 20px; border-radius: 8px; text-align: center; color: white; }
+        .summary-card.total { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .summary-card.passed { background: #28a745; }
+        .summary-card.failed { background: #dc3545; }
+        .summary-card.pending { background: #6c757d; }
+        .summary-card h3 { font-size: 14px; margin-bottom: 8px; opacity: 0.9; }
+        .summary-card .number { font-size: 32px; font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 13px; }
+        thead { background: #333; color: white; }
+        th { padding: 12px 8px; text-align: left; font-weight: 600; }
+        td { padding: 12px 8px; border-bottom: 1px solid #e9ecef; }
+        tbody tr:hover { background: #f8f9fa; }
+        .url-cell { max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .url-cell a { color: #1a0dab; text-decoration: none; }
+        .url-cell a:hover { text-decoration: underline; }
+        td a { color: #1a73e8; text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .status-pass { color: #28a745; font-weight: 600; }
+        .status-fail { color: #dc3545; font-weight: 600; }
+        .status-pending { color: #6c757d; font-weight: 600; }
+        .report-info { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+        .report-info p { margin: 5px 0; color: #666; }
+        @media print { body { background: white; padding: 0; } .container { box-shadow: none; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Structured Data Test Report</h1>
+        <p class="subtitle">Google Rich Results Test Analysis</p>
+        
+        <div class="report-info">
+            <p><strong>Sitemap:</strong> https://www.vibranthealthnaturalmedicine.com/page-sitemap.xml</p>
+            <p><strong>Generated:</strong> 6/15/2026, 7:15:01 PM</p>
+            <p><strong>Total URLs Analyzed:</strong> 30</p>
+        </div>
+        
+        <div class="summary-cards">
+            <div class="summary-card total">
+                <h3>Total URLs</h3>
+                <div class="number">30</div>
+            </div>
+            <div class="summary-card passed">
+                <h3>Passed</h3>
+                <div class="number">30</div>
+            </div>
+            <div class="summary-card failed">
+                <h3>Failed</h3>
+                <div class="number">0</div>
+            </div>
+            <div class="summary-card pending">
+                <h3>Pending</h3>
+                <div class="number">0</div>
+            </div>
+        </div>
+        
+        <h2>Detailed Results</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>URL</th>
+                    <th>Google Test</th>
+                    <th>Status</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                    <tr>
+                        <td>1</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/" target="_blank">https://www.vibranthealthnaturalmedicine.com/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>2</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/success-stories/" target="_blank">https://www.vibranthealthnaturalmedicine.com/success-stories/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fsuccess-stories%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>3</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/dr-elliot-zyglis/" target="_blank">https://www.vibranthealthnaturalmedicine.com/dr-elliot-zyglis/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fdr-elliot-zyglis%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>4</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/site-map/" target="_blank">https://www.vibranthealthnaturalmedicine.com/site-map/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fsite-map%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>5</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/office-tour/" target="_blank">https://www.vibranthealthnaturalmedicine.com/office-tour/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Foffice-tour%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>6</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/integrative-cancer-care/" target="_blank">https://www.vibranthealthnaturalmedicine.com/integrative-cancer-care/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fintegrative-cancer-care%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>7</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/general-wellness/" target="_blank">https://www.vibranthealthnaturalmedicine.com/general-wellness/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fgeneral-wellness%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>8</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/longevity-healthy-aging/" target="_blank">https://www.vibranthealthnaturalmedicine.com/longevity-healthy-aging/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Flongevity-healthy-aging%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>9</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/bioidentical-hormone-replacement-therapy-bhrt/" target="_blank">https://www.vibranthealthnaturalmedicine.com/bioidentical-hormone-replacement-therapy-bhrt/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fbioidentical-hormone-replacement-therapy-bhrt%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>10</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/medical-weight-loss/" target="_blank">https://www.vibranthealthnaturalmedicine.com/medical-weight-loss/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fmedical-weight-loss%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>11</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/dr-nicole-schertell/" target="_blank">https://www.vibranthealthnaturalmedicine.com/dr-nicole-schertell/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fdr-nicole-schertell%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>12</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/dr-johanna-mauss/" target="_blank">https://www.vibranthealthnaturalmedicine.com/dr-johanna-mauss/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fdr-johanna-mauss%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>13</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/dr-morgan-lucas/" target="_blank">https://www.vibranthealthnaturalmedicine.com/dr-morgan-lucas/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fdr-morgan-lucas%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>14</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/therapies-services-offered/" target="_blank">https://www.vibranthealthnaturalmedicine.com/therapies-services-offered/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Ftherapies-services-offered%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>15</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/detox-environmental-medicine/" target="_blank">https://www.vibranthealthnaturalmedicine.com/detox-environmental-medicine/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fdetox-environmental-medicine%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>16</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/mens-health/" target="_blank">https://www.vibranthealthnaturalmedicine.com/mens-health/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fmens-health%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>17</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/conditions-treated/" target="_blank">https://www.vibranthealthnaturalmedicine.com/conditions-treated/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fconditions-treated%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>18</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/dr-lauren-moore/" target="_blank">https://www.vibranthealthnaturalmedicine.com/dr-lauren-moore/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fdr-lauren-moore%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>19</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/specialty-laboratory-testing/" target="_blank">https://www.vibranthealthnaturalmedicine.com/specialty-laboratory-testing/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fspecialty-laboratory-testing%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>20</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/hugo-pemf-pulsed-electromagnetic-field-therapy/" target="_blank">https://www.vibranthealthnaturalmedicine.com/hugo-pemf-pulsed-electromagnetic-field-therapy/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fhugo-pemf-pulsed-electromagnetic-field-therapy%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>21</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/iv-injection-therapy/" target="_blank">https://www.vibranthealthnaturalmedicine.com/iv-injection-therapy/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fiv-injection-therapy%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>22</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/cardiovascular-disease/" target="_blank">https://www.vibranthealthnaturalmedicine.com/cardiovascular-disease/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fcardiovascular-disease%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>23</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/autoimmune-disorders/" target="_blank">https://www.vibranthealthnaturalmedicine.com/autoimmune-disorders/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fautoimmune-disorders%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>24</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/neurologic-conditions-brain-health/" target="_blank">https://www.vibranthealthnaturalmedicine.com/neurologic-conditions-brain-health/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fneurologic-conditions-brain-health%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>25</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/womens-health/" target="_blank">https://www.vibranthealthnaturalmedicine.com/womens-health/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fwomens-health%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>26</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/fibromyalgia/" target="_blank">https://www.vibranthealthnaturalmedicine.com/fibromyalgia/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Ffibromyalgia%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>27</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/digestive-disorders/" target="_blank">https://www.vibranthealthnaturalmedicine.com/digestive-disorders/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fdigestive-disorders%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>28</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/about-us/" target="_blank">https://www.vibranthealthnaturalmedicine.com/about-us/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fabout-us%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>29</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/hocatt/" target="_blank">https://www.vibranthealthnaturalmedicine.com/hocatt/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fhocatt%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>30</td>
+                        <td class="url-cell"><a href="https://www.vibranthealthnaturalmedicine.com/contact-us/" target="_blank">https://www.vibranthealthnaturalmedicine.com/contact-us/</a></td>
+                        <td><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.vibranthealthnaturalmedicine.com%2Fcontact-us%2F" target="_blank">Test Link</a></td>
+                        <td class="status-pass">✓ PASS</td>
+                        <td></td>
+                    </tr>
+                
+            </tbody>
+        </table>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+            <h3>Legend</h3>
+            <p style="margin-top: 10px;">
+                <span class="status-pass">✓ PASS</span> - Structured data is valid<br>
+                <span class="status-fail">✗ FAIL</span> - Structured data has errors<br>
+                <span class="status-pending">⏳ PENDING</span> - Not yet tested
+            </p>
+        </div>
+    </div>
+</body>
+</html>
