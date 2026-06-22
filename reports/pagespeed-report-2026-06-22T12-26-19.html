@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageSpeed Insights Report - 6/22/2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 30px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1em;
+        }
+        
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .summary-card h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .summary-card .number {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        
+        .results-table-container {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+        
+        thead {
+            background: #333;
+            color: white;
+        }
+        
+        th {
+            padding: 12px 8px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px 8px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .url-cell {
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .score {
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            min-width: 45px;
+            text-align: center;
+        }
+        
+        .score-good {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .score-average {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .score-poor {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .status-pass {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .status-fail {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .metric-value {
+            font-size: 12px;
+        }
+        
+        .metric-good {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .metric-needs-improvement {
+            color: #ffc107;
+            font-weight: 600;
+        }
+        
+        .metric-poor {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .device-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        
+        .device-mobile {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .device-desktop {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .report-info {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .report-info p {
+            margin: 5px 0;
+            color: #333;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 PageSpeed Insights Report</h1>
+        <p class="subtitle">Comprehensive performance analysis for all pages</p>
+        
+        <div class="report-info">
+            <p><strong>Generated:</strong> 6/22/2026, 5:56:19 PM</p>
+            <p><strong>Total URLs Analyzed:</strong> 27</p>
+            <p><strong>Total Tests:</strong> 54 (Mobile + Desktop)</p>
+        </div>
+        
+        <div class="summary-cards">
+            <div class="summary-card">
+                <h3>Total URLs</h3>
+                <div class="number">27</div>
+            </div>
+            <div class="summary-card">
+                <h3>Passed</h3>
+                <div class="number">41</div>
+            </div>
+            <div class="summary-card">
+                <h3>Failed</h3>
+                <div class="number">13</div>
+            </div>
+            <div class="summary-card">
+                <h3>Success Rate</h3>
+                <div class="number">76%</div>
+            </div>
+        </div>
+        
+        <h2>Detailed Results</h2>
+        
+        <div class="results-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>URL</th>
+                        <th>Device</th>
+                        <th>Performance</th>
+                        <th>Accessibility</th>
+                        <th>Best Practices</th>
+                        <th>SEO</th>
+                        <th>FCP</th>
+                        <th>LCP</th>
+                        <th>CLS</th>
+                        <th>Status</th>
+                        <th>Issues</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.018</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.42s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/meet-the-doctor/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fmeet-the-doctor%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/meet-the-doctor/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/meet-the-doctor/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fmeet-the-doctor%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/meet-the-doctor/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.56s</span></td>
+                        <td><span class="metric-value metric-good">0.77s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.lwdental.com/meet-the-team/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fmeet-the-team%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/meet-the-team/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">82</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.75s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.12</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 82 (required: ≥90); LCP: 3.75s (required: ≤2.5s); CLS: 0.120 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/meet-the-team/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fmeet-the-team%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/meet-the-team/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">1.4s</span></td>
+                        <td><span class="metric-value metric-good">0.01</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/our-office/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Four-office%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/our-office/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/our-office/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Four-office%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/our-office/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.67s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/patient-forms/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fpatient-forms%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/patient-forms/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/patient-forms/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fpatient-forms%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/patient-forms/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.lwdental.com/success-stories/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fsuccess-stories%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/success-stories/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">61</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">92</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-poor">11.12s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.154</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 61 (required: ≥90); LCP: 11.12s (required: ≤2.5s); CLS: 0.154 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.lwdental.com/success-stories/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fsuccess-stories%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/success-stories/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">68</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">1.19s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.115</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 68 (required: ≥90); CLS: 0.115 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.lwdental.com/site-map/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fsite-map%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/site-map/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">87</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.22s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.56s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 87 (required: ≥90); LCP: 3.56s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.lwdental.com/site-map/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fsite-map%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/site-map/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">89</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.215</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 89 (required: ≥90); CLS: 0.215 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.lwdental.com/request-an-appointment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Frequest-an-appointment%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/request-an-appointment/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">91</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.45s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 3.45s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/request-an-appointment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Frequest-an-appointment%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/request-an-appointment/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.71s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/general-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fgeneral-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/general-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.081</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/general-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fgeneral-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/general-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/dental-fillings/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fdental-fillings%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/dental-fillings/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.006</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/dental-fillings/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fdental-fillings%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/dental-fillings/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.7s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/crowns-and-caps/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fcrowns-and-caps%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/crowns-and-caps/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0.054</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/crowns-and-caps/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fcrowns-and-caps%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/crowns-and-caps/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/implant-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fimplant-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/implant-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.012</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/implant-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fimplant-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/implant-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.lwdental.com/dentures/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fdentures%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/dentures/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.153</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.153 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/dentures/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fdentures%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/dentures/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/cosmetic-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fcosmetic-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/cosmetic-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.97s</span></td>
+                        <td><span class="metric-value metric-good">0.006</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/cosmetic-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fcosmetic-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/cosmetic-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/teeth-whitening/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fteeth-whitening%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/teeth-whitening/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.057</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/teeth-whitening/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fteeth-whitening%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/teeth-whitening/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.71s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/invisalign/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Finvisalign%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/invisalign/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0.007</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/invisalign/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Finvisalign%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/invisalign/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.42s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/advanced-dental-technology/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fadvanced-dental-technology%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/advanced-dental-technology/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0.052</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/advanced-dental-technology/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fadvanced-dental-technology%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/advanced-dental-technology/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.lwdental.com/oral-exams/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Foral-exams%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/oral-exams/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">90</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.5s</span></td>
+                        <td><span class="metric-value metric-good">0.026</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 3.50s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/oral-exams/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Foral-exams%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/oral-exams/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.7s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/preventative-program/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fpreventative-program%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/preventative-program/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/preventative-program/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fpreventative-program%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/preventative-program/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.3s</span></td>
+                        <td><span class="metric-value metric-good">0.73s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.lwdental.com/periodontal-treatment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fperiodontal-treatment%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/periodontal-treatment/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.11</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.110 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/periodontal-treatment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fperiodontal-treatment%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/periodontal-treatment/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/emergency-services/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Femergency-services%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/emergency-services/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0.022</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/emergency-services/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Femergency-services%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/emergency-services/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.lwdental.com/night-guards/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fnight-guards%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/night-guards/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">90</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.46s</span></td>
+                        <td><span class="metric-value metric-good">0.017</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 3.46s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/night-guards/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fnight-guards%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/night-guards/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/athletic-sports-guards/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fathletic-sports-guards%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/athletic-sports-guards/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.046</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.lwdental.com/athletic-sports-guards/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fathletic-sports-guards%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/athletic-sports-guards/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">75</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.65s</span></td>
+                        <td><span class="metric-value metric-poor">0.372</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 75 (required: ≥90); CLS: 0.372 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/children-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fchildren-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/children-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.004</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/children-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fchildren-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/children-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.73s</span></td>
+                        <td><span class="metric-value metric-good">0.03</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/restorative-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Frestorative-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/restorative-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.021</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/restorative-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Frestorative-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/restorative-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/dental-bridges/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fdental-bridges%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/dental-bridges/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.021</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.lwdental.com/dental-bridges/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fdental-bridges%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/dental-bridges/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">82</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.41s</span></td>
+                        <td><span class="metric-value metric-poor">0.357</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 82 (required: ≥90); CLS: 0.357 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.lwdental.com/contact-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fcontact-us%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/contact-us/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">73</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.39s</span></td>
+                        <td><span class="metric-value metric-poor">0.374</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 73 (required: ≥90); LCP: 3.39s (required: ≤2.5s); CLS: 0.374 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.lwdental.com/contact-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.lwdental.com%2Fcontact-us%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.lwdental.com/contact-us/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.43s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+            <h3 style="margin-bottom: 10px;">Scoring Criteria</h3>
+            <ul style="line-height: 1.8; color: #666;">
+                <li><strong>Performance:</strong> Must be ≥90 (Good: Green, Average: Yellow, Poor: Red)</li>
+                <li><strong>Accessibility:</strong> Must be 100 (Pass: Green, Fail: Red)</li>
+                <li><strong>SEO:</strong> Must be 100 (Pass: Green, Fail: Red)</li>
+                <li><strong>FCP (First Contentful Paint):</strong> Must be ≤1.8s (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+                <li><strong>LCP (Largest Contentful Paint):</strong> Must be ≤2.5s (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+                <li><strong>CLS (Cumulative Layout Shift):</strong> Must be ≤0.1 (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
