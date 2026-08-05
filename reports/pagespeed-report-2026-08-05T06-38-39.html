@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageSpeed Insights Report - 8/5/2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 30px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1em;
+        }
+        
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .summary-card h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .summary-card .number {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        
+        .results-table-container {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+        
+        thead {
+            background: #333;
+            color: white;
+        }
+        
+        th {
+            padding: 12px 8px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px 8px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .url-cell {
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .score {
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            min-width: 45px;
+            text-align: center;
+        }
+        
+        .score-good {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .score-average {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .score-poor {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .status-pass {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .status-fail {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .metric-value {
+            font-size: 12px;
+        }
+        
+        .metric-good {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .metric-needs-improvement {
+            color: #ffc107;
+            font-weight: 600;
+        }
+        
+        .metric-poor {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .device-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        
+        .device-mobile {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .device-desktop {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .report-info {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .report-info p {
+            margin: 5px 0;
+            color: #333;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 PageSpeed Insights Report</h1>
+        <p class="subtitle">Comprehensive performance analysis for all pages</p>
+        
+        <div class="report-info">
+            <p><strong>Generated:</strong> 8/5/2026, 12:08:39 PM</p>
+            <p><strong>Total URLs Analyzed:</strong> 36</p>
+            <p><strong>Total Tests:</strong> 72 (Mobile + Desktop)</p>
+        </div>
+        
+        <div class="summary-cards">
+            <div class="summary-card">
+                <h3>Total URLs</h3>
+                <div class="number">36</div>
+            </div>
+            <div class="summary-card">
+                <h3>Passed</h3>
+                <div class="number">46</div>
+            </div>
+            <div class="summary-card">
+                <h3>Failed</h3>
+                <div class="number">26</div>
+            </div>
+            <div class="summary-card">
+                <h3>Success Rate</h3>
+                <div class="number">64%</div>
+            </div>
+        </div>
+        
+        <h2>Detailed Results</h2>
+        
+        <div class="results-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>URL</th>
+                        <th>Device</th>
+                        <th>Performance</th>
+                        <th>Accessibility</th>
+                        <th>Best Practices</th>
+                        <th>SEO</th>
+                        <th>FCP</th>
+                        <th>LCP</th>
+                        <th>CLS</th>
+                        <th>Status</th>
+                        <th>Issues</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">86</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-poor">3.97s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 86 (required: ≥90); LCP: 3.97s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">1.07s</span></td>
+                        <td><span class="metric-value metric-good">0.007</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/new-patient-forms/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fnew-patient-forms%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/new-patient-forms/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">89</span></td>
+                        <td><span class="score score-poor">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.059</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 89 (required: ≥90); Accessibility: 97 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/new-patient-forms/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fnew-patient-forms%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/new-patient-forms/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">89</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.217</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 89 (required: ≥90); CLS: 0.217 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/success-stories/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fsuccess-stories%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/success-stories/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">92</span></td>
+                        <td><span class="score score-poor">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.073</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 97 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/success-stories/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fsuccess-stories%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/success-stories/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">85</span></td>
+                        <td><span class="score score-poor">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.023</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 85 (required: ≥90); Accessibility: 97 (required: 100)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/smile-gallery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fsmile-gallery%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/smile-gallery/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/smile-gallery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fsmile-gallery%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/smile-gallery/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.42s</span></td>
+                        <td><span class="metric-value metric-good">0.005</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/contact-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fcontact-us%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/contact-us/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.07s</span></td>
+                        <td><span class="metric-value metric-good">1.08s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/contact-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fcontact-us%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/contact-us/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.01</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/site-map/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fsite-map%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/site-map/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">80</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.97s</span></td>
+                        <td><span class="metric-value metric-poor">4.57s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 80 (required: ≥90); LCP: 4.57s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/site-map/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fsite-map%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/site-map/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">86</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-poor">0.273</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 86 (required: ≥90); CLS: 0.273 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/financial-and-insurance/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Ffinancial-and-insurance%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/financial-and-insurance/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/financial-and-insurance/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Ffinancial-and-insurance%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/financial-and-insurance/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.52s</span></td>
+                        <td><span class="metric-value metric-good">0.64s</span></td>
+                        <td><span class="metric-value metric-good">0.017</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/sleep-apnea-oral-appliances/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fsleep-apnea-oral-appliances%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/sleep-apnea-oral-appliances/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/sleep-apnea-oral-appliances/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fsleep-apnea-oral-appliances%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/sleep-apnea-oral-appliances/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">91</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.7s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.192</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.192 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/emergency-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Femergency-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/emergency-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">2.47s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/emergency-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Femergency-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/emergency-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.52s</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0.028</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/implant-supported-dentures-all-on-4/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fimplant-supported-dentures-all-on-4%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/implant-supported-dentures-all-on-4/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/implant-supported-dentures-all-on-4/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fimplant-supported-dentures-all-on-4%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/implant-supported-dentures-all-on-4/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.3s</span></td>
+                        <td><span class="metric-value metric-good">0.8s</span></td>
+                        <td><span class="metric-value metric-good">0.013</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/what-sets-us-apart/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fwhat-sets-us-apart%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/what-sets-us-apart/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/what-sets-us-apart/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fwhat-sets-us-apart%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/what-sets-us-apart/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.76s</span></td>
+                        <td><span class="metric-value metric-good">0.023</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/gum-contouring-crown-lengthening/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fgum-contouring-crown-lengthening%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/gum-contouring-crown-lengthening/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/gum-contouring-crown-lengthening/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fgum-contouring-crown-lengthening%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/gum-contouring-crown-lengthening/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.74s</span></td>
+                        <td><span class="metric-value metric-good">0.008</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/letter-from-dr-alan-stern-october-2023/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fletter-from-dr-alan-stern-october-2023%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/letter-from-dr-alan-stern-october-2023/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">71</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">92</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-poor">4.56s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.238</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 71 (required: ≥90); LCP: 4.56s (required: ≤2.5s); CLS: 0.238 (required: ≤0.1); SEO: 92 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/letter-from-dr-alan-stern-october-2023/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fletter-from-dr-alan-stern-october-2023%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/letter-from-dr-alan-stern-october-2023/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">89</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">92</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">1.29s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.166</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 89 (required: ≥90); CLS: 0.166 (required: ≤0.1); SEO: 92 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/dental-membership-plan/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fdental-membership-plan%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/dental-membership-plan/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/dental-membership-plan/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fdental-membership-plan%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/dental-membership-plan/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.33s</span></td>
+                        <td><span class="metric-value metric-good">0.74s</span></td>
+                        <td><span class="metric-value metric-good">0.006</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/tmj-tmd-treatment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Ftmj-tmd-treatment%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/tmj-tmd-treatment/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/tmj-tmd-treatment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Ftmj-tmd-treatment%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/tmj-tmd-treatment/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.71s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.121</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.121 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/faqs/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Ffaqs%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/faqs/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">86</span></td>
+                        <td><span class="score score-poor">93</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">92</span></td>
+                        <td><span class="metric-value metric-good">1.06s</span></td>
+                        <td><span class="metric-value metric-poor">3.8s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 86 (required: ≥90); LCP: 3.80s (required: ≤2.5s); Accessibility: 93 (required: 100); SEO: 92 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/faqs/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Ffaqs%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/faqs/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">92</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.007</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 94 (required: 100); SEO: 92 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/dental-warranties/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fdental-warranties%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/dental-warranties/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">93</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 93 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/dental-warranties/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fdental-warranties%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/dental-warranties/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.66s</span></td>
+                        <td><span class="metric-value metric-good">0.008</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 97 (required: 100)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/smile-makeovers/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fsmile-makeovers%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/smile-makeovers/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/smile-makeovers/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fsmile-makeovers%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/smile-makeovers/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.035</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/what-to-expect-on-your-first-visit/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fwhat-to-expect-on-your-first-visit%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/what-to-expect-on-your-first-visit/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/what-to-expect-on-your-first-visit/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fwhat-to-expect-on-your-first-visit%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/what-to-expect-on-your-first-visit/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">75</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.52s</span></td>
+                        <td><span class="metric-value metric-good">0.8s</span></td>
+                        <td><span class="metric-value metric-poor">0.33</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 75 (required: ≥90); CLS: 0.330 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/comprehensive-oral-exams/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fcomprehensive-oral-exams%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/comprehensive-oral-exams/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/comprehensive-oral-exams/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fcomprehensive-oral-exams%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/comprehensive-oral-exams/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.74s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/periodontal-gum-disease-treatment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fperiodontal-gum-disease-treatment%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/periodontal-gum-disease-treatment/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/periodontal-gum-disease-treatment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fperiodontal-gum-disease-treatment%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/periodontal-gum-disease-treatment/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.73s</span></td>
+                        <td><span class="metric-value metric-good">0.017</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/custom-nightguards/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fcustom-nightguards%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/custom-nightguards/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/custom-nightguards/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fcustom-nightguards%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/custom-nightguards/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">90</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.78s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.193</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.193 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/our-technology/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Four-technology%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/our-technology/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/our-technology/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Four-technology%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/our-technology/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.3s</span></td>
+                        <td><span class="metric-value metric-good">0.77s</span></td>
+                        <td><span class="metric-value metric-good">0.019</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/oral-cancer-screenings/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Foral-cancer-screenings%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/oral-cancer-screenings/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/oral-cancer-screenings/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Foral-cancer-screenings%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/oral-cancer-screenings/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.73s</span></td>
+                        <td><span class="metric-value metric-good">0.006</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/full-mouth-x-ray-series-3d-cbct-imaging/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Ffull-mouth-x-ray-series-3d-cbct-imaging%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/full-mouth-x-ray-series-3d-cbct-imaging/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/full-mouth-x-ray-series-3d-cbct-imaging/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Ffull-mouth-x-ray-series-3d-cbct-imaging%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/full-mouth-x-ray-series-3d-cbct-imaging/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.042</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/porcelain-veneers/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fporcelain-veneers%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/porcelain-veneers/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/porcelain-veneers/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fporcelain-veneers%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/porcelain-veneers/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.38s</span></td>
+                        <td><span class="metric-value metric-good">0.022</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/meet-dr-ravi-shah/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fmeet-dr-ravi-shah%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/meet-dr-ravi-shah/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.57s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.57s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/meet-dr-ravi-shah/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fmeet-dr-ravi-shah%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/meet-dr-ravi-shah/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.37s</span></td>
+                        <td><span class="metric-value metric-good">0.08</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/dental-bonding/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fdental-bonding%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/dental-bonding/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.03s</span></td>
+                        <td><span class="metric-value metric-good">1.58s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/dental-bonding/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fdental-bonding%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/dental-bonding/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.7s</span></td>
+                        <td><span class="metric-value metric-good">0.084</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/porcelain-crowns/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fporcelain-crowns%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/porcelain-crowns/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.51s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.51s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/porcelain-crowns/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fporcelain-crowns%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/porcelain-crowns/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">89</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.7s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.214</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 89 (required: ≥90); CLS: 0.214 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/full-partial-dentures/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Ffull-partial-dentures%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/full-partial-dentures/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/full-partial-dentures/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Ffull-partial-dentures%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/full-partial-dentures/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">83</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.71s</span></td>
+                        <td><span class="metric-value metric-poor">0.325</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 83 (required: ≥90); CLS: 0.325 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/inlays-onlays/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Finlays-onlays%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/inlays-onlays/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/inlays-onlays/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Finlays-onlays%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/inlays-onlays/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">89</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.75s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.213</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 89 (required: ≥90); CLS: 0.213 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/dry-mouth-treatment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fdry-mouth-treatment%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/dry-mouth-treatment/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.97s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/dry-mouth-treatment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fdry-mouth-treatment%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/dry-mouth-treatment/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">91</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.76s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.184</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.184 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/teeth-whitening/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fteeth-whitening%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/teeth-whitening/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.myoceandentist.com/teeth-whitening/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fteeth-whitening%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/teeth-whitening/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">82</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-poor">0.371</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 82 (required: ≥90); CLS: 0.371 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/dental-implants/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fdental-implants%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/dental-implants/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/dental-implants/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fdental-implants%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/dental-implants/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.6s</span></td>
+                        <td><span class="metric-value metric-good">0.03</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/tooth-colored-composite-ceramic-fillings/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Ftooth-colored-composite-ceramic-fillings%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/tooth-colored-composite-ceramic-fillings/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/tooth-colored-composite-ceramic-fillings/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Ftooth-colored-composite-ceramic-fillings%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/tooth-colored-composite-ceramic-fillings/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.38s</span></td>
+                        <td><span class="metric-value metric-good">0.029</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/dental-bridges/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fdental-bridges%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/dental-bridges/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.myoceandentist.com/dental-bridges/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.myoceandentist.com%2Fdental-bridges%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.myoceandentist.com/dental-bridges/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.094</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+            <h3 style="margin-bottom: 10px;">Scoring Criteria</h3>
+            <ul style="line-height: 1.8; color: #666;">
+                <li><strong>Performance:</strong> Must be ≥90 (Good: Green, Average: Yellow, Poor: Red)</li>
+                <li><strong>Accessibility:</strong> Must be 100 (Pass: Green, Fail: Red)</li>
+                <li><strong>SEO:</strong> Must be 100 (Pass: Green, Fail: Red)</li>
+                <li><strong>FCP (First Contentful Paint):</strong> Must be ≤1.8s (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+                <li><strong>LCP (Largest Contentful Paint):</strong> Must be ≤2.5s (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+                <li><strong>CLS (Cumulative Layout Shift):</strong> Must be ≤0.1 (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
