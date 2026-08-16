@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageSpeed Insights Report - 8/16/2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 30px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1em;
+        }
+        
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .summary-card h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .summary-card .number {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        
+        .results-table-container {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+        
+        thead {
+            background: #333;
+            color: white;
+        }
+        
+        th {
+            padding: 12px 8px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px 8px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .url-cell {
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .score {
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            min-width: 45px;
+            text-align: center;
+        }
+        
+        .score-good {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .score-average {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .score-poor {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .status-pass {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .status-fail {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .metric-value {
+            font-size: 12px;
+        }
+        
+        .metric-good {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .metric-needs-improvement {
+            color: #ffc107;
+            font-weight: 600;
+        }
+        
+        .metric-poor {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .device-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        
+        .device-mobile {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .device-desktop {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .report-info {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .report-info p {
+            margin: 5px 0;
+            color: #333;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 PageSpeed Insights Report</h1>
+        <p class="subtitle">Comprehensive performance analysis for all pages</p>
+        
+        <div class="report-info">
+            <p><strong>Generated:</strong> 8/16/2026, 11:13:24 AM</p>
+            <p><strong>Total URLs Analyzed:</strong> 54</p>
+            <p><strong>Total Tests:</strong> 108 (Mobile + Desktop)</p>
+        </div>
+        
+        <div class="summary-cards">
+            <div class="summary-card">
+                <h3>Total URLs</h3>
+                <div class="number">54</div>
+            </div>
+            <div class="summary-card">
+                <h3>Passed</h3>
+                <div class="number">87</div>
+            </div>
+            <div class="summary-card">
+                <h3>Failed</h3>
+                <div class="number">21</div>
+            </div>
+            <div class="summary-card">
+                <h3>Success Rate</h3>
+                <div class="number">81%</div>
+            </div>
+        </div>
+        
+        <h2>Detailed Results</h2>
+        
+        <div class="results-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>URL</th>
+                        <th>Device</th>
+                        <th>Performance</th>
+                        <th>Accessibility</th>
+                        <th>Best Practices</th>
+                        <th>SEO</th>
+                        <th>FCP</th>
+                        <th>LCP</th>
+                        <th>CLS</th>
+                        <th>Status</th>
+                        <th>Issues</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-good">2.16s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.011</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/about-our-dental-office/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fabout-our-dental-office%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/about-our-dental-office/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">1.65s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/about-our-dental-office/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fabout-our-dental-office%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/about-our-dental-office/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.49s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/meet-our-team/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fmeet-our-team%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/meet-our-team/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/meet-our-team/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fmeet-our-team%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/meet-our-team/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.77s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/x-guide/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fx-guide%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/x-guide/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0.019</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/x-guide/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fx-guide%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/x-guide/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.3s</span></td>
+                        <td><span class="metric-value metric-good">0.74s</span></td>
+                        <td><span class="metric-value metric-good">0.004</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/community-involvement/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fcommunity-involvement%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/community-involvement/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/community-involvement/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fcommunity-involvement%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/community-involvement/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.41s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/new-patient-information/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fnew-patient-information%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/new-patient-information/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.99s</span></td>
+                        <td><span class="metric-value metric-good">1s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/new-patient-information/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fnew-patient-information%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/new-patient-information/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.7s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/frequently-asked-questions/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Ffrequently-asked-questions%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/frequently-asked-questions/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">1.5s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/frequently-asked-questions/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Ffrequently-asked-questions%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/frequently-asked-questions/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.57s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/specials/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fspecials%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/specials/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/specials/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fspecials%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/specials/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/contact-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fcontact-us%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/contact-us/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.07s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.81s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.81s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/contact-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fcontact-us%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/contact-us/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.35s</span></td>
+                        <td><span class="metric-value metric-good">0.5s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/smile-gallery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fsmile-gallery%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/smile-gallery/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">83</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.36s</span></td>
+                        <td><span class="metric-value metric-poor">4.25s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 83 (required: ≥90); LCP: 4.25s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/smile-gallery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fsmile-gallery%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/smile-gallery/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">84</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.52s</span></td>
+                        <td><span class="metric-value metric-good">0.64s</span></td>
+                        <td><span class="metric-value metric-poor">0.276</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 84 (required: ≥90); CLS: 0.276 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/free-smile-makeover-consultation/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Ffree-smile-makeover-consultation%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/free-smile-makeover-consultation/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/free-smile-makeover-consultation/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Ffree-smile-makeover-consultation%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/free-smile-makeover-consultation/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.74s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/dental-implants-special/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fdental-implants-special%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/dental-implants-special/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/dental-implants-special/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fdental-implants-special%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/dental-implants-special/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/nightguards-for-bruxism/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fnightguards-for-bruxism%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/nightguards-for-bruxism/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/nightguards-for-bruxism/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fnightguards-for-bruxism%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/nightguards-for-bruxism/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/dental-bridges-and-crowns/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fdental-bridges-and-crowns%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/dental-bridges-and-crowns/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0.97s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/dental-bridges-and-crowns/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fdental-bridges-and-crowns%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/dental-bridges-and-crowns/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.71s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/nitrous-oxide-sedation/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fnitrous-oxide-sedation%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/nitrous-oxide-sedation/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1s</span></td>
+                        <td><span class="metric-value metric-good">1.01s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/nitrous-oxide-sedation/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fnitrous-oxide-sedation%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/nitrous-oxide-sedation/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.52s</span></td>
+                        <td><span class="metric-value metric-good">0.64s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/jacqueline-t-nguyen-dds/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fjacqueline-t-nguyen-dds%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/jacqueline-t-nguyen-dds/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">92</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.32s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 3.32s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/jacqueline-t-nguyen-dds/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fjacqueline-t-nguyen-dds%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/jacqueline-t-nguyen-dds/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/masoud-e-najari-dds/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fmasoud-e-najari-dds%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/masoud-e-najari-dds/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.02s</span></td>
+                        <td><span class="metric-value metric-good">0.008</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 3.02s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/masoud-e-najari-dds/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fmasoud-e-najari-dds%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/masoud-e-najari-dds/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/advanced-services-technology/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fadvanced-services-technology%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/advanced-services-technology/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.8s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.80s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/advanced-services-technology/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fadvanced-services-technology%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/advanced-services-technology/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.3s</span></td>
+                        <td><span class="metric-value metric-good">0.73s</span></td>
+                        <td><span class="metric-value metric-good">0.006</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/request-an-appointment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Frequest-an-appointment%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/request-an-appointment/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.07s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.93s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.93s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/request-an-appointment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Frequest-an-appointment%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/request-an-appointment/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.5s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/site-map/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fsite-map%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/site-map/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">79</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-poor">0.457</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 79 (required: ≥90); CLS: 0.457 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/site-map/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fsite-map%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/site-map/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">92</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.3s</span></td>
+                        <td><span class="metric-value metric-good">0.37s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.177</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.177 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/tour-our-office/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Ftour-our-office%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/tour-our-office/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/tour-our-office/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Ftour-our-office%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/tour-our-office/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">92</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.64s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.165</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.165 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/our-services/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Four-services%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/our-services/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.66s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.66s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/our-services/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Four-services%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/our-services/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.3s</span></td>
+                        <td><span class="metric-value metric-good">0.37s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/general-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fgeneral-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/general-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/general-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fgeneral-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/general-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/dental-checkups-teeth-cleanings/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fdental-checkups-teeth-cleanings%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/dental-checkups-teeth-cleanings/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/dental-checkups-teeth-cleanings/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fdental-checkups-teeth-cleanings%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/dental-checkups-teeth-cleanings/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.52s</span></td>
+                        <td><span class="metric-value metric-good">0.6s</span></td>
+                        <td><span class="metric-value metric-good">0.006</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/restorative-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Frestorative-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/restorative-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0.97s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/restorative-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Frestorative-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/restorative-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.7s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/dental-implants/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fdental-implants%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/dental-implants/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/dental-implants/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fdental-implants%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/dental-implants/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.37s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/all-on-4-implants/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fall-on-4-implants%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/all-on-4-implants/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.57s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.57s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/all-on-4-implants/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fall-on-4-implants%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/all-on-4-implants/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.6s</span></td>
+                        <td><span class="metric-value metric-good">0.68s</span></td>
+                        <td><span class="metric-value metric-good">0.006</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/periodontal-therapy/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fperiodontal-therapy%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/periodontal-therapy/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.52s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.52s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/periodontal-therapy/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fperiodontal-therapy%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/periodontal-therapy/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.73s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/oral-cancer-screening/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Foral-cancer-screening%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/oral-cancer-screening/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0.97s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/oral-cancer-screening/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Foral-cancer-screening%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/oral-cancer-screening/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.37s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/platelet-rich-fibrin/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fplatelet-rich-fibrin%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/platelet-rich-fibrin/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/platelet-rich-fibrin/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fplatelet-rich-fibrin%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/platelet-rich-fibrin/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.7s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/dentures-partial-dentures/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fdentures-partial-dentures%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/dentures-partial-dentures/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/dentures-partial-dentures/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fdentures-partial-dentures%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/dentures-partial-dentures/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/itero/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fitero%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/itero/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.93s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/itero/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fitero%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/itero/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.34s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/sprintray-3d-printing/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fsprintray-3d-printing%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/sprintray-3d-printing/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/sprintray-3d-printing/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fsprintray-3d-printing%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/sprintray-3d-printing/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.37s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/sedation-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fsedation-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/sedation-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.97s</span></td>
+                        <td><span class="metric-value metric-good">0.98s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/sedation-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fsedation-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/sedation-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.77s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/iv-sedation/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fiv-sedation%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/iv-sedation/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/iv-sedation/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fiv-sedation%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/iv-sedation/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/childrens-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fchildrens-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/childrens-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/childrens-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fchildrens-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/childrens-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/dental-sealants/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fdental-sealants%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/dental-sealants/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">86</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-poor">3.89s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 86 (required: ≥90); LCP: 3.89s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/dental-sealants/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fdental-sealants%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/dental-sealants/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.3s</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/fluoride-treatment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Ffluoride-treatment%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/fluoride-treatment/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">86</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-poor">3.89s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 86 (required: ≥90); LCP: 3.89s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/fluoride-treatment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Ffluoride-treatment%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/fluoride-treatment/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.3s</span></td>
+                        <td><span class="metric-value metric-good">0.38s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/athletic-sports-guards/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fathletic-sports-guards%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/athletic-sports-guards/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/athletic-sports-guards/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fathletic-sports-guards%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/athletic-sports-guards/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.37s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/tooth-colored-fillings/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Ftooth-colored-fillings%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/tooth-colored-fillings/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/tooth-colored-fillings/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Ftooth-colored-fillings%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/tooth-colored-fillings/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.3s</span></td>
+                        <td><span class="metric-value metric-good">0.73s</span></td>
+                        <td><span class="metric-value metric-good">0.006</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/emergency-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Femergency-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/emergency-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/emergency-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Femergency-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/emergency-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.3s</span></td>
+                        <td><span class="metric-value metric-good">0.37s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/root-canal-therapy/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Froot-canal-therapy%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/root-canal-therapy/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/root-canal-therapy/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Froot-canal-therapy%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/root-canal-therapy/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.3s</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/tooth-extraction/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Ftooth-extraction%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/tooth-extraction/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/tooth-extraction/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Ftooth-extraction%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/tooth-extraction/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.52s</span></td>
+                        <td><span class="metric-value metric-good">0.56s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/wisdom-tooth-extraction/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fwisdom-tooth-extraction%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/wisdom-tooth-extraction/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">87</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.74s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 87 (required: ≥90); LCP: 3.74s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/wisdom-tooth-extraction/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fwisdom-tooth-extraction%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/wisdom-tooth-extraction/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/cosmetic-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fcosmetic-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/cosmetic-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/cosmetic-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fcosmetic-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/cosmetic-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/porcelain-veneers/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fporcelain-veneers%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/porcelain-veneers/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/porcelain-veneers/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fporcelain-veneers%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/porcelain-veneers/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/all-ceramic-dental-restorations/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fall-ceramic-dental-restorations%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/all-ceramic-dental-restorations/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/all-ceramic-dental-restorations/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fall-ceramic-dental-restorations%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/all-ceramic-dental-restorations/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.29s</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/dental-bonding/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fdental-bonding%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/dental-bonding/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.96s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/dental-bonding/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fdental-bonding%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/dental-bonding/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.52s</span></td>
+                        <td><span class="metric-value metric-good">0.64s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/professional-teeth-whitening/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fprofessional-teeth-whitening%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/professional-teeth-whitening/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/professional-teeth-whitening/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fprofessional-teeth-whitening%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/professional-teeth-whitening/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.72s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/gum-recontouring/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fgum-recontouring%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/gum-recontouring/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.66s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.66s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/gum-recontouring/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fgum-recontouring%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/gum-recontouring/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.7s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/smile-makeover/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fsmile-makeover%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/smile-makeover/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.92s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.56s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">LCP: 2.56s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/smile-makeover/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fsmile-makeover%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/smile-makeover/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.3s</span></td>
+                        <td><span class="metric-value metric-good">0.37s</span></td>
+                        <td><span class="metric-value metric-good">0.006</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/invisalign/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Finvisalign%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/invisalign/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">87</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">3.84s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 87 (required: ≥90); LCP: 3.84s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/invisalign/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Finvisalign%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/invisalign/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.33s</span></td>
+                        <td><span class="metric-value metric-good">0.37s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/written-reviews/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fwritten-reviews%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/written-reviews/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">62</span></td>
+                        <td><span class="score score-poor">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.2s</span></td>
+                        <td><span class="metric-value metric-poor">4.05s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.18</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 62 (required: ≥90); LCP: 4.05s (required: ≤2.5s); CLS: 0.180 (required: ≤0.1); Accessibility: 97 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/written-reviews/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fwritten-reviews%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/written-reviews/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">84</span></td>
+                        <td><span class="score score-poor">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.28s</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.011</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 84 (required: ≥90); Accessibility: 97 (required: 100)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/video-reviews/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fvideo-reviews%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/video-reviews/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0.94s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.murphyfamilydentistry.com/video-reviews/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.murphyfamilydentistry.com%2Fvideo-reviews%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.murphyfamilydentistry.com/video-reviews/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+            <h3 style="margin-bottom: 10px;">Scoring Criteria</h3>
+            <ul style="line-height: 1.8; color: #666;">
+                <li><strong>Performance:</strong> Must be ≥90 (Good: Green, Average: Yellow, Poor: Red)</li>
+                <li><strong>Accessibility:</strong> Must be 100 (Pass: Green, Fail: Red)</li>
+                <li><strong>SEO:</strong> Must be 100 (Pass: Green, Fail: Red)</li>
+                <li><strong>FCP (First Contentful Paint):</strong> Must be ≤1.8s (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+                <li><strong>LCP (Largest Contentful Paint):</strong> Must be ≤2.5s (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+                <li><strong>CLS (Cumulative Layout Shift):</strong> Must be ≤0.1 (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
