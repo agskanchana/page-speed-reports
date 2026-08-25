@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageSpeed Insights Report - 8/25/2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 30px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1em;
+        }
+        
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .summary-card h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .summary-card .number {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        
+        .results-table-container {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+        
+        thead {
+            background: #333;
+            color: white;
+        }
+        
+        th {
+            padding: 12px 8px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px 8px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .url-cell {
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .score {
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            min-width: 45px;
+            text-align: center;
+        }
+        
+        .score-good {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .score-average {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .score-poor {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .status-pass {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .status-fail {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .metric-value {
+            font-size: 12px;
+        }
+        
+        .metric-good {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .metric-needs-improvement {
+            color: #ffc107;
+            font-weight: 600;
+        }
+        
+        .metric-poor {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .device-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        
+        .device-mobile {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .device-desktop {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .report-info {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .report-info p {
+            margin: 5px 0;
+            color: #333;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 PageSpeed Insights Report</h1>
+        <p class="subtitle">Comprehensive performance analysis for all pages</p>
+        
+        <div class="report-info">
+            <p><strong>Generated:</strong> 8/25/2026, 8:23:22 PM</p>
+            <p><strong>Total URLs Analyzed:</strong> 36</p>
+            <p><strong>Total Tests:</strong> 72 (Mobile + Desktop)</p>
+        </div>
+        
+        <div class="summary-cards">
+            <div class="summary-card">
+                <h3>Total URLs</h3>
+                <div class="number">36</div>
+            </div>
+            <div class="summary-card">
+                <h3>Passed</h3>
+                <div class="number">2</div>
+            </div>
+            <div class="summary-card">
+                <h3>Failed</h3>
+                <div class="number">70</div>
+            </div>
+            <div class="summary-card">
+                <h3>Success Rate</h3>
+                <div class="number">3%</div>
+            </div>
+        </div>
+        
+        <h2>Detailed Results</h2>
+        
+        <div class="results-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>URL</th>
+                        <th>Device</th>
+                        <th>Performance</th>
+                        <th>Accessibility</th>
+                        <th>Best Practices</th>
+                        <th>SEO</th>
+                        <th>FCP</th>
+                        <th>LCP</th>
+                        <th>CLS</th>
+                        <th>Status</th>
+                        <th>Issues</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr style="">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.14s</span></td>
+                        <td><span class="metric-value metric-good">1.43s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">1.03s</span></td>
+                        <td><span class="metric-value metric-good">0.005</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/success-stories/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fsuccess-stories%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/success-stories/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">64</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-poor">3.07s</span></td>
+                        <td><span class="metric-value metric-poor">9.57s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 64 (required: ≥90); FCP: 3.07s (required: ≤1.8s); LCP: 9.57s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/success-stories/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fsuccess-stories%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/success-stories/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.54s</span></td>
+                        <td><span class="metric-value metric-good">0.005</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/cancellation-rescheduling-policy/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fcancellation-rescheduling-policy%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/cancellation-rescheduling-policy/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">88</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.11s</span></td>
+                        <td><span class="metric-value metric-good">1.12s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 88 (required: ≥90); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/cancellation-rescheduling-policy/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fcancellation-rescheduling-policy%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/cancellation-rescheduling-policy/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.54s</span></td>
+                        <td><span class="metric-value metric-good">0.02</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/site-map/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fsite-map%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/site-map/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">73</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">6.79s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 73 (required: ≥90); LCP: 6.79s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/site-map/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fsite-map%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/site-map/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">93</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">1.43s</span></td>
+                        <td><span class="metric-value metric-good">0.013</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/checkout/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fcheckout%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/checkout/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">64</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">61</span></td>
+                        <td><span class="metric-value metric-poor">2.91s</span></td>
+                        <td><span class="metric-value metric-poor">14.36s</span></td>
+                        <td><span class="metric-value metric-good">0.01</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 64 (required: ≥90); FCP: 2.91s (required: ≤1.8s); LCP: 14.36s (required: ≤2.5s); Accessibility: 99 (required: 100); SEO: 61 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/checkout/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fcheckout%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/checkout/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">64</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">61</span></td>
+                        <td><span class="metric-value metric-good">0.91s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">2.83s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.18</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 64 (required: ≥90); LCP: 2.83s (required: ≤2.5s); CLS: 0.180 (required: ≤0.1); Accessibility: 99 (required: 100); SEO: 61 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/payment-plans/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fpayment-plans%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/payment-plans/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">62</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-poor">2.71s</span></td>
+                        <td><span class="metric-value metric-poor">14.27s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 62 (required: ≥90); FCP: 2.71s (required: ≤1.8s); LCP: 14.27s (required: ≤2.5s); Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/payment-plans/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fpayment-plans%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/payment-plans/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-poor">39</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.35s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">3.34s</span></td>
+                        <td><span class="metric-value metric-poor">0.603</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 39 (required: ≥90); LCP: 3.34s (required: ≤2.5s); CLS: 0.603 (required: ≤0.1); Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/faqs/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Ffaqs%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/faqs/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">71</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">6.25s</span></td>
+                        <td><span class="metric-value metric-good">0.069</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 71 (required: ≥90); LCP: 6.25s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/faqs/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Ffaqs%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/faqs/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">1.37s</span></td>
+                        <td><span class="metric-value metric-good">0.033</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/face-peels/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fface-peels%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/face-peels/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">71</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">6.81s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 71 (required: ≥90); LCP: 6.81s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/face-peels/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fface-peels%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/face-peels/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-good">0.028</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/membership/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fmembership%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/membership/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">1.5s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 95 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/membership/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fmembership%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/membership/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.57s</span></td>
+                        <td><span class="metric-value metric-good">0.019</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 95 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/lasemd-ultra/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Flasemd-ultra%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/lasemd-ultra/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">1.5s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/lasemd-ultra/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Flasemd-ultra%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/lasemd-ultra/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">92</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.38s</span></td>
+                        <td><span class="metric-value metric-good">0.47s</span></td>
+                        <td><span class="metric-value metric-good">0.089</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/radiesse/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fradiesse%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/radiesse/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">71</span></td>
+                        <td><span class="score score-poor">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">6.82s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 71 (required: ≥90); LCP: 6.82s (required: ≤2.5s); Accessibility: 95 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/radiesse/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fradiesse%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/radiesse/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.56s</span></td>
+                        <td><span class="metric-value metric-good">0.023</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 95 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/web-stories/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fweb-stories%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/web-stories/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">60</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-average">81</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-poor">4.07s</span></td>
+                        <td><span class="metric-value metric-poor">10.51s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 60 (required: ≥90); FCP: 4.07s (required: ≤1.8s); LCP: 10.51s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/web-stories/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fweb-stories%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/web-stories/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">90</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-average">81</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.53s</span></td>
+                        <td><span class="metric-value metric-good">1.32s</span></td>
+                        <td><span class="metric-value metric-good">0.006</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/bioidentical-hormone-therapy/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fbioidentical-hormone-therapy%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/bioidentical-hormone-therapy/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">73</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">6.81s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 73 (required: ≥90); LCP: 6.81s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/bioidentical-hormone-therapy/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fbioidentical-hormone-therapy%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/bioidentical-hormone-therapy/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">1.14s</span></td>
+                        <td><span class="metric-value metric-good">0.045</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/weight-loss/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fweight-loss%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/weight-loss/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">77</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">4.84s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 77 (required: ≥90); LCP: 4.84s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/weight-loss/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fweight-loss%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/weight-loss/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">87</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.54s</span></td>
+                        <td><span class="metric-value metric-good">0.039</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 87 (required: ≥90); Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/iv-hydration-therapy/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fiv-hydration-therapy%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/iv-hydration-therapy/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.13s</span></td>
+                        <td><span class="metric-value metric-good">1.43s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/iv-hydration-therapy/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fiv-hydration-therapy%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/iv-hydration-therapy/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">93</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">0.069</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/hydrafacial/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fhydrafacial%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/hydrafacial/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="score score-poor">0</span></td>
+                        <td><span class="metric-value metric-poor">N/As</span></td>
+                        <td><span class="metric-value metric-poor">N/As</span></td>
+                        <td><span class="metric-value metric-poor">N/A</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">API Error: Lighthouse returned error: Something went wrong.</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/hydrafacial/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fhydrafacial%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/hydrafacial/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">94</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">1s</span></td>
+                        <td><span class="metric-value metric-good">0.1</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/laser-hair-removal/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Flaser-hair-removal%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/laser-hair-removal/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">1.5s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/laser-hair-removal/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Flaser-hair-removal%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/laser-hair-removal/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">81</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">1.26s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 81 (required: ≥90); Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/microneedling/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fmicroneedling%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/microneedling/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">72</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">6.72s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 72 (required: ≥90); LCP: 6.72s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/microneedling/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fmicroneedling%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/microneedling/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.52s</span></td>
+                        <td><span class="metric-value metric-good">1.05s</span></td>
+                        <td><span class="metric-value metric-good">0.008</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/ipl-therapy/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fipl-therapy%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/ipl-therapy/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">72</span></td>
+                        <td><span class="score score-poor">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">6.75s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 72 (required: ≥90); LCP: 6.75s (required: ≤2.5s); Accessibility: 95 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/ipl-therapy/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fipl-therapy%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/ipl-therapy/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-poor">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.52s</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-good">0.019</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 95 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/skinpen/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fskinpen%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/skinpen/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">72</span></td>
+                        <td><span class="score score-poor">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">6.8s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 72 (required: ≥90); LCP: 6.80s (required: ≤2.5s); Accessibility: 95 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/skinpen/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fskinpen%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/skinpen/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">71</span></td>
+                        <td><span class="score score-poor">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">1.19s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.139</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 71 (required: ≥90); CLS: 0.139 (required: ≤0.1); Accessibility: 95 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/chemical-peels/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fchemical-peels%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/chemical-peels/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">73</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">6.57s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 73 (required: ≥90); LCP: 6.57s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/chemical-peels/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fchemical-peels%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/chemical-peels/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">92</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.52s</span></td>
+                        <td><span class="metric-value metric-good">1.14s</span></td>
+                        <td><span class="metric-value metric-good">0.028</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/vi-peels/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fvi-peels%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/vi-peels/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">72</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">6.81s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 72 (required: ≥90); LCP: 6.81s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/vi-peels/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fvi-peels%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/vi-peels/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">87</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">1.12s</span></td>
+                        <td><span class="metric-value metric-good">0.025</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 87 (required: ≥90); Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/dermaplaning/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fdermaplaning%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/dermaplaning/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">73</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">6.64s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 73 (required: ≥90); LCP: 6.64s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/dermaplaning/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fdermaplaning%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/dermaplaning/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">1.13s</span></td>
+                        <td><span class="metric-value metric-good">0.012</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/botox/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fbotox%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/botox/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">72</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">6.81s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 72 (required: ≥90); LCP: 6.81s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/botox/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fbotox%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/botox/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-good">0.013</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/dermal-fillers/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fdermal-fillers%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/dermal-fillers/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">73</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">6.81s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 73 (required: ≥90); LCP: 6.81s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/dermal-fillers/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fdermal-fillers%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/dermal-fillers/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">1.13s</span></td>
+                        <td><span class="metric-value metric-good">0.026</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/erbium-laser-skin-resurfacing/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Ferbium-laser-skin-resurfacing%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/erbium-laser-skin-resurfacing/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">71</span></td>
+                        <td><span class="score score-poor">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.36s</span></td>
+                        <td><span class="metric-value metric-poor">6.8s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 71 (required: ≥90); LCP: 6.80s (required: ≤2.5s); Accessibility: 95 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/erbium-laser-skin-resurfacing/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Ferbium-laser-skin-resurfacing%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/erbium-laser-skin-resurfacing/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.5s</span></td>
+                        <td><span class="metric-value metric-good">0.026</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 95 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/platelet-rich-plasma-prp/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fplatelet-rich-plasma-prp%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/platelet-rich-plasma-prp/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">75</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">92</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-poor">6.22s</span></td>
+                        <td><span class="metric-value metric-good">0.092</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 75 (required: ≥90); LCP: 6.22s (required: ≤2.5s); Accessibility: 98 (required: 100); SEO: 92 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/platelet-rich-plasma-prp/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fplatelet-rich-plasma-prp%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/platelet-rich-plasma-prp/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">92</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">1.32s</span></td>
+                        <td><span class="metric-value metric-good">0.03</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 99 (required: 100); SEO: 92 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/vascular-lesions/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fvascular-lesions%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/vascular-lesions/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">73</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">6.79s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 73 (required: ≥90); LCP: 6.79s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/vascular-lesions/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fvascular-lesions%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/vascular-lesions/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">88</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.23</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 88 (required: ≥90); CLS: 0.230 (required: ≤0.1); Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/waxing-services/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fwaxing-services%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/waxing-services/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">72</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">6.82s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 72 (required: ≥90); LCP: 6.82s (required: ≤2.5s); Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/waxing-services/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fwaxing-services%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/waxing-services/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">94</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-good">0.009</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/before-after-gallery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fbefore-after-gallery%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/before-after-gallery/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">61</span></td>
+                        <td><span class="score score-poor">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-poor">3.91s</span></td>
+                        <td><span class="metric-value metric-poor">9s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 61 (required: ≥90); FCP: 3.91s (required: ≤1.8s); LCP: 9.00s (required: ≤2.5s); Accessibility: 95 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/before-after-gallery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fbefore-after-gallery%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/before-after-gallery/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">82</span></td>
+                        <td><span class="score score-poor">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.01s</span></td>
+                        <td><span class="metric-value metric-good">1.01s</span></td>
+                        <td><span class="metric-value metric-poor">0.274</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 82 (required: ≥90); CLS: 0.274 (required: ≤0.1); Accessibility: 95 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/about-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fabout-us%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/about-us/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">73</span></td>
+                        <td><span class="score score-poor">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">6.79s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 73 (required: ≥90); LCP: 6.79s (required: ≤2.5s); Accessibility: 95 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/about-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fabout-us%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/about-us/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-poor">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.54s</span></td>
+                        <td><span class="metric-value metric-good">0.027</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 95 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/consultation-request/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fconsultation-request%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/consultation-request/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">73</span></td>
+                        <td><span class="score score-poor">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.25s</span></td>
+                        <td><span class="metric-value metric-poor">6.72s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 73 (required: ≥90); LCP: 6.72s (required: ≤2.5s); Accessibility: 95 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/consultation-request/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fconsultation-request%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/consultation-request/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-poor">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.52s</span></td>
+                        <td><span class="metric-value metric-good">0.64s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 96 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/services/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fservices%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/services/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-poor">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 98 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/services/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fservices%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/services/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.56s</span></td>
+                        <td><span class="metric-value metric-good">0.027</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/contact-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fcontact-us%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/contact-us/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">82</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.34s</span></td>
+                        <td><span class="metric-value metric-good">1.42s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 82 (required: ≥90); Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/contact-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fcontact-us%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/contact-us/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">92</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.52s</span></td>
+                        <td><span class="metric-value metric-good">0.6s</span></td>
+                        <td><span class="metric-value metric-good">0.035</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/specials/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fspecials%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/specials/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">71</span></td>
+                        <td><span class="score score-poor">90</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">6.82s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 71 (required: ≥90); LCP: 6.82s (required: ≤2.5s); Accessibility: 90 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/specials/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fspecials%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/specials/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-poor">90</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.36s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0.037</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Accessibility: 90 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/cart/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fcart%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/cart/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-poor">48</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">61</span></td>
+                        <td><span class="metric-value metric-poor">7.7s</span></td>
+                        <td><span class="metric-value metric-poor">10.28s</span></td>
+                        <td><span class="metric-value metric-good">0.01</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 48 (required: ≥90); FCP: 7.70s (required: ≤1.8s); LCP: 10.28s (required: ≤2.5s); Accessibility: 99 (required: 100); SEO: 61 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.splendidaesthetics.com/cart/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.splendidaesthetics.com%2Fcart%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.splendidaesthetics.com/cart/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">72</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">61</span></td>
+                        <td><span class="metric-value metric-good">0.5s</span></td>
+                        <td><span class="metric-value metric-good">2.44s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.18</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 72 (required: ≥90); CLS: 0.180 (required: ≤0.1); Accessibility: 99 (required: 100); SEO: 61 (required: 100)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+            <h3 style="margin-bottom: 10px;">Scoring Criteria</h3>
+            <ul style="line-height: 1.8; color: #666;">
+                <li><strong>Performance:</strong> Must be ≥90 (Good: Green, Average: Yellow, Poor: Red)</li>
+                <li><strong>Accessibility:</strong> Must be 100 (Pass: Green, Fail: Red)</li>
+                <li><strong>SEO:</strong> Must be 100 (Pass: Green, Fail: Red)</li>
+                <li><strong>FCP (First Contentful Paint):</strong> Must be ≤1.8s (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+                <li><strong>LCP (Largest Contentful Paint):</strong> Must be ≤2.5s (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+                <li><strong>CLS (Cumulative Layout Shift):</strong> Must be ≤0.1 (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
