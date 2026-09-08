@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PageSpeed Report — sunoaksdental.com — golive</title>
+<style>
+:root{
+  --bg:#eef1f8; --card:#ffffff; --ink:#1c2333; --muted:#6b7387; --line:#e3e7f0;
+  --brand:#5b63d3; --brand2:#8b5cf6;
+  --good-bg:#dcfce7; --good-ink:#14532d;
+  --warn-bg:#fef3c7; --warn-ink:#78350f;
+  --bad-bg:#fee2e2;  --bad-ink:#7f1d1d;
+  --err-bg:#e5e7eb;  --err-ink:#374151;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#12141c; --card:#1a1d27; --ink:#e8eaf2; --muted:#9aa1b5; --line:#2a2f3d;
+    --good-bg:#14532d; --good-ink:#bbf7d0;
+    --warn-bg:#78350f; --warn-ink:#fde68a;
+    --bad-bg:#7f1d1d;  --bad-ink:#fecaca;
+    --err-bg:#374151;  --err-ink:#d1d5db;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;padding:24px 16px;background:var(--bg);color:var(--ink);
+  font:15px/1.5 'Segoe UI',system-ui,-apple-system,sans-serif}
+.wrap{max-width:1500px;margin:0 auto}
+header{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;
+  padding:28px 30px;border-radius:14px 14px 0 0}
+header h1{margin:0 0 6px;font-size:1.55rem;letter-spacing:-.02em}
+header .meta{opacity:.9;font-size:.9rem}
+header .meta code{background:rgba(255,255,255,.18);padding:1px 6px;border-radius:4px}
+main{background:var(--card);border-radius:0 0 14px 14px;padding:26px 30px 34px;
+  box-shadow:0 12px 40px rgba(20,25,50,.12)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:26px}
+.card{border:1px solid var(--line);border-radius:11px;padding:16px 18px;background:var(--card)}
+.card h3{margin:0 0 6px;font-size:.74rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600}
+.card .n{font-size:1.9rem;font-weight:700;line-height:1}
+.card.pass .n{color:#16a34a}.card.fail .n{color:#dc2626}.card.err .n{color:#d97706}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:16px}
+.controls input[type=search]{flex:1 1 240px;min-width:200px;padding:9px 12px;border:1px solid var(--line);
+  border-radius:8px;background:var(--bg);color:var(--ink);font-size:.9rem}
+.chip{padding:7px 13px;border:1px solid var(--line);border-radius:99px;background:var(--bg);
+  color:var(--ink);cursor:pointer;font-size:.85rem;font-weight:600}
+.chip[aria-pressed=true]{background:var(--brand);border-color:var(--brand);color:#fff}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:11px}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+thead th{position:sticky;top:0;background:var(--card);border-bottom:2px solid var(--line);
+  padding:11px 10px;text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;
+  color:var(--muted);cursor:pointer;white-space:nowrap;user-select:none}
+thead th:hover{color:var(--ink)}
+thead th .arrow{opacity:.35;font-size:.65rem}
+tbody td{padding:10px;border-bottom:1px solid var(--line);vertical-align:middle}
+tbody tr.fail{background:color-mix(in srgb,var(--bad-bg) 22%,transparent)}
+tbody tr.err{background:color-mix(in srgb,var(--err-bg) 30%,transparent)}
+tbody tr.detail-row td{background:var(--bg);padding:0}
+.url{max-width:340px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.url a{color:var(--brand);text-decoration:none;font-weight:500}
+.url a:hover{text-decoration:underline}
+.pill{display:inline-block;min-width:42px;text-align:center;padding:3px 9px;border-radius:6px;font-weight:700;font-size:.82rem}
+.g{background:var(--good-bg);color:var(--good-ink)}
+.a{background:var(--warn-bg);color:var(--warn-ink)}
+.p{background:var(--bad-bg);color:var(--bad-ink)}
+.n{background:var(--err-bg);color:var(--err-ink)}
+.dev{display:inline-block;padding:2px 8px;border-radius:5px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+.dev.mobile{background:#dbeafe;color:#1e40af}
+.dev.desktop{background:#f3e8ff;color:#6b21a8}
+@media (prefers-color-scheme:dark){.dev.mobile{background:#1e3a8a;color:#bfdbfe}.dev.desktop{background:#581c87;color:#e9d5ff}}
+.status{font-weight:700;font-size:.8rem}
+.status.PASS{color:#16a34a}.status.FAIL{color:#dc2626}.status.ERROR{color:#d97706}
+.issues{color:var(--muted);font-size:.79rem;max-width:330px}
+.expand{cursor:pointer;border:none;background:none;color:var(--muted);font-size:.95rem;padding:2px 6px;border-radius:5px}
+.expand:hover{background:var(--line);color:var(--ink)}
+.detail{padding:16px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.detail h4{margin:0 0 8px;font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.detail ul{margin:0;padding-left:18px;font-size:.82rem}
+.detail li{margin-bottom:4px}
+.detail .save{color:var(--muted);font-variant-numeric:tabular-nums}
+.empty{padding:36px;text-align:center;color:var(--muted)}
+footer{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
+footer ul{margin:8px 0 0;padding-left:20px}
+@media print{body{background:#fff;padding:0}main{box-shadow:none}.controls{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>PageSpeed Insights Report</h1>
+    <div class="meta">
+      sunoaksdental.com — golive · run <code>92b1204c</code> ·
+      generated 2026-09-08 12:43:50 Sri Lanka Standard Time
+    </div>
+  </header>
+  <main>
+    <div class="cards">
+      <div class="card"><h3>URLs</h3><div class="n">26</div></div>
+      <div class="card"><h3>Tests run</h3><div class="n">52</div></div>
+      <div class="card pass"><h3>Passed</h3><div class="n">16</div></div>
+      <div class="card fail"><h3>Failed</h3><div class="n">36</div></div>
+      <div class="card err"><h3>Errored</h3><div class="n">0</div></div>
+    </div>
+
+    <div class="controls">
+      <input type="search" id="q" placeholder="Filter by URL…" aria-label="Filter by URL">
+      <button class="chip" data-filter="all" aria-pressed="true">All</button>
+      <button class="chip" data-filter="fail" aria-pressed="false">Failed</button>
+      <button class="chip" data-filter="pass" aria-pressed="false">Passed</button>
+      <button class="chip" data-filter="err" aria-pressed="false">Errors</button>
+      <span style="width:12px"></span>
+      <button class="chip" data-device="all" aria-pressed="true">Both</button>
+      <button class="chip" data-device="mobile" aria-pressed="false">Mobile</button>
+      <button class="chip" data-device="desktop" aria-pressed="false">Desktop</button>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr>
+          <th style="width:34px"></th>
+          <th data-key="url">URL <span class="arrow">▲</span></th>
+          <th data-key="strategy">Device <span class="arrow"></span></th>
+          <th data-key="performance">Perf <span class="arrow"></span></th>
+          <th data-key="accessibility">A11y <span class="arrow"></span></th>
+          <th data-key="best_practices">BP <span class="arrow"></span></th>
+          <th data-key="seo">SEO <span class="arrow"></span></th>
+          <th data-key="fcp">FCP <span class="arrow"></span></th>
+          <th data-key="lcp">LCP <span class="arrow"></span></th>
+          <th data-key="cls">CLS <span class="arrow"></span></th>
+          <th data-key="status">Status <span class="arrow"></span></th>
+          <th>Issues</th>
+        </tr></thead>
+        <tbody id="body"></tbody>
+      </table>
+    </div>
+
+    <footer>
+      Showing <span id="shown">0</span> rows. Source:
+      <code>https://www.sunoaksdental.com/sitemap_index.xml</code>
+      <p style="margin:14px 0 4px"><strong>Pass criteria</strong></p>
+      <ul><li><strong>Performance:</strong> ≥90</li>
+<li><strong>Accessibility:</strong> ≥100</li>
+<li><strong>Best Practices:</strong> not enforced</li>
+<li><strong>SEO:</strong> ≥100</li>
+<li><strong>First Contentful Paint:</strong> ≤1.8s</li>
+<li><strong>Largest Contentful Paint:</strong> ≤2.5s</li>
+<li><strong>Cumulative Layout Shift:</strong> ≤0.1</li>
+<li><strong>Total Blocking Time:</strong> not enforced</li></ul>
+      <p style="margin-top:12px">
+        <strong>ERROR</strong> means the test could not be completed after every retry —
+        it is not a score of zero. Expand a row to see why.
+      </p>
+    </footer>
+  </main>
+</div>
+<script>
+const DATA = {"run": {"id": "92b1204c", "label": "sunoaksdental.com \u2014 golive", "source": "https://www.sunoaksdental.com/sitemap_index.xml", "status": "done", "created_at": "2026-09-07T10:58:30.081301+00:00", "started_at": "2026-09-07T10:58:30.084030+00:00", "finished_at": "2026-09-07T11:06:14.759665+00:00"}, "thresholds": {"performance": 90, "accessibility": 100, "best_practices": null, "seo": 100, "fcp": 1.8, "lcp": 2.5, "cls": 0.1, "tbt": null}, "rows": [{"url": "https://www.sunoaksdental.com/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 96, "seo": 100, "fcp": 1.069, "lcp": 1.805, "cls": 0.0, "tbt": 0.047, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [{"id": "image-size-responsive", "title": "Serves images with low resolution", "weight": 1, "score": 0.0}], "opportunities": [], "final_url": "https://www.sunoaksdental.com/"}, "attempts": 1, "fetched_at": "2026-09-07T10:59:03.452197+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/", "strategy": "desktop", "performance": 95, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.311, "lcp": 1.185, "cls": 0.079, "tbt": 0.042, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/"}, "attempts": 1, "fetched_at": "2026-09-07T10:59:11.887895+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/all-on-x/", "strategy": "mobile", "performance": 86, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.081, "lcp": 3.652, "cls": 0.0, "tbt": 0.177, "status": "FAIL", "issues": ["Performance: 86 (required: \u226590)", "LCP: 3.652s (required: \u22642.5s)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-javascript", "title": "Reduce unused JavaScript", "savings_ms": 450}], "final_url": "https://www.sunoaksdental.com/all-on-x/"}, "attempts": 2, "fetched_at": "2026-09-07T11:05:19.574039+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fall-on-x%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/all-on-x/", "strategy": "desktop", "performance": 52, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.521, "lcp": 0.681, "cls": 0.362, "tbt": 1.245, "status": "FAIL", "issues": ["Performance: 52 (required: \u226590)", "CLS: 0.362 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/all-on-x/"}, "attempts": 2, "fetched_at": "2026-09-07T11:05:47.476908+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fall-on-x%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/bridge-work/", "strategy": "mobile", "performance": 89, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.961, "lcp": 1.687, "cls": 0.0, "tbt": 0.428, "status": "FAIL", "issues": ["Performance: 89 (required: \u226590)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/bridge-work/"}, "attempts": 1, "fetched_at": "2026-09-07T11:01:43.436582+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fbridge-work%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/bridge-work/", "strategy": "desktop", "performance": 80, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.761, "lcp": 0.813, "cls": 0.298, "tbt": 0.174, "status": "FAIL", "issues": ["Performance: 80 (required: \u226590)", "CLS: 0.298 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/bridge-work/"}, "attempts": 1, "fetched_at": "2026-09-07T11:01:40.628516+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fbridge-work%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/contact-us/", "strategy": "mobile", "performance": 76, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.097, "lcp": 1.835, "cls": 0.0, "tbt": 1.104, "status": "FAIL", "issues": ["Performance: 76 (required: \u226590)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/contact-us/"}, "attempts": 1, "fetched_at": "2026-09-07T11:05:02.575271+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fcontact-us%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/contact-us/", "strategy": "desktop", "performance": 96, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.755, "lcp": 0.755, "cls": 0.064, "tbt": 0.056, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "server-response-time", "title": "Initial server response time was short", "savings_ms": 99}], "final_url": "https://www.sunoaksdental.com/contact-us/"}, "attempts": 1, "fetched_at": "2026-09-07T11:04:37.540970+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fcontact-us%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/dental-crown/", "strategy": "mobile", "performance": 81, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.96, "lcp": 3.69, "cls": 0.0, "tbt": 0.29, "status": "FAIL", "issues": ["Performance: 81 (required: \u226590)", "LCP: 3.69s (required: \u22642.5s)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-javascript", "title": "Reduce unused JavaScript", "savings_ms": 450}], "final_url": "https://www.sunoaksdental.com/dental-crown/"}, "attempts": 1, "fetched_at": "2026-09-07T11:01:16.708540+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fdental-crown%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/dental-crown/", "strategy": "desktop", "performance": 85, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.521, "lcp": 0.681, "cls": 0.112, "tbt": 0.274, "status": "FAIL", "issues": ["Performance: 85 (required: \u226590)", "CLS: 0.112 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/dental-crown/"}, "attempts": 1, "fetched_at": "2026-09-07T11:01:17.811977+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fdental-crown%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/dental-fillings/", "strategy": "mobile", "performance": 89, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.924, "lcp": 1.655, "cls": 0.0, "tbt": 0.45, "status": "FAIL", "issues": ["Performance: 89 (required: \u226590)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/dental-fillings/"}, "attempts": 1, "fetched_at": "2026-09-07T11:00:53.934676+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fdental-fillings%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/dental-fillings/", "strategy": "desktop", "performance": 67, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.441, "lcp": 0.561, "cls": 0.341, "tbt": 0.367, "status": "FAIL", "issues": ["Performance: 67 (required: \u226590)", "CLS: 0.341 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/dental-fillings/"}, "attempts": 1, "fetched_at": "2026-09-07T11:00:54.739028+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fdental-fillings%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/fast-braces/", "strategy": "mobile", "performance": 85, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.062, "lcp": 3.789, "cls": 0.0, "tbt": 0.143, "status": "FAIL", "issues": ["Performance: 85 (required: \u226590)", "LCP: 3.789s (required: \u22642.5s)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-javascript", "title": "Reduce unused JavaScript", "savings_ms": 300}], "final_url": "https://www.sunoaksdental.com/fast-braces/"}, "attempts": 2, "fetched_at": "2026-09-07T11:06:07.327962+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Ffast-braces%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/fast-braces/", "strategy": "desktop", "performance": 68, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.715, "lcp": 0.715, "cls": 0.298, "tbt": 0.373, "status": "FAIL", "issues": ["Performance: 68 (required: \u226590)", "CLS: 0.298 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/fast-braces/"}, "attempts": 1, "fetched_at": "2026-09-07T11:03:59.017819+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Ffast-braces%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/fluoride-trays/", "strategy": "mobile", "performance": 96, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.924, "lcp": 1.655, "cls": 0.004, "tbt": 0.222, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/fluoride-trays/"}, "attempts": 1, "fetched_at": "2026-09-07T11:00:52.077491+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Ffluoride-trays%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/fluoride-trays/", "strategy": "desktop", "performance": 92, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.715, "lcp": 0.715, "cls": 0.068, "tbt": 0.206, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/fluoride-trays/"}, "attempts": 1, "fetched_at": "2026-09-07T11:00:50.131338+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Ffluoride-trays%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/gum-recontouring/", "strategy": "mobile", "performance": 93, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.929, "lcp": 1.655, "cls": 0.0, "tbt": 0.318, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/gum-recontouring/"}, "attempts": 1, "fetched_at": "2026-09-07T11:02:02.762634+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fgum-recontouring%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/gum-recontouring/", "strategy": "desktop", "performance": 77, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.521, "lcp": 0.681, "cls": 0.318, "tbt": 0.208, "status": "FAIL", "issues": ["Performance: 77 (required: \u226590)", "CLS: 0.318 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/gum-recontouring/"}, "attempts": 1, "fetched_at": "2026-09-07T11:02:04.357406+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fgum-recontouring%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/inlays-and-onlays/", "strategy": "mobile", "performance": 87, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.063, "lcp": 3.642, "cls": 0.0, "tbt": 0.119, "status": "FAIL", "issues": ["Performance: 87 (required: \u226590)", "LCP: 3.642s (required: \u22642.5s)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-javascript", "title": "Reduce unused JavaScript", "savings_ms": 450}], "final_url": "https://www.sunoaksdental.com/inlays-and-onlays/"}, "attempts": 1, "fetched_at": "2026-09-07T11:01:36.361791+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Finlays-and-onlays%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/inlays-and-onlays/", "strategy": "desktop", "performance": 83, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.521, "lcp": 0.681, "cls": 0.309, "tbt": 0.102, "status": "FAIL", "issues": ["Performance: 83 (required: \u226590)", "CLS: 0.309 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/inlays-and-onlays/"}, "attempts": 1, "fetched_at": "2026-09-07T11:01:39.167198+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Finlays-and-onlays%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/insurance-and-finances/", "strategy": "mobile", "performance": 80, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.934, "lcp": 3.713, "cls": 0.0, "tbt": 0.376, "status": "FAIL", "issues": ["Performance: 80 (required: \u226590)", "LCP: 3.713s (required: \u22642.5s)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-javascript", "title": "Reduce unused JavaScript", "savings_ms": 450}], "final_url": "https://www.sunoaksdental.com/insurance-and-finances/"}, "attempts": 1, "fetched_at": "2026-09-07T10:59:31.357497+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Finsurance-and-finances%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/insurance-and-finances/", "strategy": "desktop", "performance": 88, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.687, "lcp": 0.687, "cls": 0.067, "tbt": 0.248, "status": "FAIL", "issues": ["Performance: 88 (required: \u226590)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/insurance-and-finances/"}, "attempts": 1, "fetched_at": "2026-09-07T10:59:35.558763+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Finsurance-and-finances%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/invisalign/", "strategy": "mobile", "performance": 89, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.941, "lcp": 3.637, "cls": 0.0, "tbt": 0.12, "status": "FAIL", "issues": ["Performance: 89 (required: \u226590)", "LCP: 3.637s (required: \u22642.5s)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-javascript", "title": "Reduce unused JavaScript", "savings_ms": 450}], "final_url": "https://www.sunoaksdental.com/invisalign/"}, "attempts": 1, "fetched_at": "2026-09-07T11:03:30.210232+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Finvisalign%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/invisalign/", "strategy": "desktop", "performance": 83, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.687, "lcp": 0.687, "cls": 0.148, "tbt": 0.27, "status": "FAIL", "issues": ["Performance: 83 (required: \u226590)", "CLS: 0.148 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/invisalign/"}, "attempts": 2, "fetched_at": "2026-09-07T11:06:14.756753+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Finvisalign%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/laser-dentistry/", "strategy": "mobile", "performance": 98, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.93, "lcp": 1.655, "cls": 0.0, "tbt": 0.141, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/laser-dentistry/"}, "attempts": 1, "fetched_at": "2026-09-07T11:00:31.728420+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Flaser-dentistry%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/laser-dentistry/", "strategy": "desktop", "performance": 94, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.32, "lcp": 0.445, "cls": 0.067, "tbt": 0.188, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/laser-dentistry/"}, "attempts": 1, "fetched_at": "2026-09-07T11:00:27.247963+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Flaser-dentistry%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/meet-dr-narinder-mahal/", "strategy": "mobile", "performance": 71, "accessibility": 100, "best_practices": 96, "seo": 100, "fcp": 0.963, "lcp": 3.625, "cls": 0.002, "tbt": 0.813, "status": "FAIL", "issues": ["Performance: 71 (required: \u226590)", "LCP: 3.625s (required: \u22642.5s)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [{"id": "image-size-responsive", "title": "Serves images with low resolution", "weight": 1, "score": 0.0}], "opportunities": [{"id": "unused-javascript", "title": "Reduce unused JavaScript", "savings_ms": 600}], "final_url": "https://www.sunoaksdental.com/meet-dr-narinder-mahal/"}, "attempts": 1, "fetched_at": "2026-09-07T10:59:34.203722+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fmeet-dr-narinder-mahal%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/meet-dr-narinder-mahal/", "strategy": "desktop", "performance": 93, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.282, "lcp": 0.723, "cls": 0.066, "tbt": 0.16, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/meet-dr-narinder-mahal/"}, "attempts": 1, "fetched_at": "2026-09-07T10:59:29.851221+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fmeet-dr-narinder-mahal%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/regular-and-deep-cleanings/", "strategy": "mobile", "performance": 89, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.971, "lcp": 1.686, "cls": 0.0, "tbt": 0.432, "status": "FAIL", "issues": ["Performance: 89 (required: \u226590)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/regular-and-deep-cleanings/"}, "attempts": 1, "fetched_at": "2026-09-07T11:00:24.306205+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fregular-and-deep-cleanings%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/regular-and-deep-cleanings/", "strategy": "desktop", "performance": 81, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.744, "lcp": 0.866, "cls": 0.111, "tbt": 0.342, "status": "FAIL", "issues": ["Performance: 81 (required: \u226590)", "CLS: 0.111 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-javascript", "title": "Reduce unused JavaScript", "savings_ms": 120}], "final_url": "https://www.sunoaksdental.com/regular-and-deep-cleanings/"}, "attempts": 1, "fetched_at": "2026-09-07T11:00:27.758433+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fregular-and-deep-cleanings%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/regular-extractions/", "strategy": "mobile", "performance": 98, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.919, "lcp": 1.684, "cls": 0.0, "tbt": 0.165, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/regular-extractions/"}, "attempts": 1, "fetched_at": "2026-09-07T11:02:48.359059+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fregular-extractions%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/regular-extractions/", "strategy": "desktop", "performance": 82, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.281, "lcp": 0.445, "cls": 0.323, "tbt": 0.132, "status": "FAIL", "issues": ["Performance: 82 (required: \u226590)", "CLS: 0.323 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/regular-extractions/"}, "attempts": 2, "fetched_at": "2026-09-07T11:05:22.019264+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fregular-extractions%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/request-an-appointment/", "strategy": "mobile", "performance": 85, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.362, "lcp": 3.978, "cls": 0.0, "tbt": 0.06, "status": "FAIL", "issues": ["Performance: 85 (required: \u226590)", "LCP: 3.978s (required: \u22642.5s)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-javascript", "title": "Reduce unused JavaScript", "savings_ms": 300}], "final_url": "https://www.sunoaksdental.com/request-an-appointment/"}, "attempts": 1, "fetched_at": "2026-09-07T11:04:37.995729+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Frequest-an-appointment%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/request-an-appointment/", "strategy": "desktop", "performance": 85, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.726, "lcp": 0.835, "cls": 0.224, "tbt": 0.124, "status": "FAIL", "issues": ["Performance: 85 (required: \u226590)", "CLS: 0.224 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/request-an-appointment/"}, "attempts": 1, "fetched_at": "2026-09-07T11:04:45.877949+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Frequest-an-appointment%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/site-map/", "strategy": "mobile", "performance": 89, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.072, "lcp": 3.583, "cls": 0.0, "tbt": 0.098, "status": "FAIL", "issues": ["Performance: 89 (required: \u226590)", "LCP: 3.583s (required: \u22642.5s)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-javascript", "title": "Reduce unused JavaScript", "savings_ms": 300}], "final_url": "https://www.sunoaksdental.com/site-map/"}, "attempts": 1, "fetched_at": "2026-09-07T10:59:49.050506+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fsite-map%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/site-map/", "strategy": "desktop", "performance": 82, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.521, "lcp": 0.681, "cls": 0.344, "tbt": 0.099, "status": "FAIL", "issues": ["Performance: 82 (required: \u226590)", "CLS: 0.344 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/site-map/"}, "attempts": 1, "fetched_at": "2026-09-07T10:59:52.043612+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fsite-map%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/sleep-apnea-treatment/", "strategy": "mobile", "performance": 83, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.93, "lcp": 3.675, "cls": 0.0, "tbt": 0.295, "status": "FAIL", "issues": ["Performance: 83 (required: \u226590)", "LCP: 3.675s (required: \u22642.5s)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-javascript", "title": "Reduce unused JavaScript", "savings_ms": 300}], "final_url": "https://www.sunoaksdental.com/sleep-apnea-treatment/"}, "attempts": 1, "fetched_at": "2026-09-07T11:04:19.104598+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fsleep-apnea-treatment%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/sleep-apnea-treatment/", "strategy": "desktop", "performance": 82, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.521, "lcp": 0.681, "cls": 0.37, "tbt": 0.082, "status": "FAIL", "issues": ["Performance: 82 (required: \u226590)", "CLS: 0.37 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/sleep-apnea-treatment/"}, "attempts": 1, "fetched_at": "2026-09-07T11:04:15.474996+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fsleep-apnea-treatment%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/smile-design/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.918, "lcp": 1.655, "cls": 0.013, "tbt": 0.117, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/smile-design/"}, "attempts": 1, "fetched_at": "2026-09-07T11:02:23.846031+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fsmile-design%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/smile-design/", "strategy": "desktop", "performance": 91, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.521, "lcp": 0.681, "cls": 0.19, "tbt": 0.06, "status": "FAIL", "issues": ["CLS: 0.19 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/smile-design/"}, "attempts": 1, "fetched_at": "2026-09-07T11:02:24.500962+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fsmile-design%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/success-story/", "strategy": "mobile", "performance": 65, "accessibility": 97, "best_practices": 100, "seo": 100, "fcp": 0.915, "lcp": 3.778, "cls": 0.28, "tbt": 0.283, "status": "FAIL", "issues": ["Performance: 65 (required: \u226590)", "Accessibility: 97 (required: \u2265100)", "LCP: 3.778s (required: \u22642.5s)", "CLS: 0.28 (required: \u22640.1)"], "details": {"failing_accessibility": [{"id": "color-contrast", "title": "Background and foreground colors do not have a sufficient contrast ratio.", "weight": 7, "score": 0.0}], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-javascript", "title": "Reduce unused JavaScript", "savings_ms": 300}], "final_url": "https://www.sunoaksdental.com/success-story/"}, "attempts": 1, "fetched_at": "2026-09-07T10:59:54.757353+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fsuccess-story%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/success-story/", "strategy": "desktop", "performance": 66, "accessibility": 97, "best_practices": 100, "seo": 100, "fcp": 0.281, "lcp": 0.445, "cls": 0.113, "tbt": 0.867, "status": "FAIL", "issues": ["Performance: 66 (required: \u226590)", "Accessibility: 97 (required: \u2265100)", "CLS: 0.113 (required: \u22640.1)"], "details": {"failing_accessibility": [{"id": "color-contrast", "title": "Background and foreground colors do not have a sufficient contrast ratio.", "weight": 7, "score": 0.0}], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/success-story/"}, "attempts": 1, "fetched_at": "2026-09-07T11:00:05.804926+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fsuccess-story%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/suresmile/", "strategy": "mobile", "performance": 84, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.051, "lcp": 3.677, "cls": 0.0, "tbt": 0.264, "status": "FAIL", "issues": ["Performance: 84 (required: \u226590)", "LCP: 3.677s (required: \u22642.5s)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-javascript", "title": "Reduce unused JavaScript", "savings_ms": 450}], "final_url": "https://www.sunoaksdental.com/suresmile/"}, "attempts": 1, "fetched_at": "2026-09-07T11:04:18.113239+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fsuresmile%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/suresmile/", "strategy": "desktop", "performance": 95, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.686, "lcp": 0.686, "cls": 0.069, "tbt": 0.149, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/suresmile/"}, "attempts": 1, "fetched_at": "2026-09-07T11:04:16.759061+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fsuresmile%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/veneers/", "strategy": "mobile", "performance": 86, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.066, "lcp": 3.644, "cls": 0.0, "tbt": 0.162, "status": "FAIL", "issues": ["Performance: 86 (required: \u226590)", "LCP: 3.644s (required: \u22642.5s)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-javascript", "title": "Reduce unused JavaScript", "savings_ms": 300}], "final_url": "https://www.sunoaksdental.com/veneers/"}, "attempts": 1, "fetched_at": "2026-09-07T11:01:11.804425+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fveneers%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/veneers/", "strategy": "desktop", "performance": 94, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.687, "lcp": 0.847, "cls": 0.08, "tbt": 0.154, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-javascript", "title": "Reduce unused JavaScript", "savings_ms": 120}], "final_url": "https://www.sunoaksdental.com/veneers/"}, "attempts": 1, "fetched_at": "2026-09-07T11:01:16.142359+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fveneers%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/what-sets-up-apart/", "strategy": "mobile", "performance": 81, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.084, "lcp": 3.678, "cls": 0.0, "tbt": 0.285, "status": "FAIL", "issues": ["Performance: 81 (required: \u226590)", "LCP: 3.678s (required: \u22642.5s)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-javascript", "title": "Reduce unused JavaScript", "savings_ms": 300}], "final_url": "https://www.sunoaksdental.com/what-sets-up-apart/"}, "attempts": 1, "fetched_at": "2026-09-07T10:59:08.888656+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fwhat-sets-up-apart%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/what-sets-up-apart/", "strategy": "desktop", "performance": 73, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.521, "lcp": 0.681, "cls": 0.332, "tbt": 0.263, "status": "FAIL", "issues": ["Performance: 73 (required: \u226590)", "CLS: 0.332 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/what-sets-up-apart/"}, "attempts": 1, "fetched_at": "2026-09-07T10:59:07.935709+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fwhat-sets-up-apart%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/wisdom-teeth-extraction/", "strategy": "mobile", "performance": 93, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.051, "lcp": 1.655, "cls": 0.0, "tbt": 0.325, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/wisdom-teeth-extraction/"}, "attempts": 1, "fetched_at": "2026-09-07T11:02:30.645720+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fwisdom-teeth-extraction%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/wisdom-teeth-extraction/", "strategy": "desktop", "performance": 96, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.715, "lcp": 0.715, "cls": 0.082, "tbt": 0.12, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/wisdom-teeth-extraction/"}, "attempts": 2, "fetched_at": "2026-09-07T11:05:23.984515+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fwisdom-teeth-extraction%2F&form_factor=desktop"}, {"url": "https://www.sunoaksdental.com/zoom-teeth-whitening/", "strategy": "mobile", "performance": 96, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.922, "lcp": 1.655, "cls": 0.0, "tbt": 0.212, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/zoom-teeth-whitening/"}, "attempts": 1, "fetched_at": "2026-09-07T11:02:06.757026+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fzoom-teeth-whitening%2F&form_factor=mobile"}, {"url": "https://www.sunoaksdental.com/zoom-teeth-whitening/", "strategy": "desktop", "performance": 88, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.441, "lcp": 0.601, "cls": 0.123, "tbt": 0.226, "status": "FAIL", "issues": ["Performance: 88 (required: \u226590)", "CLS: 0.123 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.sunoaksdental.com/zoom-teeth-whitening/"}, "attempts": 1, "fetched_at": "2026-09-07T11:02:08.163465+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.sunoaksdental.com%2Fzoom-teeth-whitening%2F&form_factor=desktop"}], "errors": [], "pending": [], "counts": {"pending": 0, "running": 0, "done": 52, "failed": 0, "total": 52, "finished": 52}, "summary": {"tested": 52, "passed": 16, "failed": 36, "errored": 0, "not_run": 0, "unique_urls": 26}, "generated_at": "2026-09-08 12:43:50 Sri Lanka Standard Time"};
+const T = DATA.thresholds;
+let filter = 'all', device = 'all', query = '', sortKey = 'url', sortDir = 1;
+
+const rows = DATA.rows.map(r => ({...r, kind: r.status === 'FAIL' ? 'fail' : 'pass'}));
+DATA.errors.forEach(e => rows.push({
+  url: e.url, strategy: e.strategy, status: 'ERROR', kind: 'err',
+  performance: null, accessibility: null, best_practices: null, seo: null,
+  fcp: null, lcp: null, cls: null, tbt: null,
+  issues: [e.error], details: {}, attempts: e.attempts, link: e.link
+}));
+
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c =>
+  ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+function scoreCls(v, min) {
+  if (v === null || v === undefined) return 'n';
+  if (min !== null && min !== undefined) return v >= min ? 'g' : 'p';
+  if (v >= 90) return 'g';
+  if (v >= 50) return 'a';
+  return 'p';
+}
+function metricCls(v, max) {
+  if (v === null || v === undefined) return 'n';
+  if (max === null || max === undefined) return v === null ? 'n' : '';
+  if (v <= max) return 'g';
+  if (v <= max * 1.5) return 'a';
+  return 'p';
+}
+const fmt = (v, suffix) => (v === null || v === undefined) ? '—' : v + (suffix || '');
+
+function visible() {
+  return rows.filter(r => {
+    if (filter === 'fail' && r.kind !== 'fail') return false;
+    if (filter === 'pass' && r.kind !== 'pass') return false;
+    if (filter === 'err'  && r.kind !== 'err')  return false;
+    if (device !== 'all' && r.strategy !== device) return false;
+    if (query && !r.url.toLowerCase().includes(query)) return false;
+    return true;
+  }).sort((a, b) => {
+    let x = a[sortKey], y = b[sortKey];
+    if (x === null || x === undefined) x = sortDir === 1 ? Infinity : -Infinity;
+    if (y === null || y === undefined) y = sortDir === 1 ? Infinity : -Infinity;
+    if (typeof x === 'string') return x.localeCompare(y) * sortDir;
+    return (x - y) * sortDir;
+  });
+}
+
+function detailHtml(r) {
+  const d = r.details || {};
+  const blocks = [];
+  const list = (title, items, render) => {
+    if (!items || !items.length) return;
+    blocks.push(`<div><h4>${esc(title)}</h4><ul>${items.map(render).join('')}</ul></div>`);
+  };
+  list('Failing accessibility checks', d.failing_accessibility,
+       a => `<li>${esc(a.title)}</li>`);
+  list('Failing SEO checks', d.failing_seo, a => `<li>${esc(a.title)}</li>`);
+  list('Failing best-practice checks', d.failing_best_practices,
+       a => `<li>${esc(a.title)}</li>`);
+  list('Top opportunities', d.opportunities,
+       o => `<li>${esc(o.title)} <span class="save">· saves ~${(o.savings_ms/1000).toFixed(2)}s</span></li>`);
+  if (r.issues && r.issues.length)
+    blocks.unshift(`<div><h4>Why this ${r.status === 'ERROR' ? 'could not be tested' : 'failed'}</h4><ul>${
+      r.issues.map(i => `<li>${esc(i)}</li>`).join('')}</ul></div>`);
+  if (!blocks.length) blocks.push('<div><h4>No further detail</h4></div>');
+  return `<div class="detail">${blocks.join('')}</div>`;
+}
+
+function render() {
+  const list = visible();
+  const body = document.getElementById('body');
+  if (!list.length) {
+    body.innerHTML = '<tr><td colspan="12" class="empty">No rows match these filters.</td></tr>';
+    document.getElementById('shown').textContent = '0';
+    return;
+  }
+  body.innerHTML = list.map((r, i) => `
+    <tr class="${r.kind}">
+      <td><button class="expand" data-i="${i}" aria-label="Show detail">▸</button></td>
+      <td class="url" title="${esc(r.url)}"><a href="${esc(r.link)}" target="_blank" rel="noopener">${esc(r.url)}</a></td>
+      <td><span class="dev ${esc(r.strategy)}">${esc(r.strategy)}</span></td>
+      <td><span class="pill ${scoreCls(r.performance, T.performance)}">${fmt(r.performance)}</span></td>
+      <td><span class="pill ${scoreCls(r.accessibility, T.accessibility)}">${fmt(r.accessibility)}</span></td>
+      <td><span class="pill ${scoreCls(r.best_practices, T.best_practices)}">${fmt(r.best_practices)}</span></td>
+      <td><span class="pill ${scoreCls(r.seo, T.seo)}">${fmt(r.seo)}</span></td>
+      <td class="${metricCls(r.fcp, T.fcp)}">${fmt(r.fcp, 's')}</td>
+      <td class="${metricCls(r.lcp, T.lcp)}">${fmt(r.lcp, 's')}</td>
+      <td class="${metricCls(r.cls, T.cls)}">${fmt(r.cls)}</td>
+      <td><span class="status ${esc(r.status)}">${esc(r.status)}</span></td>
+      <td class="issues">${esc((r.issues || []).join('; ')).slice(0, 220)}</td>
+    </tr>
+    <tr class="detail-row" id="d${i}" hidden><td colspan="12">${detailHtml(r)}</td></tr>`).join('');
+  document.getElementById('shown').textContent = String(list.length);
+
+  body.querySelectorAll('.expand').forEach(btn => btn.addEventListener('click', () => {
+    const row = document.getElementById('d' + btn.dataset.i);
+    row.hidden = !row.hidden;
+    btn.textContent = row.hidden ? '▸' : '▾';
+  }));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-filter]').forEach(b => b.addEventListener('click', () => {
+    filter = b.dataset.filter;
+    document.querySelectorAll('[data-filter]').forEach(o =>
+      o.setAttribute('aria-pressed', String(o === b)));
+    render();
+  }));
+  document.querySelectorAll('[data-device]').forEach(b => b.addEventListener('click', () => {
+    device = b.dataset.device;
+    document.querySelectorAll('[data-device]').forEach(o =>
+      o.setAttribute('aria-pressed', String(o === b)));
+    render();
+  }));
+  document.getElementById('q').addEventListener('input', e => {
+    query = e.target.value.trim().toLowerCase();
+    render();
+  });
+  document.querySelectorAll('th[data-key]').forEach(th => th.addEventListener('click', () => {
+    const key = th.dataset.key;
+    sortDir = (key === sortKey) ? -sortDir : 1;
+    sortKey = key;
+    document.querySelectorAll('th[data-key] .arrow').forEach(a => a.textContent = '');
+    const arrow = th.querySelector('.arrow');
+    if (arrow) arrow.textContent = sortDir === 1 ? '▲' : '▼';
+    render();
+  }));
+  render();
+});
+</script>
+</body>
+</html>
