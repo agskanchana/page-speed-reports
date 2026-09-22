@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PageSpeed Report — femalehealthguru.com — golive</title>
+<style>
+:root{
+  --bg:#eef1f8; --card:#ffffff; --ink:#1c2333; --muted:#6b7387; --line:#e3e7f0;
+  --brand:#5b63d3; --brand2:#8b5cf6;
+  --good-bg:#dcfce7; --good-ink:#14532d;
+  --warn-bg:#fef3c7; --warn-ink:#78350f;
+  --bad-bg:#fee2e2;  --bad-ink:#7f1d1d;
+  --err-bg:#e5e7eb;  --err-ink:#374151;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#12141c; --card:#1a1d27; --ink:#e8eaf2; --muted:#9aa1b5; --line:#2a2f3d;
+    --good-bg:#14532d; --good-ink:#bbf7d0;
+    --warn-bg:#78350f; --warn-ink:#fde68a;
+    --bad-bg:#7f1d1d;  --bad-ink:#fecaca;
+    --err-bg:#374151;  --err-ink:#d1d5db;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;padding:24px 16px;background:var(--bg);color:var(--ink);
+  font:15px/1.5 'Segoe UI',system-ui,-apple-system,sans-serif}
+.wrap{max-width:1500px;margin:0 auto}
+header{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;
+  padding:28px 30px;border-radius:14px 14px 0 0}
+header h1{margin:0 0 6px;font-size:1.55rem;letter-spacing:-.02em}
+header .meta{opacity:.9;font-size:.9rem}
+header .meta code{background:rgba(255,255,255,.18);padding:1px 6px;border-radius:4px}
+main{background:var(--card);border-radius:0 0 14px 14px;padding:26px 30px 34px;
+  box-shadow:0 12px 40px rgba(20,25,50,.12)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:26px}
+.card{border:1px solid var(--line);border-radius:11px;padding:16px 18px;background:var(--card)}
+.card h3{margin:0 0 6px;font-size:.74rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600}
+.card .n{font-size:1.9rem;font-weight:700;line-height:1}
+.card.pass .n{color:#16a34a}.card.fail .n{color:#dc2626}.card.err .n{color:#d97706}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:16px}
+.controls input[type=search]{flex:1 1 240px;min-width:200px;padding:9px 12px;border:1px solid var(--line);
+  border-radius:8px;background:var(--bg);color:var(--ink);font-size:.9rem}
+.chip{padding:7px 13px;border:1px solid var(--line);border-radius:99px;background:var(--bg);
+  color:var(--ink);cursor:pointer;font-size:.85rem;font-weight:600}
+.chip[aria-pressed=true]{background:var(--brand);border-color:var(--brand);color:#fff}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:11px}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+thead th{position:sticky;top:0;background:var(--card);border-bottom:2px solid var(--line);
+  padding:11px 10px;text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;
+  color:var(--muted);cursor:pointer;white-space:nowrap;user-select:none}
+thead th:hover{color:var(--ink)}
+thead th .arrow{opacity:.35;font-size:.65rem}
+tbody td{padding:10px;border-bottom:1px solid var(--line);vertical-align:middle}
+tbody tr.fail{background:color-mix(in srgb,var(--bad-bg) 22%,transparent)}
+tbody tr.err{background:color-mix(in srgb,var(--err-bg) 30%,transparent)}
+tbody tr.detail-row td{background:var(--bg);padding:0}
+.url{max-width:340px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.url a{color:var(--brand);text-decoration:none;font-weight:500}
+.url a:hover{text-decoration:underline}
+.pill{display:inline-block;min-width:42px;text-align:center;padding:3px 9px;border-radius:6px;font-weight:700;font-size:.82rem}
+.g{background:var(--good-bg);color:var(--good-ink)}
+.a{background:var(--warn-bg);color:var(--warn-ink)}
+.p{background:var(--bad-bg);color:var(--bad-ink)}
+.n{background:var(--err-bg);color:var(--err-ink)}
+.dev{display:inline-block;padding:2px 8px;border-radius:5px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+.dev.mobile{background:#dbeafe;color:#1e40af}
+.dev.desktop{background:#f3e8ff;color:#6b21a8}
+@media (prefers-color-scheme:dark){.dev.mobile{background:#1e3a8a;color:#bfdbfe}.dev.desktop{background:#581c87;color:#e9d5ff}}
+.status{font-weight:700;font-size:.8rem}
+.status.PASS{color:#16a34a}.status.FAIL{color:#dc2626}.status.ERROR{color:#d97706}
+.issues{color:var(--muted);font-size:.79rem;max-width:330px}
+.expand{cursor:pointer;border:none;background:none;color:var(--muted);font-size:.95rem;padding:2px 6px;border-radius:5px}
+.expand:hover{background:var(--line);color:var(--ink)}
+.detail{padding:16px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.detail h4{margin:0 0 8px;font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.detail ul{margin:0;padding-left:18px;font-size:.82rem}
+.detail li{margin-bottom:4px}
+.detail .save{color:var(--muted);font-variant-numeric:tabular-nums}
+.empty{padding:36px;text-align:center;color:var(--muted)}
+footer{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
+footer ul{margin:8px 0 0;padding-left:20px}
+@media print{body{background:#fff;padding:0}main{box-shadow:none}.controls{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>PageSpeed Insights Report</h1>
+    <div class="meta">
+      femalehealthguru.com — golive · run <code>796f4c67</code> ·
+      generated 2026-09-22 17:56:17 Sri Lanka Standard Time
+    </div>
+  </header>
+  <main>
+    <div class="cards">
+      <div class="card"><h3>URLs</h3><div class="n">29</div></div>
+      <div class="card"><h3>Tests run</h3><div class="n">58</div></div>
+      <div class="card pass"><h3>Passed</h3><div class="n">56</div></div>
+      <div class="card fail"><h3>Failed</h3><div class="n">2</div></div>
+      <div class="card err"><h3>Errored</h3><div class="n">0</div></div>
+    </div>
+
+    <div class="controls">
+      <input type="search" id="q" placeholder="Filter by URL…" aria-label="Filter by URL">
+      <button class="chip" data-filter="all" aria-pressed="true">All</button>
+      <button class="chip" data-filter="fail" aria-pressed="false">Failed</button>
+      <button class="chip" data-filter="pass" aria-pressed="false">Passed</button>
+      <button class="chip" data-filter="err" aria-pressed="false">Errors</button>
+      <span style="width:12px"></span>
+      <button class="chip" data-device="all" aria-pressed="true">Both</button>
+      <button class="chip" data-device="mobile" aria-pressed="false">Mobile</button>
+      <button class="chip" data-device="desktop" aria-pressed="false">Desktop</button>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr>
+          <th style="width:34px"></th>
+          <th data-key="url">URL <span class="arrow">▲</span></th>
+          <th data-key="strategy">Device <span class="arrow"></span></th>
+          <th data-key="performance">Perf <span class="arrow"></span></th>
+          <th data-key="accessibility">A11y <span class="arrow"></span></th>
+          <th data-key="best_practices">BP <span class="arrow"></span></th>
+          <th data-key="seo">SEO <span class="arrow"></span></th>
+          <th data-key="fcp">FCP <span class="arrow"></span></th>
+          <th data-key="lcp">LCP <span class="arrow"></span></th>
+          <th data-key="cls">CLS <span class="arrow"></span></th>
+          <th data-key="status">Status <span class="arrow"></span></th>
+          <th>Issues</th>
+        </tr></thead>
+        <tbody id="body"></tbody>
+      </table>
+    </div>
+
+    <footer>
+      Showing <span id="shown">0</span> rows. Source:
+      <code>https://www.femalehealthguru.com/sitemap_index.xml</code>
+      <p style="margin:14px 0 4px"><strong>Pass criteria</strong></p>
+      <ul><li><strong>Performance:</strong> ≥90</li>
+<li><strong>Accessibility:</strong> ≥100</li>
+<li><strong>Best Practices:</strong> not enforced</li>
+<li><strong>SEO:</strong> ≥100</li>
+<li><strong>First Contentful Paint:</strong> ≤1.8s</li>
+<li><strong>Largest Contentful Paint:</strong> ≤2.5s</li>
+<li><strong>Cumulative Layout Shift:</strong> ≤0.1</li>
+<li><strong>Total Blocking Time:</strong> not enforced</li></ul>
+      <p style="margin-top:12px">
+        <strong>ERROR</strong> means the test could not be completed after every retry —
+        it is not a score of zero. Expand a row to see why.
+      </p>
+    </footer>
+  </main>
+</div>
+<script>
+const DATA = {"run": {"id": "796f4c67", "label": "femalehealthguru.com \u2014 golive", "source": "https://www.femalehealthguru.com/sitemap_index.xml", "status": "done", "created_at": "2026-09-22T11:50:02.372801+00:00", "started_at": "2026-09-22T11:50:02.377901+00:00", "finished_at": "2026-09-22T11:56:20.143180+00:00"}, "thresholds": {"performance": 90, "accessibility": 100, "best_practices": null, "seo": 100, "fcp": 1.8, "lcp": 2.5, "cls": 0.1, "tbt": null}, "rows": [{"url": "https://www.femalehealthguru.com/", "strategy": "mobile", "performance": 94, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.363, "lcp": 1.732, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/"}, "attempts": 1, "fetched_at": "2026-09-22T11:50:17.352000+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.352, "lcp": 0.642, "cls": 0.025, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/"}, "attempts": 1, "fetched_at": "2026-09-22T11:50:18.419447+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/contact-us/", "strategy": "mobile", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.231, "lcp": 1.252, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/contact-us/"}, "attempts": 1, "fetched_at": "2026-09-22T11:51:58.730428+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fcontact-us%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/contact-us/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.346, "lcp": 0.545, "cls": 0.002, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/contact-us/"}, "attempts": 1, "fetched_at": "2026-09-22T11:52:04.439987+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fcontact-us%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/faq/", "strategy": "mobile", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.075, "lcp": 1.276, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/faq/"}, "attempts": 1, "fetched_at": "2026-09-22T11:50:44.822593+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Ffaq%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/faq/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.351, "lcp": 0.601, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-css-rules", "title": "Reduce unused CSS", "savings_ms": 60}], "final_url": "https://www.femalehealthguru.com/faq/"}, "attempts": 1, "fetched_at": "2026-09-22T11:50:36.787735+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Ffaq%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/female-incontinence/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.117, "lcp": 1.994, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/female-incontinence/"}, "attempts": 1, "fetched_at": "2026-09-22T11:54:57.600891+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Ffemale-incontinence%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/female-incontinence/", "strategy": "desktop", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.367, "lcp": 0.935, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-css-rules", "title": "Reduce unused CSS", "savings_ms": 80}], "final_url": "https://www.femalehealthguru.com/female-incontinence/"}, "attempts": 1, "fetched_at": "2026-09-22T11:55:03.378307+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Ffemale-incontinence%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/finance/", "strategy": "mobile", "performance": 97, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.351, "lcp": 2.038, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/finance/"}, "attempts": 1, "fetched_at": "2026-09-22T11:51:24.836333+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Ffinance%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/finance/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.315, "lcp": 0.606, "cls": 0.001, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/finance/"}, "attempts": 1, "fetched_at": "2026-09-22T11:51:20.364868+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Ffinance%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/gainswave-for-her/", "strategy": "mobile", "performance": 97, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.351, "lcp": 2.123, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/gainswave-for-her/"}, "attempts": 1, "fetched_at": "2026-09-22T11:52:48.399717+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fgainswave-for-her%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/gainswave-for-her/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.318, "lcp": 0.632, "cls": 0.001, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/gainswave-for-her/"}, "attempts": 1, "fetched_at": "2026-09-22T11:52:47.552074+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fgainswave-for-her%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/gainswave-for-improved-ability-to-orgasm/", "strategy": "mobile", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.064, "lcp": 1.276, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/gainswave-for-improved-ability-to-orgasm/"}, "attempts": 1, "fetched_at": "2026-09-22T11:52:49.358860+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fgainswave-for-improved-ability-to-orgasm%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/gainswave-for-improved-ability-to-orgasm/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.314, "lcp": 0.544, "cls": 0.001, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/gainswave-for-improved-ability-to-orgasm/"}, "attempts": 1, "fetched_at": "2026-09-22T11:53:01.513956+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fgainswave-for-improved-ability-to-orgasm%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/gainswave-for-improved-vaginal-and-clitoral-sensitivity/", "strategy": "mobile", "performance": 98, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.201, "lcp": 2.259, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/gainswave-for-improved-vaginal-and-clitoral-sensitivity/"}, "attempts": 1, "fetched_at": "2026-09-22T11:52:22.525589+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fgainswave-for-improved-vaginal-and-clitoral-sensitivity%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/gainswave-for-improved-vaginal-and-clitoral-sensitivity/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.299, "lcp": 0.541, "cls": 0.001, "tbt": 0.045, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/gainswave-for-improved-vaginal-and-clitoral-sensitivity/"}, "attempts": 1, "fetched_at": "2026-09-22T11:52:27.981233+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fgainswave-for-improved-vaginal-and-clitoral-sensitivity%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/glp-1-medications-for-women/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.201, "lcp": 1.972, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/glp-1-medications-for-women/"}, "attempts": 1, "fetched_at": "2026-09-22T11:54:43.886613+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fglp-1-medications-for-women%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/glp-1-medications-for-women/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.339, "lcp": 0.506, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/glp-1-medications-for-women/"}, "attempts": 1, "fetched_at": "2026-09-22T11:54:44.745269+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fglp-1-medications-for-women%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/hormone-optimization-for-sexual-health-low-t-low-e/", "strategy": "mobile", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.064, "lcp": 1.433, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/hormone-optimization-for-sexual-health-low-t-low-e/"}, "attempts": 1, "fetched_at": "2026-09-22T11:52:05.598373+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fhormone-optimization-for-sexual-health-low-t-low-e%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/hormone-optimization-for-sexual-health-low-t-low-e/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.329, "lcp": 0.601, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/hormone-optimization-for-sexual-health-low-t-low-e/"}, "attempts": 1, "fetched_at": "2026-09-22T11:52:04.415403+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fhormone-optimization-for-sexual-health-low-t-low-e%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/hormone-replacement-therapy-hrt/", "strategy": "mobile", "performance": 98, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.071, "lcp": 1.576, "cls": 0.0, "tbt": 0.125, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/hormone-replacement-therapy-hrt/"}, "attempts": 1, "fetched_at": "2026-09-22T11:54:06.695087+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fhormone-replacement-therapy-hrt%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/hormone-replacement-therapy-hrt/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.307, "lcp": 0.651, "cls": 0.001, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/hormone-replacement-therapy-hrt/"}, "attempts": 1, "fetched_at": "2026-09-22T11:53:54.665321+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fhormone-replacement-therapy-hrt%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/low-e-for-women/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.365, "lcp": 1.981, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/low-e-for-women/"}, "attempts": 1, "fetched_at": "2026-09-22T11:55:21.098589+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Flow-e-for-women%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/low-e-for-women/", "strategy": "desktop", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.321, "lcp": 0.889, "cls": 0.001, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/low-e-for-women/"}, "attempts": 1, "fetched_at": "2026-09-22T11:56:20.139788+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Flow-e-for-women%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/low-t-for-women/", "strategy": "mobile", "performance": 97, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.351, "lcp": 2.038, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/low-t-for-women/"}, "attempts": 1, "fetched_at": "2026-09-22T11:53:37.217080+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Flow-t-for-women%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/low-t-for-women/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.325, "lcp": 0.631, "cls": 0.001, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-css-rules", "title": "Reduce unused CSS", "savings_ms": 50}], "final_url": "https://www.femalehealthguru.com/low-t-for-women/"}, "attempts": 1, "fetched_at": "2026-09-22T11:53:36.365338+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Flow-t-for-women%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/meet-dr-jeffrey-buch/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.084, "lcp": 1.975, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/meet-dr-jeffrey-buch/"}, "attempts": 1, "fetched_at": "2026-09-22T11:50:37.628713+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fmeet-dr-jeffrey-buch%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/meet-dr-jeffrey-buch/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.303, "lcp": 0.572, "cls": 0.001, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/meet-dr-jeffrey-buch/"}, "attempts": 1, "fetched_at": "2026-09-22T11:50:37.139848+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fmeet-dr-jeffrey-buch%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/meet-regina-kogan/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.065, "lcp": 1.977, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/meet-regina-kogan/"}, "attempts": 1, "fetched_at": "2026-09-22T11:50:19.325799+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fmeet-regina-kogan%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/meet-regina-kogan/", "strategy": "desktop", "performance": 98, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.289, "lcp": 0.572, "cls": 0.001, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "server-response-time", "title": "Initial server response time was short", "savings_ms": 294}], "final_url": "https://www.femalehealthguru.com/meet-regina-kogan/"}, "attempts": 1, "fetched_at": "2026-09-22T11:50:22.218548+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fmeet-regina-kogan%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/meet-the-team/", "strategy": "mobile", "performance": 97, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.351, "lcp": 2.049, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/meet-the-team/"}, "attempts": 1, "fetched_at": "2026-09-22T11:51:06.287679+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fmeet-the-team%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/meet-the-team/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.317, "lcp": 0.542, "cls": 0.001, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/meet-the-team/"}, "attempts": 1, "fetched_at": "2026-09-22T11:50:59.709517+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fmeet-the-team%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/menopause-treatment-with-low-t-and-low-e/", "strategy": "mobile", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.077, "lcp": 1.295, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/menopause-treatment-with-low-t-and-low-e/"}, "attempts": 1, "fetched_at": "2026-09-22T11:53:15.345129+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fmenopause-treatment-with-low-t-and-low-e%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/menopause-treatment-with-low-t-and-low-e/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.297, "lcp": 0.626, "cls": 0.016, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/menopause-treatment-with-low-t-and-low-e/"}, "attempts": 1, "fetched_at": "2026-09-22T11:53:16.833453+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fmenopause-treatment-with-low-t-and-low-e%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/non-surgical-treatment-of-female-incontinence-with-emsella/", "strategy": "mobile", "performance": 97, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.351, "lcp": 1.984, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/non-surgical-treatment-of-female-incontinence-with-emsella/"}, "attempts": 1, "fetched_at": "2026-09-22T11:55:02.383322+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fnon-surgical-treatment-of-female-incontinence-with-emsella%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/non-surgical-treatment-of-female-incontinence-with-emsella/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.311, "lcp": 0.534, "cls": 0.001, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/non-surgical-treatment-of-female-incontinence-with-emsella/"}, "attempts": 1, "fetched_at": "2026-09-22T11:54:58.233966+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fnon-surgical-treatment-of-female-incontinence-with-emsella%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/peptide-therapy-for-women/", "strategy": "mobile", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.115, "lcp": 1.357, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/peptide-therapy-for-women/"}, "attempts": 1, "fetched_at": "2026-09-22T11:54:23.054985+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fpeptide-therapy-for-women%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/peptide-therapy-for-women/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.345, "lcp": 0.649, "cls": 0.001, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/peptide-therapy-for-women/"}, "attempts": 1, "fetched_at": "2026-09-22T11:54:25.260725+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fpeptide-therapy-for-women%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/request-an-appointment/", "strategy": "mobile", "performance": 96, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.514, "lcp": 2.142, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/request-an-appointment/"}, "attempts": 1, "fetched_at": "2026-09-22T11:51:46.237283+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Frequest-an-appointment%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/request-an-appointment/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.38, "lcp": 0.558, "cls": 0.002, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/request-an-appointment/"}, "attempts": 1, "fetched_at": "2026-09-22T11:51:44.308935+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Frequest-an-appointment%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/semaglutide-weight-loss-for-women/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.065, "lcp": 1.965, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/semaglutide-weight-loss-for-women/"}, "attempts": 1, "fetched_at": "2026-09-22T11:54:38.123933+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fsemaglutide-weight-loss-for-women%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/semaglutide-weight-loss-for-women/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.291, "lcp": 0.531, "cls": 0.001, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/semaglutide-weight-loss-for-women/"}, "attempts": 1, "fetched_at": "2026-09-22T11:54:43.859157+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fsemaglutide-weight-loss-for-women%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/site-map/", "strategy": "mobile", "performance": 97, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.105, "lcp": 1.993, "cls": 0.0, "tbt": 0.145, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/site-map/"}, "attempts": 1, "fetched_at": "2026-09-22T11:50:57.178047+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fsite-map%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/site-map/", "strategy": "desktop", "performance": 98, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.349, "lcp": 0.88, "cls": 0.001, "tbt": 0.118, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/site-map/"}, "attempts": 1, "fetched_at": "2026-09-22T11:50:59.666870+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fsite-map%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/success-stories/", "strategy": "mobile", "performance": 96, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.364, "lcp": 2.561, "cls": 0.0, "tbt": 0.015, "status": "FAIL", "issues": ["LCP: 2.561s (required: \u22642.5s)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/success-stories/"}, "attempts": 1, "fetched_at": "2026-09-22T11:51:44.772045+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fsuccess-stories%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/success-stories/", "strategy": "desktop", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.353, "lcp": 0.772, "cls": 0.002, "tbt": 0.026, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/success-stories/"}, "attempts": 1, "fetched_at": "2026-09-22T11:51:42.215130+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fsuccess-stories%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/testosterone-therapy-with-oral-cream-or-pellet-insert-for-women-2/", "strategy": "mobile", "performance": 97, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.351, "lcp": 1.987, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/testosterone-therapy-with-oral-cream-or-pellet-insert-for-women-2/"}, "attempts": 1, "fetched_at": "2026-09-22T11:53:57.329146+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Ftestosterone-therapy-with-oral-cream-or-pellet-insert-for-women-2%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/testosterone-therapy-with-oral-cream-or-pellet-insert-for-women-2/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.312, "lcp": 0.601, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/testosterone-therapy-with-oral-cream-or-pellet-insert-for-women-2/"}, "attempts": 1, "fetched_at": "2026-09-22T11:53:53.573255+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Ftestosterone-therapy-with-oral-cream-or-pellet-insert-for-women-2%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/testosterone-therapy-with-oral-cream-or-pellet-insert-for-women/", "strategy": "mobile", "performance": 97, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.351, "lcp": 1.971, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/testosterone-therapy-with-oral-cream-or-pellet-insert-for-women/"}, "attempts": 1, "fetched_at": "2026-09-22T11:52:22.119597+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Ftestosterone-therapy-with-oral-cream-or-pellet-insert-for-women%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/testosterone-therapy-with-oral-cream-or-pellet-insert-for-women/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.329, "lcp": 0.559, "cls": 0.001, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/testosterone-therapy-with-oral-cream-or-pellet-insert-for-women/"}, "attempts": 1, "fetched_at": "2026-09-22T11:52:22.326252+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Ftestosterone-therapy-with-oral-cream-or-pellet-insert-for-women%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/treating-fatigue-with-hormones/", "strategy": "mobile", "performance": 97, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.351, "lcp": 1.986, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/treating-fatigue-with-hormones/"}, "attempts": 1, "fetched_at": "2026-09-22T11:53:19.448624+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Ftreating-fatigue-with-hormones%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/treating-fatigue-with-hormones/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.324, "lcp": 0.586, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/treating-fatigue-with-hormones/"}, "attempts": 1, "fetched_at": "2026-09-22T11:53:14.884020+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Ftreating-fatigue-with-hormones%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/treating-sleep-issues-with-hormones-2/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.351, "lcp": 1.976, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/treating-sleep-issues-with-hormones-2/"}, "attempts": 1, "fetched_at": "2026-09-22T11:53:34.615392+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Ftreating-sleep-issues-with-hormones-2%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/treating-sleep-issues-with-hormones-2/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.294, "lcp": 0.581, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/treating-sleep-issues-with-hormones-2/"}, "attempts": 1, "fetched_at": "2026-09-22T11:53:39.468325+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Ftreating-sleep-issues-with-hormones-2%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/weight-loss-for-women/", "strategy": "mobile", "performance": 84, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.061, "lcp": 1.351, "cls": 0.318, "tbt": 0.0, "status": "FAIL", "issues": ["Performance: 84 (required: \u226590)", "CLS: 0.318 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/weight-loss-for-women/"}, "attempts": 1, "fetched_at": "2026-09-22T11:54:21.142809+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fweight-loss-for-women%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/weight-loss-for-women/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.289, "lcp": 0.578, "cls": 0.001, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/weight-loss-for-women/"}, "attempts": 1, "fetched_at": "2026-09-22T11:54:25.628438+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fweight-loss-for-women%2F&form_factor=desktop"}, {"url": "https://www.femalehealthguru.com/what-sets-us-apart/", "strategy": "mobile", "performance": 96, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.351, "lcp": 2.269, "cls": 0.0, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/what-sets-us-apart/"}, "attempts": 1, "fetched_at": "2026-09-22T11:51:25.568013+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fwhat-sets-us-apart%2F&form_factor=mobile"}, {"url": "https://www.femalehealthguru.com/what-sets-us-apart/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.312, "lcp": 0.512, "cls": 0.001, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.femalehealthguru.com/what-sets-us-apart/"}, "attempts": 1, "fetched_at": "2026-09-22T11:51:23.597879+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.femalehealthguru.com%2Fwhat-sets-us-apart%2F&form_factor=desktop"}], "errors": [], "pending": [], "counts": {"pending": 0, "running": 0, "done": 58, "failed": 0, "total": 58, "finished": 58}, "summary": {"tested": 58, "passed": 56, "failed": 2, "errored": 0, "not_run": 0, "unique_urls": 29}, "generated_at": "2026-09-22 17:56:17 Sri Lanka Standard Time"};
+const T = DATA.thresholds;
+let filter = 'all', device = 'all', query = '', sortKey = 'url', sortDir = 1;
+
+const rows = DATA.rows.map(r => ({...r, kind: r.status === 'FAIL' ? 'fail' : 'pass'}));
+DATA.errors.forEach(e => rows.push({
+  url: e.url, strategy: e.strategy, status: 'ERROR', kind: 'err',
+  performance: null, accessibility: null, best_practices: null, seo: null,
+  fcp: null, lcp: null, cls: null, tbt: null,
+  issues: [e.error], details: {}, attempts: e.attempts, link: e.link
+}));
+
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c =>
+  ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+function scoreCls(v, min) {
+  if (v === null || v === undefined) return 'n';
+  if (min !== null && min !== undefined) return v >= min ? 'g' : 'p';
+  if (v >= 90) return 'g';
+  if (v >= 50) return 'a';
+  return 'p';
+}
+function metricCls(v, max) {
+  if (v === null || v === undefined) return 'n';
+  if (max === null || max === undefined) return v === null ? 'n' : '';
+  if (v <= max) return 'g';
+  if (v <= max * 1.5) return 'a';
+  return 'p';
+}
+const fmt = (v, suffix) => (v === null || v === undefined) ? '—' : v + (suffix || '');
+
+function visible() {
+  return rows.filter(r => {
+    if (filter === 'fail' && r.kind !== 'fail') return false;
+    if (filter === 'pass' && r.kind !== 'pass') return false;
+    if (filter === 'err'  && r.kind !== 'err')  return false;
+    if (device !== 'all' && r.strategy !== device) return false;
+    if (query && !r.url.toLowerCase().includes(query)) return false;
+    return true;
+  }).sort((a, b) => {
+    let x = a[sortKey], y = b[sortKey];
+    if (x === null || x === undefined) x = sortDir === 1 ? Infinity : -Infinity;
+    if (y === null || y === undefined) y = sortDir === 1 ? Infinity : -Infinity;
+    if (typeof x === 'string') return x.localeCompare(y) * sortDir;
+    return (x - y) * sortDir;
+  });
+}
+
+function detailHtml(r) {
+  const d = r.details || {};
+  const blocks = [];
+  const list = (title, items, render) => {
+    if (!items || !items.length) return;
+    blocks.push(`<div><h4>${esc(title)}</h4><ul>${items.map(render).join('')}</ul></div>`);
+  };
+  list('Failing accessibility checks', d.failing_accessibility,
+       a => `<li>${esc(a.title)}</li>`);
+  list('Failing SEO checks', d.failing_seo, a => `<li>${esc(a.title)}</li>`);
+  list('Failing best-practice checks', d.failing_best_practices,
+       a => `<li>${esc(a.title)}</li>`);
+  list('Top opportunities', d.opportunities,
+       o => `<li>${esc(o.title)} <span class="save">· saves ~${(o.savings_ms/1000).toFixed(2)}s</span></li>`);
+  if (r.issues && r.issues.length)
+    blocks.unshift(`<div><h4>Why this ${r.status === 'ERROR' ? 'could not be tested' : 'failed'}</h4><ul>${
+      r.issues.map(i => `<li>${esc(i)}</li>`).join('')}</ul></div>`);
+  if (!blocks.length) blocks.push('<div><h4>No further detail</h4></div>');
+  return `<div class="detail">${blocks.join('')}</div>`;
+}
+
+function render() {
+  const list = visible();
+  const body = document.getElementById('body');
+  if (!list.length) {
+    body.innerHTML = '<tr><td colspan="12" class="empty">No rows match these filters.</td></tr>';
+    document.getElementById('shown').textContent = '0';
+    return;
+  }
+  body.innerHTML = list.map((r, i) => `
+    <tr class="${r.kind}">
+      <td><button class="expand" data-i="${i}" aria-label="Show detail">▸</button></td>
+      <td class="url" title="${esc(r.url)}"><a href="${esc(r.link)}" target="_blank" rel="noopener">${esc(r.url)}</a></td>
+      <td><span class="dev ${esc(r.strategy)}">${esc(r.strategy)}</span></td>
+      <td><span class="pill ${scoreCls(r.performance, T.performance)}">${fmt(r.performance)}</span></td>
+      <td><span class="pill ${scoreCls(r.accessibility, T.accessibility)}">${fmt(r.accessibility)}</span></td>
+      <td><span class="pill ${scoreCls(r.best_practices, T.best_practices)}">${fmt(r.best_practices)}</span></td>
+      <td><span class="pill ${scoreCls(r.seo, T.seo)}">${fmt(r.seo)}</span></td>
+      <td class="${metricCls(r.fcp, T.fcp)}">${fmt(r.fcp, 's')}</td>
+      <td class="${metricCls(r.lcp, T.lcp)}">${fmt(r.lcp, 's')}</td>
+      <td class="${metricCls(r.cls, T.cls)}">${fmt(r.cls)}</td>
+      <td><span class="status ${esc(r.status)}">${esc(r.status)}</span></td>
+      <td class="issues">${esc((r.issues || []).join('; ')).slice(0, 220)}</td>
+    </tr>
+    <tr class="detail-row" id="d${i}" hidden><td colspan="12">${detailHtml(r)}</td></tr>`).join('');
+  document.getElementById('shown').textContent = String(list.length);
+
+  body.querySelectorAll('.expand').forEach(btn => btn.addEventListener('click', () => {
+    const row = document.getElementById('d' + btn.dataset.i);
+    row.hidden = !row.hidden;
+    btn.textContent = row.hidden ? '▸' : '▾';
+  }));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-filter]').forEach(b => b.addEventListener('click', () => {
+    filter = b.dataset.filter;
+    document.querySelectorAll('[data-filter]').forEach(o =>
+      o.setAttribute('aria-pressed', String(o === b)));
+    render();
+  }));
+  document.querySelectorAll('[data-device]').forEach(b => b.addEventListener('click', () => {
+    device = b.dataset.device;
+    document.querySelectorAll('[data-device]').forEach(o =>
+      o.setAttribute('aria-pressed', String(o === b)));
+    render();
+  }));
+  document.getElementById('q').addEventListener('input', e => {
+    query = e.target.value.trim().toLowerCase();
+    render();
+  });
+  document.querySelectorAll('th[data-key]').forEach(th => th.addEventListener('click', () => {
+    const key = th.dataset.key;
+    sortDir = (key === sortKey) ? -sortDir : 1;
+    sortKey = key;
+    document.querySelectorAll('th[data-key] .arrow').forEach(a => a.textContent = '');
+    const arrow = th.querySelector('.arrow');
+    if (arrow) arrow.textContent = sortDir === 1 ? '▲' : '▼';
+    render();
+  }));
+  render();
+});
+</script>
+</body>
+</html>
