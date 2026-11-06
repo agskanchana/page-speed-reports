@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PageSpeed Report — newtowndental.com</title>
+<style>
+:root{
+  --bg:#eef1f8; --card:#ffffff; --ink:#1c2333; --muted:#6b7387; --line:#e3e7f0;
+  --brand:#5b63d3; --brand2:#8b5cf6;
+  --good-bg:#dcfce7; --good-ink:#14532d;
+  --warn-bg:#fef3c7; --warn-ink:#78350f;
+  --bad-bg:#fee2e2;  --bad-ink:#7f1d1d;
+  --err-bg:#e5e7eb;  --err-ink:#374151;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#12141c; --card:#1a1d27; --ink:#e8eaf2; --muted:#9aa1b5; --line:#2a2f3d;
+    --good-bg:#14532d; --good-ink:#bbf7d0;
+    --warn-bg:#78350f; --warn-ink:#fde68a;
+    --bad-bg:#7f1d1d;  --bad-ink:#fecaca;
+    --err-bg:#374151;  --err-ink:#d1d5db;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;padding:24px 16px;background:var(--bg);color:var(--ink);
+  font:15px/1.5 'Segoe UI',system-ui,-apple-system,sans-serif}
+.wrap{max-width:1500px;margin:0 auto}
+header{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;
+  padding:28px 30px;border-radius:14px 14px 0 0}
+header h1{margin:0 0 6px;font-size:1.55rem;letter-spacing:-.02em}
+header .meta{opacity:.9;font-size:.9rem}
+header .meta code{background:rgba(255,255,255,.18);padding:1px 6px;border-radius:4px}
+main{background:var(--card);border-radius:0 0 14px 14px;padding:26px 30px 34px;
+  box-shadow:0 12px 40px rgba(20,25,50,.12)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:26px}
+.card{border:1px solid var(--line);border-radius:11px;padding:16px 18px;background:var(--card)}
+.card h3{margin:0 0 6px;font-size:.74rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600}
+.card .n{font-size:1.9rem;font-weight:700;line-height:1}
+.card.pass .n{color:#16a34a}.card.fail .n{color:#dc2626}.card.err .n{color:#d97706}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:16px}
+.controls input[type=search]{flex:1 1 240px;min-width:200px;padding:9px 12px;border:1px solid var(--line);
+  border-radius:8px;background:var(--bg);color:var(--ink);font-size:.9rem}
+.chip{padding:7px 13px;border:1px solid var(--line);border-radius:99px;background:var(--bg);
+  color:var(--ink);cursor:pointer;font-size:.85rem;font-weight:600}
+.chip[aria-pressed=true]{background:var(--brand);border-color:var(--brand);color:#fff}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:11px}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+thead th{position:sticky;top:0;background:var(--card);border-bottom:2px solid var(--line);
+  padding:11px 10px;text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;
+  color:var(--muted);cursor:pointer;white-space:nowrap;user-select:none}
+thead th:hover{color:var(--ink)}
+thead th .arrow{opacity:.35;font-size:.65rem}
+tbody td{padding:10px;border-bottom:1px solid var(--line);vertical-align:middle}
+tbody tr.fail{background:color-mix(in srgb,var(--bad-bg) 22%,transparent)}
+tbody tr.err{background:color-mix(in srgb,var(--err-bg) 30%,transparent)}
+tbody tr.detail-row td{background:var(--bg);padding:0}
+.url{max-width:340px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.url a{color:var(--brand);text-decoration:none;font-weight:500}
+.url a:hover{text-decoration:underline}
+.pill{display:inline-block;min-width:42px;text-align:center;padding:3px 9px;border-radius:6px;font-weight:700;font-size:.82rem}
+.g{background:var(--good-bg);color:var(--good-ink)}
+.a{background:var(--warn-bg);color:var(--warn-ink)}
+.p{background:var(--bad-bg);color:var(--bad-ink)}
+.n{background:var(--err-bg);color:var(--err-ink)}
+.dev{display:inline-block;padding:2px 8px;border-radius:5px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+.dev.mobile{background:#dbeafe;color:#1e40af}
+.dev.desktop{background:#f3e8ff;color:#6b21a8}
+@media (prefers-color-scheme:dark){.dev.mobile{background:#1e3a8a;color:#bfdbfe}.dev.desktop{background:#581c87;color:#e9d5ff}}
+.status{font-weight:700;font-size:.8rem}
+.status.PASS{color:#16a34a}.status.FAIL{color:#dc2626}.status.ERROR{color:#d97706}
+.issues{color:var(--muted);font-size:.79rem;max-width:330px}
+.expand{cursor:pointer;border:none;background:none;color:var(--muted);font-size:.95rem;padding:2px 6px;border-radius:5px}
+.expand:hover{background:var(--line);color:var(--ink)}
+.detail{padding:16px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.detail h4{margin:0 0 8px;font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.detail ul{margin:0;padding-left:18px;font-size:.82rem}
+.detail li{margin-bottom:4px}
+.detail .save{color:var(--muted);font-variant-numeric:tabular-nums}
+.empty{padding:36px;text-align:center;color:var(--muted)}
+footer{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
+footer ul{margin:8px 0 0;padding-left:20px}
+@media print{body{background:#fff;padding:0}main{box-shadow:none}.controls{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>PageSpeed Insights Report</h1>
+    <div class="meta">
+      newtowndental.com · run <code>e7b35fe2</code> ·
+      generated 2026-11-06 17:26:38 Sri Lanka Standard Time
+    </div>
+  </header>
+  <main>
+    <div class="cards">
+      <div class="card"><h3>URLs</h3><div class="n">28</div></div>
+      <div class="card"><h3>Tests run</h3><div class="n">56</div></div>
+      <div class="card pass"><h3>Passed</h3><div class="n">52</div></div>
+      <div class="card fail"><h3>Failed</h3><div class="n">4</div></div>
+      <div class="card err"><h3>Errored</h3><div class="n">0</div></div>
+    </div>
+
+    <div class="controls">
+      <input type="search" id="q" placeholder="Filter by URL…" aria-label="Filter by URL">
+      <button class="chip" data-filter="all" aria-pressed="true">All</button>
+      <button class="chip" data-filter="fail" aria-pressed="false">Failed</button>
+      <button class="chip" data-filter="pass" aria-pressed="false">Passed</button>
+      <button class="chip" data-filter="err" aria-pressed="false">Errors</button>
+      <span style="width:12px"></span>
+      <button class="chip" data-device="all" aria-pressed="true">Both</button>
+      <button class="chip" data-device="mobile" aria-pressed="false">Mobile</button>
+      <button class="chip" data-device="desktop" aria-pressed="false">Desktop</button>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr>
+          <th style="width:34px"></th>
+          <th data-key="url">URL <span class="arrow">▲</span></th>
+          <th data-key="strategy">Device <span class="arrow"></span></th>
+          <th data-key="performance">Perf <span class="arrow"></span></th>
+          <th data-key="accessibility">A11y <span class="arrow"></span></th>
+          <th data-key="best_practices">BP <span class="arrow"></span></th>
+          <th data-key="seo">SEO <span class="arrow"></span></th>
+          <th data-key="fcp">FCP <span class="arrow"></span></th>
+          <th data-key="lcp">LCP <span class="arrow"></span></th>
+          <th data-key="cls">CLS <span class="arrow"></span></th>
+          <th data-key="status">Status <span class="arrow"></span></th>
+          <th>Issues</th>
+        </tr></thead>
+        <tbody id="body"></tbody>
+      </table>
+    </div>
+
+    <footer>
+      Showing <span id="shown">0</span> rows. Source:
+      <code>https://www.newtowndental.com/page-sitemap.xml</code>
+      <p style="margin:14px 0 4px"><strong>Pass criteria</strong></p>
+      <ul><li><strong>Performance:</strong> ≥90</li>
+<li><strong>Accessibility:</strong> ≥100</li>
+<li><strong>Best Practices:</strong> not enforced</li>
+<li><strong>SEO:</strong> ≥100</li>
+<li><strong>First Contentful Paint:</strong> ≤1.8s</li>
+<li><strong>Largest Contentful Paint:</strong> ≤2.5s</li>
+<li><strong>Cumulative Layout Shift:</strong> ≤0.1</li>
+<li><strong>Total Blocking Time:</strong> not enforced</li></ul>
+      <p style="margin-top:12px">
+        <strong>ERROR</strong> means the test could not be completed after every retry —
+        it is not a score of zero. Expand a row to see why.
+      </p>
+    </footer>
+  </main>
+</div>
+<script>
+const DATA = {"run": {"id": "e7b35fe2", "label": "newtowndental.com", "source": "https://www.newtowndental.com/page-sitemap.xml", "status": "done", "created_at": "2026-11-06T11:15:32.518871+00:00", "started_at": "2026-11-06T11:15:32.641595+00:00", "finished_at": "2026-11-06T11:56:29.338091+00:00"}, "thresholds": {"performance": 90, "accessibility": 100, "best_practices": null, "seo": 100, "fcp": 1.8, "lcp": 2.5, "cls": 0.1, "tbt": null}, "rows": [{"url": "https://www.newtowndental.com/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.069, "lcp": 1.205, "cls": 0.0, "tbt": 0.069, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "server-response-time", "title": "Initial server response time was short", "savings_ms": 260}], "final_url": "https://www.newtowndental.com/"}, "attempts": 1, "fetched_at": "2026-11-06T11:15:51.369413+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/", "strategy": "desktop", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.325, "lcp": 0.441, "cls": 0.003, "tbt": 0.025, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "server-response-time", "title": "Initial server response time was short", "savings_ms": 258}], "final_url": "https://www.newtowndental.com/"}, "attempts": 1, "fetched_at": "2026-11-06T11:15:48.756682+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/cleaning-hygiene/", "strategy": "mobile", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.078, "lcp": 1.078, "cls": 0.0, "tbt": 0.045, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/cleaning-hygiene/"}, "attempts": 1, "fetched_at": "2026-11-06T11:18:23.120285+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fcleaning-hygiene%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/cleaning-hygiene/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.306, "lcp": 0.306, "cls": 0.008, "tbt": 0.016, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/cleaning-hygiene/"}, "attempts": 1, "fetched_at": "2026-11-06T11:18:24.080713+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fcleaning-hygiene%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/contact-us/", "strategy": "mobile", "performance": 98, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.067, "lcp": 1.084, "cls": 0.0, "tbt": 0.154, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "server-response-time", "title": "Initial server response time was short", "savings_ms": 83}], "final_url": "https://www.newtowndental.com/contact-us/"}, "attempts": 1, "fetched_at": "2026-11-06T11:16:05.562379+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fcontact-us%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/contact-us/", "strategy": "desktop", "performance": 98, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.332, "lcp": 0.995, "cls": 0.003, "tbt": 0.067, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "server-response-time", "title": "Initial server response time was short", "savings_ms": 83}], "final_url": "https://www.newtowndental.com/contact-us/"}, "attempts": 1, "fetched_at": "2026-11-06T11:16:04.434491+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fcontact-us%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/cosmetic-dentist/", "strategy": "mobile", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.094, "lcp": 1.094, "cls": 0.0, "tbt": 0.019, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/cosmetic-dentist/"}, "attempts": 1, "fetched_at": "2026-11-06T11:17:18.488214+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fcosmetic-dentist%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/cosmetic-dentist/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.322, "lcp": 0.322, "cls": 0.046, "tbt": 0.059, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/cosmetic-dentist/"}, "attempts": 1, "fetched_at": "2026-11-06T11:17:20.326094+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fcosmetic-dentist%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/dental-bonding/", "strategy": "mobile", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.079, "lcp": 1.079, "cls": 0.0, "tbt": 0.055, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/dental-bonding/"}, "attempts": 1, "fetched_at": "2026-11-06T11:17:33.187258+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fdental-bonding%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/dental-bonding/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.317, "lcp": 0.317, "cls": 0.004, "tbt": 0.0, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/dental-bonding/"}, "attempts": 1, "fetched_at": "2026-11-06T11:17:31.264213+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fdental-bonding%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/dental-bridges/", "strategy": "mobile", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.068, "lcp": 1.086, "cls": 0.0, "tbt": 0.068, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/dental-bridges/"}, "attempts": 1, "fetched_at": "2026-11-06T11:16:50.815207+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fdental-bridges%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/dental-bridges/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.318, "lcp": 0.318, "cls": 0.013, "tbt": 0.013, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/dental-bridges/"}, "attempts": 1, "fetched_at": "2026-11-06T11:16:50.841944+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fdental-bridges%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/dental-crowns/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.067, "lcp": 1.085, "cls": 0.0, "tbt": 0.105, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/dental-crowns/"}, "attempts": 1, "fetched_at": "2026-11-06T11:16:37.339216+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fdental-crowns%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/dental-crowns/", "strategy": "desktop", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.338, "lcp": 0.338, "cls": 0.004, "tbt": 0.085, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/dental-crowns/"}, "attempts": 1, "fetched_at": "2026-11-06T11:16:36.910257+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fdental-crowns%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/dental-implants/", "strategy": "mobile", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.092, "lcp": 1.092, "cls": 0.0, "tbt": 0.077, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/dental-implants/"}, "attempts": 1, "fetched_at": "2026-11-06T11:17:06.380877+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fdental-implants%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/dental-implants/", "strategy": "desktop", "performance": 98, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.316, "lcp": 0.316, "cls": 0.085, "tbt": 0.007, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/dental-implants/"}, "attempts": 1, "fetched_at": "2026-11-06T11:17:05.727532+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fdental-implants%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/dentures/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.067, "lcp": 1.084, "cls": 0.0, "tbt": 0.096, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/dentures/"}, "attempts": 1, "fetched_at": "2026-11-06T11:17:07.151550+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fdentures%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/dentures/", "strategy": "desktop", "performance": 98, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.334, "lcp": 0.334, "cls": 0.074, "tbt": 0.071, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/dentures/"}, "attempts": 1, "fetched_at": "2026-11-06T11:17:06.511460+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fdentures%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/fluoride-treatments/", "strategy": "mobile", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.097, "lcp": 1.097, "cls": 0.0, "tbt": 0.043, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/fluoride-treatments/"}, "attempts": 1, "fetched_at": "2026-11-06T11:16:21.039093+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Ffluoride-treatments%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/fluoride-treatments/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.326, "lcp": 0.326, "cls": 0.003, "tbt": 0.071, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/fluoride-treatments/"}, "attempts": 1, "fetched_at": "2026-11-06T11:16:23.071514+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Ffluoride-treatments%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/full-mouth-makeover/", "strategy": "mobile", "performance": 97, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.092, "lcp": 1.092, "cls": 0.0, "tbt": 0.184, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/full-mouth-makeover/"}, "attempts": 1, "fetched_at": "2026-11-06T11:17:53.296461+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Ffull-mouth-makeover%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/full-mouth-makeover/", "strategy": "desktop", "performance": 88, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.498, "lcp": 0.498, "cls": 0.232, "tbt": 0.036, "status": "FAIL", "issues": ["Performance: 88 (required: \u226590)", "CLS: 0.232 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "server-response-time", "title": "Initial server response time was short", "savings_ms": 258}], "final_url": "https://www.newtowndental.com/full-mouth-makeover/"}, "attempts": 1, "fetched_at": "2026-11-06T11:56:28.259581+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Ffull-mouth-makeover%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/invisalign/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.099, "lcp": 1.099, "cls": 0.0, "tbt": 0.109, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/invisalign/"}, "attempts": 1, "fetched_at": "2026-11-06T11:18:10.886641+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Finvisalign%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/invisalign/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.334, "lcp": 0.334, "cls": 0.011, "tbt": 0.026, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/invisalign/"}, "attempts": 1, "fetched_at": "2026-11-06T11:18:07.325478+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Finvisalign%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/meet-dr-ariel-samuels/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.089, "lcp": 1.089, "cls": 0.0, "tbt": 0.127, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/meet-dr-ariel-samuels/"}, "attempts": 1, "fetched_at": "2026-11-06T11:18:39.391544+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fmeet-dr-ariel-samuels%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/meet-dr-ariel-samuels/", "strategy": "desktop", "performance": 93, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.334, "lcp": 0.486, "cls": 0.123, "tbt": 0.137, "status": "FAIL", "issues": ["CLS: 0.123 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "server-response-time", "title": "Initial server response time was short", "savings_ms": 87}], "final_url": "https://www.newtowndental.com/meet-dr-ariel-samuels/"}, "attempts": 1, "fetched_at": "2026-11-06T11:56:29.335203+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fmeet-dr-ariel-samuels%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/meet-dr-jeremy-rosenfeld/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.074, "lcp": 1.074, "cls": 0.0, "tbt": 0.119, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/meet-dr-jeremy-rosenfeld/"}, "attempts": 1, "fetched_at": "2026-11-06T11:18:39.013128+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fmeet-dr-jeremy-rosenfeld%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/meet-dr-jeremy-rosenfeld/", "strategy": "desktop", "performance": 92, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.403, "lcp": 1.012, "cls": 0.109, "tbt": 0.147, "status": "FAIL", "issues": ["CLS: 0.109 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-javascript", "title": "Reduce unused JavaScript", "savings_ms": 50}], "final_url": "https://www.newtowndental.com/meet-dr-jeremy-rosenfeld/"}, "attempts": 1, "fetched_at": "2026-11-06T11:56:27.956358+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fmeet-dr-jeremy-rosenfeld%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/meet-the-team/", "strategy": "mobile", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.082, "lcp": 1.082, "cls": 0.0, "tbt": 0.021, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/meet-the-team/"}, "attempts": 1, "fetched_at": "2026-11-06T11:18:22.642112+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fmeet-the-team%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/meet-the-team/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.318, "lcp": 0.521, "cls": 0.008, "tbt": 0.042, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/meet-the-team/"}, "attempts": 1, "fetched_at": "2026-11-06T11:18:23.677192+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fmeet-the-team%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/membership/", "strategy": "mobile", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.078, "lcp": 1.078, "cls": 0.0, "tbt": 0.047, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/membership/"}, "attempts": 1, "fetched_at": "2026-11-06T11:18:53.049904+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fmembership%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/membership/", "strategy": "desktop", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.352, "lcp": 0.352, "cls": 0.007, "tbt": 0.115, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/membership/"}, "attempts": 1, "fetched_at": "2026-11-06T11:18:54.117675+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fmembership%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/patient-forms-and-info/", "strategy": "mobile", "performance": 98, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.115, "lcp": 1.115, "cls": 0.0, "tbt": 0.05, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/patient-forms-and-info/"}, "attempts": 1, "fetched_at": "2026-11-06T11:18:56.645350+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fpatient-forms-and-info%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/patient-forms-and-info/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.295, "lcp": 0.449, "cls": 0.0, "tbt": 0.02, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/patient-forms-and-info/"}, "attempts": 1, "fetched_at": "2026-11-06T11:18:54.934026+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fpatient-forms-and-info%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/preventive-dentistry/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.092, "lcp": 1.092, "cls": 0.0, "tbt": 0.099, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/preventive-dentistry/"}, "attempts": 1, "fetched_at": "2026-11-06T11:19:10.260119+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fpreventive-dentistry%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/preventive-dentistry/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.321, "lcp": 0.321, "cls": 0.013, "tbt": 0.039, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/preventive-dentistry/"}, "attempts": 1, "fetched_at": "2026-11-06T11:19:10.069508+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fpreventive-dentistry%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/restorative-dentistry/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.073, "lcp": 1.088, "cls": 0.0, "tbt": 0.12, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/restorative-dentistry/"}, "attempts": 1, "fetched_at": "2026-11-06T11:16:19.584974+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Frestorative-dentistry%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/restorative-dentistry/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.319, "lcp": 0.319, "cls": 0.004, "tbt": 0.035, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/restorative-dentistry/"}, "attempts": 1, "fetched_at": "2026-11-06T11:16:18.872434+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Frestorative-dentistry%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/root-canal-therapy/", "strategy": "mobile", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.086, "lcp": 1.086, "cls": 0.0, "tbt": 0.082, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/root-canal-therapy/"}, "attempts": 1, "fetched_at": "2026-11-06T11:16:37.926154+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Froot-canal-therapy%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/root-canal-therapy/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.339, "lcp": 0.339, "cls": 0.005, "tbt": 0.082, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/root-canal-therapy/"}, "attempts": 1, "fetched_at": "2026-11-06T11:16:37.840629+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Froot-canal-therapy%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/same-day-emergency-dentistry/", "strategy": "mobile", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.083, "lcp": 1.083, "cls": 0.0, "tbt": 0.079, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/same-day-emergency-dentistry/"}, "attempts": 1, "fetched_at": "2026-11-06T11:18:07.469320+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fsame-day-emergency-dentistry%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/same-day-emergency-dentistry/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.318, "lcp": 0.318, "cls": 0.019, "tbt": 0.023, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/same-day-emergency-dentistry/"}, "attempts": 1, "fetched_at": "2026-11-06T11:18:04.801403+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fsame-day-emergency-dentistry%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/site-map/", "strategy": "mobile", "performance": 98, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.076, "lcp": 1.076, "cls": 0.0, "tbt": 0.159, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/site-map/"}, "attempts": 1, "fetched_at": "2026-11-06T11:16:06.063617+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fsite-map%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/site-map/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.31, "lcp": 0.31, "cls": 0.019, "tbt": 0.036, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/site-map/"}, "attempts": 1, "fetched_at": "2026-11-06T11:16:05.235494+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fsite-map%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/smile-design/", "strategy": "mobile", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.09, "lcp": 1.09, "cls": 0.0, "tbt": 0.067, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/smile-design/"}, "attempts": 1, "fetched_at": "2026-11-06T11:17:50.477624+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fsmile-design%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/smile-design/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.318, "lcp": 0.318, "cls": 0.005, "tbt": 0.027, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/smile-design/"}, "attempts": 1, "fetched_at": "2026-11-06T11:17:50.142882+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fsmile-design%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/smile-gallery/", "strategy": "mobile", "performance": 98, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.093, "lcp": 1.093, "cls": 0.0, "tbt": 0.033, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/smile-gallery/"}, "attempts": 1, "fetched_at": "2026-11-06T11:19:15.185344+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fsmile-gallery%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/smile-gallery/", "strategy": "desktop", "performance": 96, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.523, "lcp": 0.523, "cls": 0.056, "tbt": 0.148, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/smile-gallery/"}, "attempts": 1, "fetched_at": "2026-11-06T11:19:12.850607+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fsmile-gallery%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/success-stories/", "strategy": "mobile", "performance": 85, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.919, "lcp": 3.743, "cls": 0.0, "tbt": 0.217, "status": "FAIL", "issues": ["Performance: 85 (required: \u226590)", "LCP: 3.743s (required: \u22642.5s)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-javascript", "title": "Reduce unused JavaScript", "savings_ms": 600}, {"id": "server-response-time", "title": "Initial server response time was short", "savings_ms": 152}], "final_url": "https://www.newtowndental.com/success-stories/"}, "attempts": 1, "fetched_at": "2026-11-06T11:15:49.545769+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fsuccess-stories%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/success-stories/", "strategy": "desktop", "performance": 96, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.267, "lcp": 1.317, "cls": 0.0, "tbt": 0.03, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-javascript", "title": "Reduce unused JavaScript", "savings_ms": 200}, {"id": "server-response-time", "title": "Initial server response time was short", "savings_ms": 129}], "final_url": "https://www.newtowndental.com/success-stories/"}, "attempts": 1, "fetched_at": "2026-11-06T11:15:47.229132+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fsuccess-stories%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/teeth-whitening/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.068, "lcp": 1.087, "cls": 0.0, "tbt": 0.129, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/teeth-whitening/"}, "attempts": 1, "fetched_at": "2026-11-06T11:17:35.072766+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fteeth-whitening%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/teeth-whitening/", "strategy": "desktop", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.356, "lcp": 0.356, "cls": 0.009, "tbt": 0.093, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/teeth-whitening/"}, "attempts": 1, "fetched_at": "2026-11-06T11:17:36.518175+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fteeth-whitening%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/tooth-extractions/", "strategy": "mobile", "performance": 98, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.114, "lcp": 1.114, "cls": 0.0, "tbt": 0.154, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/tooth-extractions/"}, "attempts": 1, "fetched_at": "2026-11-06T11:16:53.218133+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Ftooth-extractions%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/tooth-extractions/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.31, "lcp": 0.31, "cls": 0.005, "tbt": 0.024, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/tooth-extractions/"}, "attempts": 1, "fetched_at": "2026-11-06T11:16:50.439006+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Ftooth-extractions%2F&form_factor=desktop"}, {"url": "https://www.newtowndental.com/veneers/", "strategy": "mobile", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.078, "lcp": 1.078, "cls": 0.0, "tbt": 0.055, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/veneers/"}, "attempts": 1, "fetched_at": "2026-11-06T11:17:19.095933+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fveneers%2F&form_factor=mobile"}, {"url": "https://www.newtowndental.com/veneers/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.328, "lcp": 0.328, "cls": 0.01, "tbt": 0.045, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.newtowndental.com/veneers/"}, "attempts": 1, "fetched_at": "2026-11-06T11:17:20.637989+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.newtowndental.com%2Fveneers%2F&form_factor=desktop"}], "errors": [], "pending": [], "counts": {"pending": 0, "running": 0, "done": 56, "failed": 0, "total": 56, "finished": 56}, "summary": {"tested": 56, "passed": 52, "failed": 4, "errored": 0, "not_run": 0, "unique_urls": 28}, "generated_at": "2026-11-06 17:26:38 Sri Lanka Standard Time"};
+const T = DATA.thresholds;
+let filter = 'all', device = 'all', query = '', sortKey = 'url', sortDir = 1;
+
+const rows = DATA.rows.map(r => ({...r, kind: r.status === 'FAIL' ? 'fail' : 'pass'}));
+DATA.errors.forEach(e => rows.push({
+  url: e.url, strategy: e.strategy, status: 'ERROR', kind: 'err',
+  performance: null, accessibility: null, best_practices: null, seo: null,
+  fcp: null, lcp: null, cls: null, tbt: null,
+  issues: [e.error], details: {}, attempts: e.attempts, link: e.link
+}));
+
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c =>
+  ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+function scoreCls(v, min) {
+  if (v === null || v === undefined) return 'n';
+  if (min !== null && min !== undefined) return v >= min ? 'g' : 'p';
+  if (v >= 90) return 'g';
+  if (v >= 50) return 'a';
+  return 'p';
+}
+function metricCls(v, max) {
+  if (v === null || v === undefined) return 'n';
+  if (max === null || max === undefined) return v === null ? 'n' : '';
+  if (v <= max) return 'g';
+  if (v <= max * 1.5) return 'a';
+  return 'p';
+}
+const fmt = (v, suffix) => (v === null || v === undefined) ? '—' : v + (suffix || '');
+
+function visible() {
+  return rows.filter(r => {
+    if (filter === 'fail' && r.kind !== 'fail') return false;
+    if (filter === 'pass' && r.kind !== 'pass') return false;
+    if (filter === 'err'  && r.kind !== 'err')  return false;
+    if (device !== 'all' && r.strategy !== device) return false;
+    if (query && !r.url.toLowerCase().includes(query)) return false;
+    return true;
+  }).sort((a, b) => {
+    let x = a[sortKey], y = b[sortKey];
+    if (x === null || x === undefined) x = sortDir === 1 ? Infinity : -Infinity;
+    if (y === null || y === undefined) y = sortDir === 1 ? Infinity : -Infinity;
+    if (typeof x === 'string') return x.localeCompare(y) * sortDir;
+    return (x - y) * sortDir;
+  });
+}
+
+function detailHtml(r) {
+  const d = r.details || {};
+  const blocks = [];
+  const list = (title, items, render) => {
+    if (!items || !items.length) return;
+    blocks.push(`<div><h4>${esc(title)}</h4><ul>${items.map(render).join('')}</ul></div>`);
+  };
+  list('Failing accessibility checks', d.failing_accessibility,
+       a => `<li>${esc(a.title)}</li>`);
+  list('Failing SEO checks', d.failing_seo, a => `<li>${esc(a.title)}</li>`);
+  list('Failing best-practice checks', d.failing_best_practices,
+       a => `<li>${esc(a.title)}</li>`);
+  list('Top opportunities', d.opportunities,
+       o => `<li>${esc(o.title)} <span class="save">· saves ~${(o.savings_ms/1000).toFixed(2)}s</span></li>`);
+  if (r.issues && r.issues.length)
+    blocks.unshift(`<div><h4>Why this ${r.status === 'ERROR' ? 'could not be tested' : 'failed'}</h4><ul>${
+      r.issues.map(i => `<li>${esc(i)}</li>`).join('')}</ul></div>`);
+  if (!blocks.length) blocks.push('<div><h4>No further detail</h4></div>');
+  return `<div class="detail">${blocks.join('')}</div>`;
+}
+
+function render() {
+  const list = visible();
+  const body = document.getElementById('body');
+  if (!list.length) {
+    body.innerHTML = '<tr><td colspan="12" class="empty">No rows match these filters.</td></tr>';
+    document.getElementById('shown').textContent = '0';
+    return;
+  }
+  body.innerHTML = list.map((r, i) => `
+    <tr class="${r.kind}">
+      <td><button class="expand" data-i="${i}" aria-label="Show detail">▸</button></td>
+      <td class="url" title="${esc(r.url)}"><a href="${esc(r.link)}" target="_blank" rel="noopener">${esc(r.url)}</a></td>
+      <td><span class="dev ${esc(r.strategy)}">${esc(r.strategy)}</span></td>
+      <td><span class="pill ${scoreCls(r.performance, T.performance)}">${fmt(r.performance)}</span></td>
+      <td><span class="pill ${scoreCls(r.accessibility, T.accessibility)}">${fmt(r.accessibility)}</span></td>
+      <td><span class="pill ${scoreCls(r.best_practices, T.best_practices)}">${fmt(r.best_practices)}</span></td>
+      <td><span class="pill ${scoreCls(r.seo, T.seo)}">${fmt(r.seo)}</span></td>
+      <td class="${metricCls(r.fcp, T.fcp)}">${fmt(r.fcp, 's')}</td>
+      <td class="${metricCls(r.lcp, T.lcp)}">${fmt(r.lcp, 's')}</td>
+      <td class="${metricCls(r.cls, T.cls)}">${fmt(r.cls)}</td>
+      <td><span class="status ${esc(r.status)}">${esc(r.status)}</span></td>
+      <td class="issues">${esc((r.issues || []).join('; ')).slice(0, 220)}</td>
+    </tr>
+    <tr class="detail-row" id="d${i}" hidden><td colspan="12">${detailHtml(r)}</td></tr>`).join('');
+  document.getElementById('shown').textContent = String(list.length);
+
+  body.querySelectorAll('.expand').forEach(btn => btn.addEventListener('click', () => {
+    const row = document.getElementById('d' + btn.dataset.i);
+    row.hidden = !row.hidden;
+    btn.textContent = row.hidden ? '▸' : '▾';
+  }));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-filter]').forEach(b => b.addEventListener('click', () => {
+    filter = b.dataset.filter;
+    document.querySelectorAll('[data-filter]').forEach(o =>
+      o.setAttribute('aria-pressed', String(o === b)));
+    render();
+  }));
+  document.querySelectorAll('[data-device]').forEach(b => b.addEventListener('click', () => {
+    device = b.dataset.device;
+    document.querySelectorAll('[data-device]').forEach(o =>
+      o.setAttribute('aria-pressed', String(o === b)));
+    render();
+  }));
+  document.getElementById('q').addEventListener('input', e => {
+    query = e.target.value.trim().toLowerCase();
+    render();
+  });
+  document.querySelectorAll('th[data-key]').forEach(th => th.addEventListener('click', () => {
+    const key = th.dataset.key;
+    sortDir = (key === sortKey) ? -sortDir : 1;
+    sortKey = key;
+    document.querySelectorAll('th[data-key] .arrow').forEach(a => a.textContent = '');
+    const arrow = th.querySelector('.arrow');
+    if (arrow) arrow.textContent = sortDir === 1 ? '▲' : '▼';
+    render();
+  }));
+  render();
+});
+</script>
+</body>
+</html>
