@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PageSpeed Report — chiroandosteopathy.com</title>
+<style>
+:root{
+  --bg:#eef1f8; --card:#ffffff; --ink:#1c2333; --muted:#6b7387; --line:#e3e7f0;
+  --brand:#5b63d3; --brand2:#8b5cf6;
+  --good-bg:#dcfce7; --good-ink:#14532d;
+  --warn-bg:#fef3c7; --warn-ink:#78350f;
+  --bad-bg:#fee2e2;  --bad-ink:#7f1d1d;
+  --err-bg:#e5e7eb;  --err-ink:#374151;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#12141c; --card:#1a1d27; --ink:#e8eaf2; --muted:#9aa1b5; --line:#2a2f3d;
+    --good-bg:#14532d; --good-ink:#bbf7d0;
+    --warn-bg:#78350f; --warn-ink:#fde68a;
+    --bad-bg:#7f1d1d;  --bad-ink:#fecaca;
+    --err-bg:#374151;  --err-ink:#d1d5db;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;padding:24px 16px;background:var(--bg);color:var(--ink);
+  font:15px/1.5 'Segoe UI',system-ui,-apple-system,sans-serif}
+.wrap{max-width:1500px;margin:0 auto}
+header{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;
+  padding:28px 30px;border-radius:14px 14px 0 0}
+header h1{margin:0 0 6px;font-size:1.55rem;letter-spacing:-.02em}
+header .meta{opacity:.9;font-size:.9rem}
+header .meta code{background:rgba(255,255,255,.18);padding:1px 6px;border-radius:4px}
+main{background:var(--card);border-radius:0 0 14px 14px;padding:26px 30px 34px;
+  box-shadow:0 12px 40px rgba(20,25,50,.12)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:26px}
+.card{border:1px solid var(--line);border-radius:11px;padding:16px 18px;background:var(--card)}
+.card h3{margin:0 0 6px;font-size:.74rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600}
+.card .n{font-size:1.9rem;font-weight:700;line-height:1}
+.card.pass .n{color:#16a34a}.card.fail .n{color:#dc2626}.card.err .n{color:#d97706}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:16px}
+.controls input[type=search]{flex:1 1 240px;min-width:200px;padding:9px 12px;border:1px solid var(--line);
+  border-radius:8px;background:var(--bg);color:var(--ink);font-size:.9rem}
+.chip{padding:7px 13px;border:1px solid var(--line);border-radius:99px;background:var(--bg);
+  color:var(--ink);cursor:pointer;font-size:.85rem;font-weight:600}
+.chip[aria-pressed=true]{background:var(--brand);border-color:var(--brand);color:#fff}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:11px}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+thead th{position:sticky;top:0;background:var(--card);border-bottom:2px solid var(--line);
+  padding:11px 10px;text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;
+  color:var(--muted);cursor:pointer;white-space:nowrap;user-select:none}
+thead th:hover{color:var(--ink)}
+thead th .arrow{opacity:.35;font-size:.65rem}
+tbody td{padding:10px;border-bottom:1px solid var(--line);vertical-align:middle}
+tbody tr.fail{background:color-mix(in srgb,var(--bad-bg) 22%,transparent)}
+tbody tr.err{background:color-mix(in srgb,var(--err-bg) 30%,transparent)}
+tbody tr.detail-row td{background:var(--bg);padding:0}
+.url{max-width:340px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.url a{color:var(--brand);text-decoration:none;font-weight:500}
+.url a:hover{text-decoration:underline}
+.pill{display:inline-block;min-width:42px;text-align:center;padding:3px 9px;border-radius:6px;font-weight:700;font-size:.82rem}
+.g{background:var(--good-bg);color:var(--good-ink)}
+.a{background:var(--warn-bg);color:var(--warn-ink)}
+.p{background:var(--bad-bg);color:var(--bad-ink)}
+.n{background:var(--err-bg);color:var(--err-ink)}
+.dev{display:inline-block;padding:2px 8px;border-radius:5px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+.dev.mobile{background:#dbeafe;color:#1e40af}
+.dev.desktop{background:#f3e8ff;color:#6b21a8}
+@media (prefers-color-scheme:dark){.dev.mobile{background:#1e3a8a;color:#bfdbfe}.dev.desktop{background:#581c87;color:#e9d5ff}}
+.status{font-weight:700;font-size:.8rem}
+.status.PASS{color:#16a34a}.status.FAIL{color:#dc2626}.status.ERROR{color:#d97706}
+.issues{color:var(--muted);font-size:.79rem;max-width:330px}
+.expand{cursor:pointer;border:none;background:none;color:var(--muted);font-size:.95rem;padding:2px 6px;border-radius:5px}
+.expand:hover{background:var(--line);color:var(--ink)}
+.detail{padding:16px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.detail h4{margin:0 0 8px;font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.detail ul{margin:0;padding-left:18px;font-size:.82rem}
+.detail li{margin-bottom:4px}
+.detail .save{color:var(--muted);font-variant-numeric:tabular-nums}
+.empty{padding:36px;text-align:center;color:var(--muted)}
+footer{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
+footer ul{margin:8px 0 0;padding-left:20px}
+@media print{body{background:#fff;padding:0}main{box-shadow:none}.controls{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>PageSpeed Insights Report</h1>
+    <div class="meta">
+      chiroandosteopathy.com · run <code>516df05e</code> ·
+      generated 2026-11-13 15:10:56 Sri Lanka Standard Time
+    </div>
+  </header>
+  <main>
+    <div class="cards">
+      <div class="card"><h3>URLs</h3><div class="n">28</div></div>
+      <div class="card"><h3>Tests run</h3><div class="n">56</div></div>
+      <div class="card pass"><h3>Passed</h3><div class="n">53</div></div>
+      <div class="card fail"><h3>Failed</h3><div class="n">3</div></div>
+      <div class="card err"><h3>Errored</h3><div class="n">0</div></div>
+    </div>
+
+    <div class="controls">
+      <input type="search" id="q" placeholder="Filter by URL…" aria-label="Filter by URL">
+      <button class="chip" data-filter="all" aria-pressed="true">All</button>
+      <button class="chip" data-filter="fail" aria-pressed="false">Failed</button>
+      <button class="chip" data-filter="pass" aria-pressed="false">Passed</button>
+      <button class="chip" data-filter="err" aria-pressed="false">Errors</button>
+      <span style="width:12px"></span>
+      <button class="chip" data-device="all" aria-pressed="true">Both</button>
+      <button class="chip" data-device="mobile" aria-pressed="false">Mobile</button>
+      <button class="chip" data-device="desktop" aria-pressed="false">Desktop</button>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr>
+          <th style="width:34px"></th>
+          <th data-key="url">URL <span class="arrow">▲</span></th>
+          <th data-key="strategy">Device <span class="arrow"></span></th>
+          <th data-key="performance">Perf <span class="arrow"></span></th>
+          <th data-key="accessibility">A11y <span class="arrow"></span></th>
+          <th data-key="best_practices">BP <span class="arrow"></span></th>
+          <th data-key="seo">SEO <span class="arrow"></span></th>
+          <th data-key="fcp">FCP <span class="arrow"></span></th>
+          <th data-key="lcp">LCP <span class="arrow"></span></th>
+          <th data-key="cls">CLS <span class="arrow"></span></th>
+          <th data-key="status">Status <span class="arrow"></span></th>
+          <th>Issues</th>
+        </tr></thead>
+        <tbody id="body"></tbody>
+      </table>
+    </div>
+
+    <footer>
+      Showing <span id="shown">0</span> rows. Source:
+      <code>https://www.chiroandosteopathy.com/page-sitemap.xml</code>
+      <p style="margin:14px 0 4px"><strong>Pass criteria</strong></p>
+      <ul><li><strong>Performance:</strong> ≥90</li>
+<li><strong>Accessibility:</strong> ≥100</li>
+<li><strong>Best Practices:</strong> not enforced</li>
+<li><strong>SEO:</strong> ≥100</li>
+<li><strong>First Contentful Paint:</strong> ≤1.8s</li>
+<li><strong>Largest Contentful Paint:</strong> ≤2.5s</li>
+<li><strong>Cumulative Layout Shift:</strong> ≤0.1</li>
+<li><strong>Total Blocking Time:</strong> not enforced</li></ul>
+      <p style="margin-top:12px">
+        <strong>ERROR</strong> means the test could not be completed after every retry —
+        it is not a score of zero. Expand a row to see why.
+      </p>
+    </footer>
+  </main>
+</div>
+<script>
+const DATA = {"run": {"id": "516df05e", "label": "chiroandosteopathy.com", "source": "https://www.chiroandosteopathy.com/page-sitemap.xml", "status": "done", "created_at": "2026-11-13T08:19:16.952887+00:00", "started_at": "2026-11-13T08:19:17.067644+00:00", "finished_at": "2026-11-13T09:40:41.330781+00:00"}, "thresholds": {"performance": 90, "accessibility": 100, "best_practices": null, "seo": 100, "fcp": 1.8, "lcp": 2.5, "cls": 0.1, "tbt": null}, "rows": [{"url": "https://www.chiroandosteopathy.com/", "strategy": "mobile", "performance": 98, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.267, "lcp": 1.501, "cls": 0.0, "tbt": 0.145, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/"}, "attempts": 1, "fetched_at": "2026-11-13T09:40:41.135595+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/", "strategy": "desktop", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.336, "lcp": 0.481, "cls": 0.004, "tbt": 0.104, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "server-response-time", "title": "Initial server response time was short", "savings_ms": 102}], "final_url": "https://www.chiroandosteopathy.com/"}, "attempts": 1, "fetched_at": "2026-11-13T09:40:41.327514+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/auto-injury-whiplash/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.257, "lcp": 1.257, "cls": 0.0, "tbt": 0.09, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/auto-injury-whiplash/"}, "attempts": 1, "fetched_at": "2026-11-13T08:31:31.976489+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fauto-injury-whiplash%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/auto-injury-whiplash/", "strategy": "desktop", "performance": 96, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.328, "lcp": 0.401, "cls": 0.083, "tbt": 0.139, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/auto-injury-whiplash/"}, "attempts": 1, "fetched_at": "2026-11-13T08:20:02.110233+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fauto-injury-whiplash%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/before-and-after-transformations/", "strategy": "mobile", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.26, "lcp": 1.26, "cls": 0.017, "tbt": 0.047, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/before-and-after-transformations/"}, "attempts": 1, "fetched_at": "2026-11-13T08:21:07.750304+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fbefore-and-after-transformations%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/before-and-after-transformations/", "strategy": "desktop", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.338, "lcp": 0.935, "cls": 0.006, "tbt": 0.045, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/before-and-after-transformations/"}, "attempts": 1, "fetched_at": "2026-11-13T08:21:11.159974+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fbefore-and-after-transformations%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/book-online/", "strategy": "mobile", "performance": 97, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.26, "lcp": 1.26, "cls": 0.0, "tbt": 0.057, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/book-online/"}, "attempts": 1, "fetched_at": "2026-11-13T08:22:49.254073+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fbook-online%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/book-online/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.332, "lcp": 0.362, "cls": 0.005, "tbt": 0.049, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/book-online/"}, "attempts": 1, "fetched_at": "2026-11-13T08:22:49.574547+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fbook-online%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/chiropractic-care/", "strategy": "mobile", "performance": 96, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.271, "lcp": 1.271, "cls": 0.0, "tbt": 0.069, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/chiropractic-care/"}, "attempts": 1, "fetched_at": "2026-11-13T08:23:55.874166+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fchiropractic-care%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/chiropractic-care/", "strategy": "desktop", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.337, "lcp": 0.681, "cls": 0.049, "tbt": 0.087, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/chiropractic-care/"}, "attempts": 1, "fetched_at": "2026-11-13T08:23:59.092909+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fchiropractic-care%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/cold-laser-therapy/", "strategy": "mobile", "performance": 96, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.278, "lcp": 1.278, "cls": 0.0, "tbt": 0.075, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/cold-laser-therapy/"}, "attempts": 1, "fetched_at": "2026-11-13T08:21:51.387255+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fcold-laser-therapy%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/cold-laser-therapy/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.328, "lcp": 0.328, "cls": 0.013, "tbt": 0.032, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/cold-laser-therapy/"}, "attempts": 1, "fetched_at": "2026-11-13T08:21:47.497346+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fcold-laser-therapy%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/contact-hours/", "strategy": "mobile", "performance": 96, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.276, "lcp": 1.276, "cls": 0.0, "tbt": 0.062, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/contact-hours/"}, "attempts": 1, "fetched_at": "2026-11-13T08:23:11.640559+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fcontact-hours%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/contact-hours/", "strategy": "desktop", "performance": 98, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.352, "lcp": 0.534, "cls": 0.005, "tbt": 0.113, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/contact-hours/"}, "attempts": 1, "fetched_at": "2026-11-13T08:23:15.181883+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fcontact-hours%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/corrective-chiropractic-care/", "strategy": "mobile", "performance": 96, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.275, "lcp": 1.275, "cls": 0.0, "tbt": 0.103, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/corrective-chiropractic-care/"}, "attempts": 1, "fetched_at": "2026-11-13T08:21:49.938938+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fcorrective-chiropractic-care%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/corrective-chiropractic-care/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.334, "lcp": 0.334, "cls": 0.035, "tbt": 0.072, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/corrective-chiropractic-care/"}, "attempts": 1, "fetched_at": "2026-11-13T08:21:49.185154+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fcorrective-chiropractic-care%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/dr-aimee-oliver/", "strategy": "mobile", "performance": 98, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.214, "lcp": 1.377, "cls": 0.0, "tbt": 0.09, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "server-response-time", "title": "Initial server response time was short", "savings_ms": 100}], "final_url": "https://www.chiroandosteopathy.com/dr-aimee-oliver/"}, "attempts": 1, "fetched_at": "2026-11-13T09:25:40.256615+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fdr-aimee-oliver%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/dr-aimee-oliver/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.326, "lcp": 0.326, "cls": 0.004, "tbt": 0.004, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/dr-aimee-oliver/"}, "attempts": 1, "fetched_at": "2026-11-13T08:22:26.274082+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fdr-aimee-oliver%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/dr-charles-oliver/", "strategy": "mobile", "performance": 96, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.214, "lcp": 1.364, "cls": 0.0, "tbt": 0.125, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "server-response-time", "title": "Initial server response time was short", "savings_ms": 294}], "final_url": "https://www.chiroandosteopathy.com/dr-charles-oliver/"}, "attempts": 1, "fetched_at": "2026-11-13T09:25:40.596352+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fdr-charles-oliver%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/dr-charles-oliver/", "strategy": "desktop", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.333, "lcp": 0.468, "cls": 0.016, "tbt": 0.103, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/dr-charles-oliver/"}, "attempts": 1, "fetched_at": "2026-11-13T08:22:55.786711+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fdr-charles-oliver%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/dr-kara-hail/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.214, "lcp": 1.501, "cls": 0.0, "tbt": 0.073, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-css-rules", "title": "Reduce unused CSS", "savings_ms": 140}, {"id": "server-response-time", "title": "Initial server response time was short", "savings_ms": 101}], "final_url": "https://www.chiroandosteopathy.com/dr-kara-hail/"}, "attempts": 1, "fetched_at": "2026-11-13T08:30:21.986798+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fdr-kara-hail%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/dr-kara-hail/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.338, "lcp": 0.361, "cls": 0.002, "tbt": 0.039, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/dr-kara-hail/"}, "attempts": 1, "fetched_at": "2026-11-13T08:22:28.179020+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fdr-kara-hail%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/functional-medicine/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.261, "lcp": 1.364, "cls": 0.003, "tbt": 0.115, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "server-response-time", "title": "Initial server response time was short", "savings_ms": 103}], "final_url": "https://www.chiroandosteopathy.com/functional-medicine/"}, "attempts": 1, "fetched_at": "2026-11-13T08:20:27.777414+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Ffunctional-medicine%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/functional-medicine/", "strategy": "desktop", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.334, "lcp": 0.744, "cls": 0.005, "tbt": 0.05, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/functional-medicine/"}, "attempts": 1, "fetched_at": "2026-11-13T08:20:27.403804+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Ffunctional-medicine%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/hormone-therapy/", "strategy": "mobile", "performance": 97, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.263, "lcp": 1.389, "cls": 0.0, "tbt": 0.198, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-css-rules", "title": "Reduce unused CSS", "savings_ms": 130}], "final_url": "https://www.chiroandosteopathy.com/hormone-therapy/"}, "attempts": 1, "fetched_at": "2026-11-13T08:21:31.367544+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fhormone-therapy%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/hormone-therapy/", "strategy": "desktop", "performance": 90, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.393, "lcp": 0.469, "cls": 0.08, "tbt": 0.238, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/hormone-therapy/"}, "attempts": 1, "fetched_at": "2026-11-13T08:21:29.793985+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fhormone-therapy%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/insurance-payment/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.239, "lcp": 1.239, "cls": 0.0, "tbt": 0.054, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "server-response-time", "title": "Initial server response time was short", "savings_ms": 96}], "final_url": "https://www.chiroandosteopathy.com/insurance-payment/"}, "attempts": 1, "fetched_at": "2026-11-13T08:19:33.639860+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Finsurance-payment%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/insurance-payment/", "strategy": "desktop", "performance": 96, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.335, "lcp": 0.335, "cls": 0.003, "tbt": 0.138, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "server-response-time", "title": "Initial server response time was short", "savings_ms": 103}], "final_url": "https://www.chiroandosteopathy.com/insurance-payment/"}, "attempts": 1, "fetched_at": "2026-11-13T08:19:33.219966+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Finsurance-payment%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/knee-pain/", "strategy": "mobile", "performance": 95, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.298, "lcp": 1.298, "cls": 0.0, "tbt": 0.129, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/knee-pain/"}, "attempts": 1, "fetched_at": "2026-11-13T08:21:29.897389+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fknee-pain%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/knee-pain/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.33, "lcp": 0.345, "cls": 0.007, "tbt": 0.055, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/knee-pain/"}, "attempts": 1, "fetched_at": "2026-11-13T08:21:26.984179+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fknee-pain%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/lab-tests/", "strategy": "mobile", "performance": 96, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.266, "lcp": 1.266, "cls": 0.0, "tbt": 0.236, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/lab-tests/"}, "attempts": 1, "fetched_at": "2026-11-13T08:20:49.858356+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Flab-tests%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/lab-tests/", "strategy": "desktop", "performance": 97, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.33, "lcp": 0.353, "cls": 0.078, "tbt": 0.108, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/lab-tests/"}, "attempts": 1, "fetched_at": "2026-11-13T08:20:48.299527+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Flab-tests%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/myofascial-release/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.252, "lcp": 1.252, "cls": 0.007, "tbt": 0.112, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "server-response-time", "title": "Initial server response time was short", "savings_ms": 105}], "final_url": "https://www.chiroandosteopathy.com/myofascial-release/"}, "attempts": 1, "fetched_at": "2026-11-13T08:20:25.303135+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fmyofascial-release%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/myofascial-release/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.326, "lcp": 0.34, "cls": 0.006, "tbt": 0.038, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/myofascial-release/"}, "attempts": 1, "fetched_at": "2026-11-13T08:20:27.183509+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fmyofascial-release%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/neuropathy/", "strategy": "mobile", "performance": 94, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.287, "lcp": 1.287, "cls": 0.0, "tbt": 0.175, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/neuropathy/"}, "attempts": 1, "fetched_at": "2026-11-13T08:22:12.920001+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fneuropathy%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/neuropathy/", "strategy": "desktop", "performance": 97, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.332, "lcp": 0.361, "cls": 0.022, "tbt": 0.144, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/neuropathy/"}, "attempts": 1, "fetched_at": "2026-11-13T08:22:12.003108+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fneuropathy%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/ozone-therapy/", "strategy": "mobile", "performance": 96, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.269, "lcp": 1.269, "cls": 0.0, "tbt": 0.072, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/ozone-therapy/"}, "attempts": 1, "fetched_at": "2026-11-13T08:22:07.401285+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fozone-therapy%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/ozone-therapy/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.33, "lcp": 0.33, "cls": 0.01, "tbt": 0.028, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/ozone-therapy/"}, "attempts": 1, "fetched_at": "2026-11-13T08:22:09.672360+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fozone-therapy%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/patient-forms/", "strategy": "mobile", "performance": 50, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.236, "lcp": 7.535, "cls": 0.705, "tbt": 0.128, "status": "FAIL", "issues": ["Performance: 50 (required: \u226590)", "LCP: 7.535s (required: \u22642.5s)", "CLS: 0.705 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-javascript", "title": "Reduce unused JavaScript", "savings_ms": 600}, {"id": "unused-css-rules", "title": "Reduce unused CSS", "savings_ms": 300}], "final_url": "https://www.chiroandosteopathy.com/patient-forms/"}, "attempts": 1, "fetched_at": "2026-11-13T09:26:08.988593+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fpatient-forms%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/patient-forms/", "strategy": "desktop", "performance": 75, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.355, "lcp": 0.63, "cls": 0.461, "tbt": 0.165, "status": "FAIL", "issues": ["Performance: 75 (required: \u226590)", "CLS: 0.461 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-javascript", "title": "Reduce unused JavaScript", "savings_ms": 50}], "final_url": "https://www.chiroandosteopathy.com/patient-forms/"}, "attempts": 1, "fetched_at": "2026-11-13T09:26:11.168458+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fpatient-forms%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/physical-therapy/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.268, "lcp": 1.364, "cls": 0.002, "tbt": 0.124, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/physical-therapy/"}, "attempts": 1, "fetched_at": "2026-11-13T08:20:45.217533+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fphysical-therapy%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/physical-therapy/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.33, "lcp": 0.33, "cls": 0.023, "tbt": 0.01, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/physical-therapy/"}, "attempts": 2, "fetched_at": "2026-11-13T08:31:01.514370+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fphysical-therapy%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/postural-correction/", "strategy": "mobile", "performance": 93, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.265, "lcp": 1.364, "cls": 0.097, "tbt": 0.212, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/postural-correction/"}, "attempts": 1, "fetched_at": "2026-11-13T08:24:19.404479+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fpostural-correction%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/postural-correction/", "strategy": "desktop", "performance": 94, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.338, "lcp": 0.38, "cls": 0.138, "tbt": 0.094, "status": "FAIL", "issues": ["CLS: 0.138 (required: \u22640.1)"], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/postural-correction/"}, "attempts": 1, "fetched_at": "2026-11-13T09:40:37.910804+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fpostural-correction%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/reviews/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.251, "lcp": 1.513, "cls": 0.0, "tbt": 0.096, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-css-rules", "title": "Reduce unused CSS", "savings_ms": 120}], "final_url": "https://www.chiroandosteopathy.com/reviews/"}, "attempts": 1, "fetched_at": "2026-11-13T08:30:44.557971+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Freviews%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/reviews/", "strategy": "desktop", "performance": 97, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.337, "lcp": 0.349, "cls": 0.005, "tbt": 0.136, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/reviews/"}, "attempts": 1, "fetched_at": "2026-11-13T08:23:37.393794+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Freviews%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/sciatica-treatment/", "strategy": "mobile", "performance": 97, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.287, "lcp": 1.287, "cls": 0.002, "tbt": 0.177, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/sciatica-treatment/"}, "attempts": 1, "fetched_at": "2026-11-13T08:19:56.725230+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fsciatica-treatment%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/sciatica-treatment/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.334, "lcp": 0.347, "cls": 0.007, "tbt": 0.059, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/sciatica-treatment/"}, "attempts": 1, "fetched_at": "2026-11-13T08:19:59.159884+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fsciatica-treatment%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/site-map/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.214, "lcp": 1.351, "cls": 0.0, "tbt": 0.127, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/site-map/"}, "attempts": 1, "fetched_at": "2026-11-13T08:23:17.470199+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fsite-map%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/site-map/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.341, "lcp": 0.346, "cls": 0.008, "tbt": 0.073, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/site-map/"}, "attempts": 1, "fetched_at": "2026-11-13T08:23:13.202773+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fsite-map%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/spinal-decompression/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.259, "lcp": 1.364, "cls": 0.004, "tbt": 0.085, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/spinal-decompression/"}, "attempts": 1, "fetched_at": "2026-11-13T08:24:14.223183+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fspinal-decompression%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/spinal-decompression/", "strategy": "desktop", "performance": 97, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.335, "lcp": 0.335, "cls": 0.076, "tbt": 0.119, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/spinal-decompression/"}, "attempts": 1, "fetched_at": "2026-11-13T08:24:19.562955+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fspinal-decompression%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/weight-loss/", "strategy": "mobile", "performance": 97, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.26, "lcp": 1.26, "cls": 0.0, "tbt": 0.054, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/weight-loss/"}, "attempts": 1, "fetched_at": "2026-11-13T08:23:55.566010+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fweight-loss%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/weight-loss/", "strategy": "desktop", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.333, "lcp": 0.333, "cls": 0.056, "tbt": 0.072, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "server-response-time", "title": "Initial server response time was short", "savings_ms": 101}], "final_url": "https://www.chiroandosteopathy.com/weight-loss/"}, "attempts": 1, "fetched_at": "2026-11-13T09:26:07.080123+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fweight-loss%2F&form_factor=desktop"}, {"url": "https://www.chiroandosteopathy.com/what-sets-us-apart/", "strategy": "mobile", "performance": 99, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 1.256, "lcp": 1.365, "cls": 0.0, "tbt": 0.076, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [{"id": "unused-css-rules", "title": "Reduce unused CSS", "savings_ms": 110}, {"id": "server-response-time", "title": "Initial server response time was short", "savings_ms": 102}], "final_url": "https://www.chiroandosteopathy.com/what-sets-us-apart/"}, "attempts": 1, "fetched_at": "2026-11-13T08:30:22.870537+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fwhat-sets-us-apart%2F&form_factor=mobile"}, {"url": "https://www.chiroandosteopathy.com/what-sets-us-apart/", "strategy": "desktop", "performance": 100, "accessibility": 100, "best_practices": 100, "seo": 100, "fcp": 0.326, "lcp": 0.342, "cls": 0.009, "tbt": 0.075, "status": "PASS", "issues": [], "details": {"failing_accessibility": [], "failing_seo": [], "failing_best_practices": [], "opportunities": [], "final_url": "https://www.chiroandosteopathy.com/what-sets-us-apart/"}, "attempts": 1, "fetched_at": "2026-11-13T08:21:07.497901+00:00", "link": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.chiroandosteopathy.com%2Fwhat-sets-us-apart%2F&form_factor=desktop"}], "errors": [], "pending": [], "counts": {"pending": 0, "running": 0, "done": 56, "failed": 0, "total": 56, "finished": 56}, "summary": {"tested": 56, "passed": 53, "failed": 3, "errored": 0, "not_run": 0, "unique_urls": 28}, "generated_at": "2026-11-13 15:10:56 Sri Lanka Standard Time"};
+const T = DATA.thresholds;
+let filter = 'all', device = 'all', query = '', sortKey = 'url', sortDir = 1;
+
+const rows = DATA.rows.map(r => ({...r, kind: r.status === 'FAIL' ? 'fail' : 'pass'}));
+DATA.errors.forEach(e => rows.push({
+  url: e.url, strategy: e.strategy, status: 'ERROR', kind: 'err',
+  performance: null, accessibility: null, best_practices: null, seo: null,
+  fcp: null, lcp: null, cls: null, tbt: null,
+  issues: [e.error], details: {}, attempts: e.attempts, link: e.link
+}));
+
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c =>
+  ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+function scoreCls(v, min) {
+  if (v === null || v === undefined) return 'n';
+  if (min !== null && min !== undefined) return v >= min ? 'g' : 'p';
+  if (v >= 90) return 'g';
+  if (v >= 50) return 'a';
+  return 'p';
+}
+function metricCls(v, max) {
+  if (v === null || v === undefined) return 'n';
+  if (max === null || max === undefined) return v === null ? 'n' : '';
+  if (v <= max) return 'g';
+  if (v <= max * 1.5) return 'a';
+  return 'p';
+}
+const fmt = (v, suffix) => (v === null || v === undefined) ? '—' : v + (suffix || '');
+
+function visible() {
+  return rows.filter(r => {
+    if (filter === 'fail' && r.kind !== 'fail') return false;
+    if (filter === 'pass' && r.kind !== 'pass') return false;
+    if (filter === 'err'  && r.kind !== 'err')  return false;
+    if (device !== 'all' && r.strategy !== device) return false;
+    if (query && !r.url.toLowerCase().includes(query)) return false;
+    return true;
+  }).sort((a, b) => {
+    let x = a[sortKey], y = b[sortKey];
+    if (x === null || x === undefined) x = sortDir === 1 ? Infinity : -Infinity;
+    if (y === null || y === undefined) y = sortDir === 1 ? Infinity : -Infinity;
+    if (typeof x === 'string') return x.localeCompare(y) * sortDir;
+    return (x - y) * sortDir;
+  });
+}
+
+function detailHtml(r) {
+  const d = r.details || {};
+  const blocks = [];
+  const list = (title, items, render) => {
+    if (!items || !items.length) return;
+    blocks.push(`<div><h4>${esc(title)}</h4><ul>${items.map(render).join('')}</ul></div>`);
+  };
+  list('Failing accessibility checks', d.failing_accessibility,
+       a => `<li>${esc(a.title)}</li>`);
+  list('Failing SEO checks', d.failing_seo, a => `<li>${esc(a.title)}</li>`);
+  list('Failing best-practice checks', d.failing_best_practices,
+       a => `<li>${esc(a.title)}</li>`);
+  list('Top opportunities', d.opportunities,
+       o => `<li>${esc(o.title)} <span class="save">· saves ~${(o.savings_ms/1000).toFixed(2)}s</span></li>`);
+  if (r.issues && r.issues.length)
+    blocks.unshift(`<div><h4>Why this ${r.status === 'ERROR' ? 'could not be tested' : 'failed'}</h4><ul>${
+      r.issues.map(i => `<li>${esc(i)}</li>`).join('')}</ul></div>`);
+  if (!blocks.length) blocks.push('<div><h4>No further detail</h4></div>');
+  return `<div class="detail">${blocks.join('')}</div>`;
+}
+
+function render() {
+  const list = visible();
+  const body = document.getElementById('body');
+  if (!list.length) {
+    body.innerHTML = '<tr><td colspan="12" class="empty">No rows match these filters.</td></tr>';
+    document.getElementById('shown').textContent = '0';
+    return;
+  }
+  body.innerHTML = list.map((r, i) => `
+    <tr class="${r.kind}">
+      <td><button class="expand" data-i="${i}" aria-label="Show detail">▸</button></td>
+      <td class="url" title="${esc(r.url)}"><a href="${esc(r.link)}" target="_blank" rel="noopener">${esc(r.url)}</a></td>
+      <td><span class="dev ${esc(r.strategy)}">${esc(r.strategy)}</span></td>
+      <td><span class="pill ${scoreCls(r.performance, T.performance)}">${fmt(r.performance)}</span></td>
+      <td><span class="pill ${scoreCls(r.accessibility, T.accessibility)}">${fmt(r.accessibility)}</span></td>
+      <td><span class="pill ${scoreCls(r.best_practices, T.best_practices)}">${fmt(r.best_practices)}</span></td>
+      <td><span class="pill ${scoreCls(r.seo, T.seo)}">${fmt(r.seo)}</span></td>
+      <td class="${metricCls(r.fcp, T.fcp)}">${fmt(r.fcp, 's')}</td>
+      <td class="${metricCls(r.lcp, T.lcp)}">${fmt(r.lcp, 's')}</td>
+      <td class="${metricCls(r.cls, T.cls)}">${fmt(r.cls)}</td>
+      <td><span class="status ${esc(r.status)}">${esc(r.status)}</span></td>
+      <td class="issues">${esc((r.issues || []).join('; ')).slice(0, 220)}</td>
+    </tr>
+    <tr class="detail-row" id="d${i}" hidden><td colspan="12">${detailHtml(r)}</td></tr>`).join('');
+  document.getElementById('shown').textContent = String(list.length);
+
+  body.querySelectorAll('.expand').forEach(btn => btn.addEventListener('click', () => {
+    const row = document.getElementById('d' + btn.dataset.i);
+    row.hidden = !row.hidden;
+    btn.textContent = row.hidden ? '▸' : '▾';
+  }));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-filter]').forEach(b => b.addEventListener('click', () => {
+    filter = b.dataset.filter;
+    document.querySelectorAll('[data-filter]').forEach(o =>
+      o.setAttribute('aria-pressed', String(o === b)));
+    render();
+  }));
+  document.querySelectorAll('[data-device]').forEach(b => b.addEventListener('click', () => {
+    device = b.dataset.device;
+    document.querySelectorAll('[data-device]').forEach(o =>
+      o.setAttribute('aria-pressed', String(o === b)));
+    render();
+  }));
+  document.getElementById('q').addEventListener('input', e => {
+    query = e.target.value.trim().toLowerCase();
+    render();
+  });
+  document.querySelectorAll('th[data-key]').forEach(th => th.addEventListener('click', () => {
+    const key = th.dataset.key;
+    sortDir = (key === sortKey) ? -sortDir : 1;
+    sortKey = key;
+    document.querySelectorAll('th[data-key] .arrow').forEach(a => a.textContent = '');
+    const arrow = th.querySelector('.arrow');
+    if (arrow) arrow.textContent = sortDir === 1 ? '▲' : '▼';
+    render();
+  }));
+  render();
+});
+</script>
+</body>
+</html>
